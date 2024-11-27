@@ -5,42 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie</title>
     <link rel="stylesheet" href="styles.css">
-        <style>
-        /* Style pour la galerie Instagram */
-        #instafeed {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-        #instafeed img {
-            width: 100%;
-            height: auto;
-            max-width: 200px;
-            border-radius: 10px;
-        }
-    </style>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/instafeed.js@1.4.1/instafeed.min.js"></script>
 </head>
-    <script type="text/javascript" src="path/to/instafeed.min.js"></script>
+
 <body>
 
 <div id="contenu-principal">
     <h2>Galerie</h2>
     <p>Découvrez nos réalisations dans notre galerie. Retrouvez nos peintures sur figurines, décors et autres projets.</p>
 </div>
-  <div id="instafeed"></div>
-
-    <script type="text/javascript">
-        var feed = new Instafeed({
-            get: 'user',
-            userId: 'peinturefigurine.fr', // Remplacez par votre ID Instagram
-
-            resolution: 'standard_resolution',
-            limit: 9
-        });
-        feed.run();
-    </script>
-
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-81547a53-d904-4681-b833-a0c53d059dae" data-elfsight-app-lazy></div>
+   
 </body>
 </html>

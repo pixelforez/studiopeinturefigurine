@@ -1,11 +1,26 @@
 /* Style général du corps de la page */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            margin: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .gallery-item img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
 
 /* Styles du header */
 header {
@@ -244,4 +259,5 @@ table {
 #scrollToTopBtn:hover {
     background-color: #267a38;
 }
+
 

@@ -5,7 +5,7 @@
     }
     nav ul li {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
     }
     /* Tableau */
   th, td {
@@ -40,7 +40,7 @@ body {
 /* Styles du header */
 header {
     background-color: #2f8b4f; /* Vert foncé */
-    padding: 0px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -64,13 +64,13 @@ header h1 a:hover {
 /* Styles du menu de navigation */
 nav {
     background-color: #3c9b67; /* Vert clair */
-    padding: 0px;
+    padding: 30px;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+   padding: 30px;
     margin: 0;
 }
 
@@ -97,7 +97,7 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0px;
+    padding: 30px;
     text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 
@@ -120,7 +120,7 @@ nav ul li a:hover {
     background-color: #2f8b4f;
     color: white;
     font-size: 18px;
-    padding: 0;
+    padding: 30px;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
@@ -135,7 +135,7 @@ nav ul li a:hover {
 footer {
     background-color: #2f8b4f;
     color: white;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -191,7 +191,7 @@ footer a:hover {
   font-size: 24px;
   border: none;
   border-radius: 50%;
-  padding: 0px;
+  padding: 30px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
@@ -247,13 +247,13 @@ body {
     background-color: #f4f7f6;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding: 30px;
 }
 
 /* Styles du header */
 header {
     background-color: #2f8b4f; /* Vert foncé */
-    padding: 0px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -277,13 +277,13 @@ header h1 a:hover {
 /* Styles du menu de navigation */
 nav {
     background-color: #3c9b67; /* Vert clair */
-    padding: 0px;
+    padding: 30px;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 30px;
     margin: 0;
 }
 
@@ -310,7 +310,7 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0px;
+    padding: 30px;
     text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 
@@ -333,7 +333,7 @@ nav ul li a:hover {
     background-color: #2f8b4f;
     color: white;
     font-size: 18px;
-    padding: 0;
+    padding: 30px;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
@@ -404,7 +404,7 @@ footer a:hover {
   font-size: 24px;
   border: none;
   border-radius: 50%;
-  padding: 0px;
+  padding: 30px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;

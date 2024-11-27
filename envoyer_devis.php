@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les données du formulaire
+    // Récupération des données du formulaire
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $adresse = $_POST['adresse'];
@@ -14,27 +14,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $heros = $_POST['heros'];
     $petitMonstre = $_POST['petitMonstre'];
     $grosMonstre = $_POST['grosMonstre'];
-    $total = $_POST['total'];
 
-    // Destinataire et sujet
-    $to = "studiopeinturefigurine@gmail.com";
-    $subject = "Devis de Peinture - Formulaire";
+    // Tarifs pour calculer le total
+    $tarifs = [
+        "infanterie" => ["niveau_1" => 8.00, "niveau_2" => 13.00, "niveau_3" => 25.00],
+        "cavalerie_lourde" => ["niveau_1" => 11.00, "niveau_2" => 18.00, "niveau_3" => 35.00],
+        "heros_a_pied" => ["niveau_1" => 12.00, "niveau_2" => 20.00, "niveau_3" => 40.00],
+        "petit_vehicule_monstre" => ["niveau_1" => 15.00, "niveau_2" => 25.00, "niveau_3" => 50.00],
+        "gros_vehicule_monstre" => ["niveau_1" => 50.00, "niveau_2" => 75.00, "niveau_3" => 150.00]
+    ];
 
-    // Contenu du message
-    $message = "
-        <h3>Devis de Peinture</h3>
-        <p><strong>Nom :</strong> $nom</p>
-        <p><strong>Prénom :</strong> $prenom</p>
-        <p><strong>Adresse :</strong> $adresse, $codePostal $ville</p>
-        <p><strong>Téléphone :</strong> $telephone</p>
-        <p><strong>E-mail :</strong> $email</p>
-        <p><strong>Niveau de Peinture :</strong> $niveau</p>
-        <p><strong>Infanteries :</strong> $infanterie</p>
-        <p><strong>Cavaleries :</strong> $cavalerie</p>
-        <p><strong>Héros à Pied :</strong> $heros</p>
-        <p><strong>Petits Véhicules/Monstres :</strong> $petitMonstre</p>
-        <p><strong>Gros Véhicules/Monstres :</strong> $grosMonstre</p>
-        <p><strong>Total Estimé :</strong> $total €</p>
-    ";
+    // Calcul du total estimé
+    $total = 
+        ($tarifs['infanterie'][$niveau] * $infanterie) +
+        ($tarifs['cavalerie_lourde'][$niveau] * $cavalerie) +
+        ($tarifs['heros_a_pied'][$niveau] * $heros) +
+        ($tarifs['petit_vehicule_monstre'][$niveau] * $petitMonstre) +
+        ($tarifs['gros_vehicule_monstre'][$niveau] * $grosMonstre);
 
-    // En
+    // Message à envoyer
+    $message = "Devis de " . $prenom . " " . $nom . ":\n\n";
+    $message .= "Adresse: " . $adresse . ", " . $codePostal . " " . $ville . "\n";
+    $message .= "Téléphone: " . $telephone . "\n";
+    $message .= "Email: " . $email . "\n\n";
+    $message .= "Niveau de Peinture:

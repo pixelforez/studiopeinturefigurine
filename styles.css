@@ -1,6 +1,6 @@
 /* Définition des couleurs */
 :root {
-  --green: #4CAF50; /* Couleur verte */
+  --dark-green: #2E7D32; /* Vert foncé */
   --white: #FFFFFF; /* Couleur blanche */
   --black: #000000; /* Couleur noire */
 }
@@ -16,14 +16,22 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre autour du body */
   overflow-x: hidden;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Menu, head et footer */
 header, footer, nav {
-  background-color: var(--green); /* Fond vert */
+  background-color: var(--dark-green); /* Fond vert foncé */
   color: var(--white); /* Texte blanc */
   padding: 15px 0;
   text-align: center;
+  width: 100%;
+}
+
+header h1 {
+  margin: 0;
 }
 
 /* Style du menu */
@@ -31,10 +39,11 @@ nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-  display: inline;
   margin: 0 15px;
 }
 
@@ -46,7 +55,8 @@ nav ul li a {
 
 /* Style des titres */
 h1, h2, h3, h4, h5 {
-  color: var(--green); /* Titres en vert */
+  color: var(--dark-green); /* Titres en vert foncé */
+  text-align: center; /* Titres centrés */
 }
 
 /* Style de la galerie */
@@ -55,6 +65,8 @@ h1, h2, h3, h4, h5 {
   grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   gap: 10px;
   justify-items: center;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .gallery img {
@@ -74,7 +86,7 @@ h1, h2, h3, h4, h5 {
   position: fixed;
   left: 20px;
   bottom: 20px;
-  background-color: var(--green);
+  background-color: var(--dark-green);
   color: var(--white);
   font-size: 24px;
   border: none;
@@ -91,8 +103,11 @@ h1, h2, h3, h4, h5 {
 
 /* Réactivité */
 @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  
   nav ul li {
-    display: block;
     margin: 10px 0;
   }
 }

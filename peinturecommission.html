@@ -251,9 +251,12 @@
 <section id="formSection" style="display:none;">
     <h3>Formulaire de Contact</h3>
     <form id="contactForm">
-        <label for="name">Nom et Prénom :</label><br>
+        <label for="name">Nom :</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
+        <label for="prenom">Prénom :</label><br>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+        
         <label for="email">Email :</label><br>
         <input type="email" id="email" name="email" required><br><br>
 
@@ -263,8 +266,9 @@
         <input type="submit" value="Envoyer"  class="button">
     </form>
 
-    <div id="formFeedback"></div>
-</div>
+  <div class="cta">
+       <a href="simulateur_devis.html" onclick="loadPage('simulateur_devis.html'); return false;" class="button">Demander une simulation</a>
+    </div>
 
 </body>
 </html>

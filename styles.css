@@ -6,61 +6,6 @@ body {
     margin: 0;
     padding: 0;
 }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .highlight {
-            font-weight: bold;
-            color: #e67e22;
-        }
-        .cta {
-            text-align: center;
-            margin-top: 20px;
-                margin-bottom: 20px;
-        }
-        .cta a {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #2c3e50;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        .cta a:hover {
-            background: #34495e;
-        }
-/* Tableau */
-  th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #333;
-            color: #fff;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .check {
-            color: green;
-            font-weight: bold;
-        }
-
-        .cross {
-            color: red;
-            font-weight: bold;
-        }
 
 /* Styles du header */
 header {
@@ -74,7 +19,6 @@ header h1 a {
     font-size: 36px;
     text-decoration: none;
     font-weight: bold;
-    text-align: center;
 }
 
 header h1 a:hover {
@@ -180,3 +124,31 @@ footer a:hover {
         margin-bottom: 15px;
     }
 }
+
+
+/* Tableau */
+  th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .check {
+            color: green;
+            font-weight: bold;
+        }
+
+        .cross {
+            color: red;
+            font-weight: bold;
+        }
+

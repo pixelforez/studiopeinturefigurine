@@ -124,3 +124,46 @@ footer a:hover {
         margin-bottom: 15px;
     }
 }
+
+/* Style de la galerie */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px; /* Limite de largeur pour éviter trop de photos par ligne */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Flèche pour remonter */
+.scroll-to-top {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background-color: var(--dark-green);
+  color: var(--white);
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+}

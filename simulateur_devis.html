@@ -104,10 +104,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
                  <!-- Affichage du total estimé -->
     <div id="total-estime">Total estimé : <?= number_format($total, 2, ',', ' ') ?> €</div>
-        <button onclick="toggleTexte()">Demander un devis</button>
+        <button onclick="toggleTexte()" class="button">Demander un devis</button>
 
     <!-- Texte à afficher/masquer -->
-    <div id="texte">test</div>
+    <div id="texte">
+
+        <p></p>FORMULAIRE</p>
+    </div>
 
         
     </form>

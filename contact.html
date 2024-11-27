@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de Simulation - Studio Peinture Figurine</title>
+    <link rel="stylesheet" href="styles.css">
+<!-- Ajout du favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-container">
+        <h1>Demande de Simulation - Studio Peinture Figurine</h1>
+        <a href="index.html" class="back-home">Retour à l'accueil</a>
+    </div>
+</header>
+
+<!-- Main content -->
+<main>
+    <section class="form-section">
+        <h2>Demandez une simulation de devis</h2>
+        <p>Pour obtenir une estimation personnalisée de votre projet de peinture ou d'impression 3D, veuillez remplir le formulaire ci-dessous. Nous reviendrons vers vous avec un devis détaillé, adapté à vos besoins spécifiques.</p>
+
+        <form action="envoyer_simulation.php" method="POST">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telephone">Numéro de téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="type_de_projet">Type de projet :</label>
+                <select id="type_de_projet" name="type_de_projet" required>
+                    <option value="peinture">Peinture sur figurines/décors</option>
+                    <option value="impression_3d">Impression 3D</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="niveau_peinture">Niveau de peinture souhaité :</label>
+                <select id="niveau_peinture" name="niveau_peinture">
+                    <option value="tabletop">Tabletop</option>
+                    <option value="vitrine">Vitrine</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre_figurines">Nombre de figurines :</label>
+                <input type="number" id="nombre_figurines" name="nombre_figurines" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Envoyer la demande</button>
+        </form>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Studio Peinture Figurine. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

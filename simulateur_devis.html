@@ -1,0 +1,25 @@
+<div id="contenu-principal">
+    <h2>Simulateur de Devis</h2>
+    <form action="envoyer_devis.php" method="POST">
+        <label for="niveau">Niveau de Peinture :</label>
+        <select name="niveau" id="niveau">
+            <option value="1">Niveau 1 - Tabletop</option>
+            <option value="2">Niveau 2 - Peinture détaillée</option>
+            <option value="3">Niveau 3 - Vitrine</option>
+        </select><br><br>
+
+        <label for="infanterie">Nombre d'infanterie :</label>
+        <input type="number" id="infanterie" name="infanterie" min="0"><br><br>
+
+        <label for="personnage">Nombre de personnages :</label>
+        <input type="number" id="personnage" name="personnage" min="0"><br><br>
+
+        <label for="monstre">Nombre de monstres :</label>
+        <input type="number" id="monstre" name="monstre" min="0"><br><br>
+
+        <label for="vehicule">Nombre de véhicules :</label>
+        <input type="number" id="vehicule" name="vehicule" min="0"><br><br>
+
+        <input type="submit" value="Obtenir le devis">
+    </form>
+</div>

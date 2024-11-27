@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Peinture Figurine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        // Fonction AJAX pour charger le contenu des pages
+        function loadPage(page) {
+            // Enlever l'ancien contenu et charger la nouvelle page
+            $("#contenu-principal").fadeOut(200, function() {
+                $("#contenu-principal").load(page + " #contenu-principal", function() {
+                    // Rendre le contenu visible après qu'il soit chargé
+                    $("#contenu-principal").fadeIn(200);
+                });
+            });
+        }
+
+        $(document).ready(function() {
+            // Lorsque la page est chargée, on charge le contenu de base
+            loadPage("index.html");
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <h1><a href="index.html" style="color: white; text-decoration: none;">Studio Peinture Figurine</a></h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="peinturecommission.html" onclick="loadPage('peinturecommission.html'); return false;">Peinture sur commission</a></li>
+        <li><a href="impression3d.html" onclick="loadPage('impression3d.html'); return false;">Impression 3D à la demande</a></li>
+        <li><a href="formation.html" onclick="loadPage('formation.html'); return false;">Formation</a></li>
+        <li><a href="simulateur_devis.html" onclick="loadPage('simulateur_devis.html'); return false;">Simulateur de devis</a></li>
+        <li><a href="galerie.html" onclick="loadPage('galerie.html'); return false;">Galerie</a></li>
+    </ul>
+</nav>
+
+<!-- Contenu principal qui change dynamiquement -->
+<div id="contenu-principal">
+    <h2>Bienvenue au Studio Peinture Figurine</h2>
+    <p class="texte-centre">
+        Chez Studio Peinture Figurine, nous offrons des services professionnels de peinture sur figurines et d'impression 3D. 
+        Notre objectif est de transformer vos figurines en véritables œuvres d'art.
+    </p>
+    <p class="texte-centre">
+        Vous souhaitez une peinture de qualité, une impression 3D détaillée ou des formations sur les techniques de peinture ? Nous vous proposons des services adaptés à vos besoins.
+    </p>
+    <p class="texte-centre">
+        Découvrez nos différentes offres et demandez un devis personnalisé grâce à notre simulateur de devis. Nous nous engageons à vous fournir des résultats qui dépassent vos attentes.
+    </p>
+    <p class="texte-centre">
+        <a href="simulateur_devis.html" class="button">Demander une simulation</a>
+    </p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Studio Peinture Figurine. Tous droits réservés.</p>
+ <p><a href="conditions.html" onclick="loadPage('peinturecommission.html'); return false;">Conditions générales de vente</a></p>
+</footer>
+
+</body>
+</html>

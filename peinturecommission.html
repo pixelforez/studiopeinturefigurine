@@ -3,95 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Peinture Figurine - Studio de Peinture pour Wargames et Modélisme">
+    <meta property="og:description" content="Transformez vos figurines en œuvres d'art avec notre service de peinture sur figurines. Services personnalisés pour Warhammer, Age of Sigmar, et plus.">
+    <meta property="og:image" content="https://peinturefigurine.fr/favicon.png">
+    <meta property="og:url" content="https://peinturefigurine.fr/peinturecommission.html">
+    <meta property="og:type" content="website">
+
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Peinture sur figurines et décors de haute qualité pour jeux de figurines, wargames et modélisme. Services de peinture sur mesure et impression 3D à la demande.">
+
+    <!-- Page Title -->
     <title>Peinture sur Commission - Studio Peinture Figurine</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.png">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // Fonction AJAX pour charger le contenu des pages
-        function loadPage(page) {
-            // Enlever l'ancien contenu et charger la nouvelle page
-            $("#contenu-principal").fadeOut(200, function() {
-                $("#contenu-principal").load(page + " #contenu-principal", function() {
-                    // Rendre le contenu visible après qu'il soit chargé
-                    $("#contenu-principal").fadeIn(200);
-                });
-            });
-        }
 
-        $(document).ready(function() {
-            // Charger le contenu initial de la page peinture sur commission
-            loadPage("peinturecommission.html");
-
-            // Charger un contenu spécifique lors du clic sur le bouton
-            $("#changer-contenu").click(function() {
-                loadPage("nouveau_contenu.html"); // Remplacez par le fichier ou page que vous souhaitez charger
-            });
-        });
+    <!-- JSON-LD structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Entreprise",
+      "name": "Studio Peinture Figurine",
+      "url": "https://peinturefigurine.fr",
+      "logo": "https://peinturefigurine.fr/favicon.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "07 75 86 08 37",
+        "contactType": "Service de Peinture et Impression",
+        "areaServed": "FR",
+        "availableLanguage": "fr"
+      },
+      "sameAs": [
+        "https://www.facebook.com/peinturefigurine.fr",
+        "https://www.instagram.com/peinturefigurine.fr"
+      ]
+    }
     </script>
+
 </head>
 <body>
 
 <header>
-    <h1><a href="index.html" style="color: white; text-decoration: none;">Studio Peinture Figurine</a></h1>
+    <h1>Transformez vos Figurines en Œuvres d'Art</h1>
+    <p>Confiez-nous la peinture de vos figurines et décors pour un résultat digne de votre passion !</p>
 </header>
 
-<nav>
+<section id="service">
+    <h2>Notre Expertise à Votre Service</h2>
+    <p>Que vous soyez un joueur de **Warhammer 40K**, un collectionneur ou un passionné de **modélisme**, notre studio de peinture sur figurines est spécialisé dans la transformation de vos pièces en œuvres d'art. De la peinture tabletop à la qualité vitrine, chaque figurine est minutieusement préparée et peinte selon vos préférences.</p>
+    <p>Notre objectif : vous offrir des créations exceptionnelles, prêtes à briller sur vos tables de jeu ou dans vos vitrines. Nous prenons soin de chaque détail, de la **préparation à la finition**, pour un rendu à la hauteur de vos attentes.</p>
+</section>
+
+<section id="services">
+    <h2>Nos Services</h2>
     <ul>
-        <li><a href="peinturecommission.html" onclick="loadPage('peinturecommission.html'); return false;">Peinture sur commission</a></li>
-        <li><a href="impression3d.html" onclick="loadPage('impression3d.html'); return false;">Impression 3D à la demande</a></li>
-        <li><a href="formation.html" onclick="loadPage('formation.html'); return false;">Formation</a></li>
-        <li><a href="simulateur_devis.html" onclick="loadPage('simulateur_devis.html'); return false;">Simulateur de devis</a></li>
-        <li><a href="galerie.html" onclick="loadPage('galerie.html'); return false;">Galerie</a></li>
+        <li><strong>Peinture Tabletop</strong> : Idéal pour les parties avec des figurines prêtes à l'emploi.</li>
+        <li><strong>Peinture Vitrine</strong> : Pour une finition impeccable, digne des plus grandes collections.</li>
+        <li><strong>Peinture Personnalisée</strong> : Vous choisissez les couleurs et le style, nous les réalisons pour vous.</li>
+        <li><strong>Impression 3D sur Mesure</strong> : Obtenez des figurines et décors uniques à partir de vos fichiers STL, avec une qualité de détail exceptionnelle.</li>
     </ul>
-</nav>
+</section>
 
-<!-- Contenu principal qui changera dynamiquement -->
-<div id="contenu-principal">
-    <h2>Peinture sur Commission</h2>
-    
-    <p class="texte-centre">
-        Au <strong>Studio Peinture Figurine</strong>, nous offrons un service professionnel de peinture sur figurines et décors, adapté à vos besoins spécifiques. Que vous soyez un joueur de jeux de figurines ou un collectionneur passionné, nous mettons notre expertise à votre service pour créer des œuvres uniques et personnalisées.
-    </p>
-    
-    <h3>Nos services de peinture</h3>
-    <p>
-        Nous proposons plusieurs niveaux de peinture, en fonction de la qualité que vous souhaitez obtenir. Chaque projet est réalisé avec soin, de la préparation minutieuse des figurines jusqu'aux touches finales qui feront ressortir toute leur beauté.
-    </p>
-    
-    <ul>
-        <li><strong>Niveau 1 - Tabletop :</strong> Peinture de base, idéale pour les joueurs de jeux de figurines qui souhaitent un résultat rapide et de qualité. Chaque figurine est peinte avec soin, en appliquant des techniques d'ombrage et d'éclaircissement pour un rendu agréable à l'œil.</li>
-        <li><strong>Niveau 2 - Peinture détaillée :</strong> Ce niveau inclut des détails supplémentaires et des techniques plus avancées pour un résultat plus réaliste. Idéal pour les collectionneurs qui souhaitent que leurs figurines aient un rendu plus professionnel et détaillé.</li>
-        <li><strong>Niveau 3 - Vitrine :</strong> Peinture de haute qualité, avec des détails minutieux, des effets de weathering et des finitions soignées. Ce niveau est destiné aux figurines de collection ou aux pièces d'exposition qui doivent impressionner par leur perfection.</li>
-    </ul>
-
-    <h3>Notre Processus de Travail</h3>
-    <p>
-        Chaque commande de peinture est unique et commence par une discussion avec vous afin de bien comprendre vos attentes et vos besoins. Voici les étapes du processus :
-    </p>
-
+<section id="processus">
+    <h2>Comment Ça Marche ?</h2>
     <ol>
-        <li><strong>Évaluation et devis personnalisé :</strong> Après avoir discuté de votre projet, nous vous envoyons un devis détaillé en fonction du nombre de figurines, du niveau de peinture souhaité, et du type de figurines (infanterie, véhicules, monstres, etc.).</li>
-        <li><strong>Préparation des figurines :</strong> Nous commençons par préparer vos figurines en les nettoyant et en enlevant toutes les imperfections pour garantir un résultat parfait.</li>
-        <li><strong>Peinture :</strong> Les figurines sont ensuite peintes avec une attention particulière aux détails. Nous appliquons différentes couches de peinture, techniques d'ombrage, éclaircissements, et autres effets spécifiques à chaque niveau de peinture.</li>
-        <li><strong>Finitions et vérification :</strong> Après la peinture, nous vérifions le rendu pour nous assurer qu'il répond à vos attentes. Nous ajoutons les dernières touches comme le weathering (effet d'usure) ou les détails spécifiques sur demande.</li>
+        <li><strong>Devis Personnalisé</strong> : Décrivez vos besoins, et nous vous fournissons un devis précis en fonction de la taille et du type de figurine.</li>
+        <li><strong>Réservation et Démarrage</strong> : Un acompte de 20% vous permet de réserver un créneau pour votre projet.</li>
+        <li><strong>Suivi et Livraison</strong> : Vous recevez des photos régulières de l'avancement, et une fois terminé, nous vous envoyons vos figurines par Colissimo ou Mondial Relay.</li>
     </ol>
+</section>
 
-    <h3>Demander un devis personnalisé</h3>
-    <p>
-        Vous souhaitez connaître le coût exact de votre projet ? Utilisez notre <a href="simulateur_devis.html" class="button">Simulateur de devis</a> pour obtenir une estimation rapide et détaillée.
-    </p>
-
-    <!-- Bouton pour charger un autre contenu avec AJAX -->
-    <div style="text-align: center; margin-top: 20px;">
-        <button id="changer-contenu" style="padding: 10px 20px; font-size: 16px;">Voir un exemple de projet</button>
-    </div>
-
-</div>
+<section id="contact">
+    <h2>Prêt à Donner Vie à Vos Projets ?</h2>
+    <p>Contactez-nous dès aujourd'hui pour obtenir un devis personnalisé et discuter de vos besoins. Nous sommes là pour rendre vos figurines exceptionnelles !</p>
+    <p><strong>Contact : </strong><a href="mailto:studiopeinturefigurine@gmail.com">studiopeinturefigurine@gmail.com</a> | Téléphone : 07 75 86 08 37</p>
+</section>
 
 <footer>
-    <p>&copy; 2024 Studio Peinture Figurine. Tous droits réservés.</p>
-    <p><a href="conditions.html">Conditions générales de vente</a></p>
+    <p>&copy; 2024 Studio Peinture Figurine - Tous droits réservés</p>
 </footer>
 
 </body>

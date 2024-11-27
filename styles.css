@@ -1,7 +1,7 @@
 /* Responsive: Formulaire sur mobile */
 @media screen and (max-width: 768px) {
     #contenu-principal {
-        width: 40%;
+        width: 80%;
     }
     nav ul li {
         display: block;
@@ -200,7 +200,7 @@ footer a:hover {
 .scroll-to-top:hover {
   transform: scale(1.1);
 }
-l {
+ul {
   list-style-type: none; /* Supprime les puces */
   padding: 0; /* Enlève l'espace intérieur */
   margin: 0; /* Enlève les marges par défaut */
@@ -412,7 +412,7 @@ footer a:hover {
 .scroll-to-top:hover {
   transform: scale(1.1);
 }
-l {
+ul {
   list-style-type: none; /* Supprime les puces */
   padding: 0; /* Enlève l'espace intérieur */
   margin: 0; /* Enlève les marges par défaut */

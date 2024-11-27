@@ -1,145 +1,126 @@
-/* Définition des couleurs */
-:root {
-  --dark-green: #2E7D32; /* Vert foncé */
-  --white: #FFFFFF; /* Couleur blanche */
-  --black: #000000; /* Couleur noire */
-  --button-gray: #888888; /* Gris pour les boutons */
-  --button-hover: #666666; /* Gris plus foncé au survol */
-}
-
-/* Global styles */
+/* Style général du corps de la page */
 body {
-  background-color: var(--white); /* Fond blanc */
-  font-family: Arial, sans-serif;
-  color: var(--black); /* Texte noir */
-  margin: 0;
-  padding: 0;
-  border-radius: 15px; /* Coins arrondis */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre autour du body */
-  overflow-x: hidden;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Menu, head et footer */
-header, footer, nav {
-  background-color: var(--dark-green); /* Fond vert foncé */
-  color: var(--white); /* Texte blanc */
-  padding: 15px 0;
-  text-align: center;
-  width: 100%;
+/* Styles du header */
+header {
+    background-color: #2f8b4f; /* Vert foncé */
+    padding: 20px;
+    text-align: center;
 }
 
-header h1 {
-  margin: 0;
+header h1 a {
+    color: white;
+    font-size: 36px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Style du menu */
+header h1 a:hover {
+    text-decoration: underline;
+}
+
+/* Styles du menu de navigation */
+nav {
+    background-color: #3c9b67; /* Vert clair */
+    padding: 15px;
+    text-align: center;
+}
+
 nav ul {
-  list-style-type: none; /* Suppression des puces */
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap; /* Assure que les éléments restent sur une seule ligne */
-  gap: 20px; /* Espace entre les éléments */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-  margin: 0;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 nav ul li a {
-  color: var(--white); /* Texte blanc dans le menu */
-  text-decoration: none; /* Pas de soulignement */
-  font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-/* Empêcher le surlignage des liens */
-nav ul li a:hover,
-nav ul li a:focus {
-  color: var(--white); /* Conserver la couleur blanche */
-  text-decoration: none; /* Aucun soulignement au survol */
-  background-color: transparent; /* Pas de fond au survol */
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-/* Style des titres */
-h1, h2, h3, h4, h5 {
-  color: var(--dark-green); /* Titres en vert foncé */
-  text-align: center; /* Titres centrés */
+/* Conteneur principal */
+#contenu-principal {
+    width: 60%;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 
-/* Style de la galerie */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 20px;
-  justify-items: center;
-  margin-top: 20px;
-  width: 100%;
-  max-width: 1200px; /* Limite de largeur pour éviter trop de photos par ligne */
+/* Titre principal de la page */
+#contenu-principal h2 {
+    color: #2f8b4f;
+    font-size: 36px;
 }
 
-.gallery img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+/* Centrage du texte dans les paragraphes */
+.texte-centre {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Flèche pour remonter */
-.scroll-to-top {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  background-color: var(--dark-green);
-  color: var(--white);
-  font-size: 24px;
-  border: none;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.scroll-to-top:hover {
-  transform: scale(1.1);
-}
-
-/* Boutons gris arrondis */
+/* Bouton pour la simulation */
 .button {
-  background-color: var(--button-gray);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 30px; /* Boutons arrondis */
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    background-color: #2f8b4f;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: var(--button-hover); /* Effet au survol */
+    background-color: #267a38; /* Vert plus foncé */
 }
 
-/* Réactivité : assure que le menu tient sur une ligne même sur mobile */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: row; /* Les éléments du menu restent sur une ligne */
-    flex-wrap: nowrap; /* Eviter le retour à la ligne sur petits écrans */
-    justify-content: space-between; /* Répartir l'espace entre les éléments */
-  }
-  
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Aligner les images par 1 ou 2 sur mobile */
-  }
+/* Footer */
+footer {
+    background-color: #2f8b4f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive: Formulaire sur mobile */
+@media screen and (max-width: 768px) {
+    #contenu-principal {
+        width: 90%;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 15px;
+    }
 }

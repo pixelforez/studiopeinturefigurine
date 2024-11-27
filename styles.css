@@ -3,8 +3,9 @@
   --dark-green: #2E7D32; /* Vert foncé */
   --white: #FFFFFF; /* Couleur blanche */
   --black: #000000; /* Couleur noire */
+  --button-black: #333333; /* Noir pour les boutons */
+  --button-hover: #444444; /* Noir légèrement plus clair au survol */
 }
-
 
 /* Global styles */
 body {
@@ -20,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-   text-align: center; 
+  text-align: center;
 }
 
 /* Menu, head et footer */
@@ -113,12 +114,13 @@ h1, h2, h3, h4, h5 {
     margin: 10px 0;
   }
 }
+
 /* Style du bouton */
 #scrollToTopBtn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #2f8b4f;
+    background-color: var(--button-black); /* Noir pour le bouton */
     color: white;
     border: none;
     padding: 15px;
@@ -128,10 +130,10 @@ h1, h2, h3, h4, h5 {
     display: none; /* Masqué au départ */
     z-index: 200;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 /* Apparence du bouton au survol */
 #scrollToTopBtn:hover {
-    background-color: #267a38;
+    background-color: var(--button-hover); /* Noir plus clair au survol */
 }
-

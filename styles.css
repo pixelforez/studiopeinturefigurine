@@ -3,8 +3,8 @@
   --dark-green: #2E7D32; /* Vert foncé */
   --white: #FFFFFF; /* Couleur blanche */
   --black: #000000; /* Couleur noire */
-  --button-black: #333333; /* Noir pour les boutons */
-  --button-hover: #444444; /* Noir légèrement plus clair au survol */
+  --button-gray: #888888; /* Gris pour les boutons */
+  --button-hover: #666666; /* Gris plus foncé au survol */
 }
 
 /* Global styles */
@@ -52,8 +52,16 @@ nav ul li {
 
 nav ul li a {
   color: var(--white); /* Texte blanc dans le menu */
-  text-decoration: none;
+  text-decoration: none; /* Pas de soulignement */
   font-weight: bold;
+}
+
+/* Empêcher le surlignage des liens */
+nav ul li a:hover,
+nav ul li a:focus {
+  color: var(--white); /* Conserver la couleur blanche */
+  text-decoration: none; /* Aucun soulignement au survol */
+  background-color: transparent; /* Pas de fond au survol */
 }
 
 /* Style des titres */
@@ -65,23 +73,24 @@ h1, h2, h3, h4, h5 {
 /* Style de la galerie */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  gap: 20px;
   justify-items: center;
   margin-top: 20px;
   width: 100%;
+  max-width: 1200px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* Flèche pour remonter */
@@ -104,6 +113,22 @@ h1, h2, h3, h4, h5 {
   transform: scale(1.1);
 }
 
+/* Boutons gris arrondis */
+.button {
+  background-color: var(--button-gray);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px; /* Boutons arrondis */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--button-hover); /* Effet au survol */
+}
+
 /* Réactivité */
 @media (max-width: 768px) {
   nav ul {
@@ -113,27 +138,8 @@ h1, h2, h3, h4, h5 {
   nav ul li {
     margin: 10px 0;
   }
-}
-
-/* Style du bouton */
-#scrollToTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--button-black); /* Noir pour le bouton */
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 24px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none; /* Masqué au départ */
-    z-index: 200;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Apparence du bouton au survol */
-#scrollToTopBtn:hover {
-    background-color: var(--button-hover); /* Noir plus clair au survol */
+  
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Aligner les images par 1 ou 2 sur mobile */
+  }
 }

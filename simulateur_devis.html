@@ -6,35 +6,34 @@
     <title>Simulateur de Devis</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        // Fonction pour calculer le total estimé en fonction des quantités et niveaux
-        function calculerTotal() {
-            // Récupération des valeurs sélectionnées par l'utilisateur
+        // Fonction pour envoyer les données à PHP et calculer le total via AJAX
+        function updateTotal() {
             var niveau = parseInt(document.getElementById("niveau").value);
             var infanterie = parseInt(document.getElementById("infanterie").value) || 0;
             var personnage = parseInt(document.getElementById("personnage").value) || 0;
             var monstre = parseInt(document.getElementById("monstre").value) || 0;
             var vehicule = parseInt(document.getElementById("vehicule").value) || 0;
 
-            // Définition des prix par niveau et type
-            var prixInfanterie = [5, 8, 15]; // Tabletop, Tabletop, Vitrine
-            var prixPersonnage = [12, 20, 40];
-            var prixMonstre = [11, 18, 35];
-            var prixVehicule = [15, 25, 50];
-
-            // Calcul du total
-            var total = (infanterie * prixInfanterie[niveau - 1]) +
-                        (personnage * prixPersonnage[niveau - 1]) +
-                        (monstre * prixMonstre[niveau - 1]) +
-                        (vehicule * prixVehicule[niveau - 1]);
-
-            // Affichage du total estimé
-            document.getElementById("total-estime").innerText = "Total estimé : " + total.toFixed(2) + " €";
-        }
-
-        // Fonction pour envoyer la demande de devis
-        function envoyerDemande() {
-            alert("Votre demande de devis a été envoyée !");
-            // Logique pour envoyer la demande peut être ajoutée ici (comme un formulaire POST)
+            // Envoi des données via AJAX
+            fetch('calculer_devis.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    niveau: niveau,
+                    infanterie: infanterie,
+                    personnage: personnage,
+                    monstre: monstre,
+                    vehicule: vehicule
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Affichage du total estimé renvoyé par PHP
+                document.getElementById("total-estime").innerText = "Total estimé : " + data.total.toFixed(2) + " €";
+            })
+            .catch(error => console.error('Erreur :', error));
         }
     </script>
 </head>
@@ -42,31 +41,30 @@
 
 <div id="contenu-principal">
     <h2>Simulateur de Devis</h2>
-    <form action="envoyer_formulaire.php" method="POST">
+    <form oninput="updateTotal()">
         <label for="niveau">Niveau de Peinture :</label>
-        <select name="niveau" id="niveau" onchange="calculerTotal()">
+        <select name="niveau" id="niveau">
             <option value="1">Niveau 1 - Tabletop</option>
             <option value="2">Niveau 2 - Peinture détaillée</option>
             <option value="3">Niveau 3 - Vitrine</option>
         </select><br><br>
 
         <label for="infanterie">Nombre d'infanterie :</label>
-        <input type="number" id="infanterie" name="infanterie" min="0" onchange="calculerTotal()"><br><br>
+        <input type="number" id="infanterie" name="infanterie" min="0" value="0"><br><br>
 
         <label for="personnage">Nombre de personnages :</label>
-        <input type="number" id="personnage" name="personnage" min="0" onchange="calculerTotal()"><br><br>
+        <input type="number" id="personnage" name="personnage" min="0" value="0"><br><br>
 
         <label for="monstre">Nombre de monstres :</label>
-        <input type="number" id="monstre" name="monstre" min="0" onchange="calculerTotal()"><br><br>
+        <input type="number" id="monstre" name="monstre" min="0" value="0"><br><br>
 
         <label for="vehicule">Nombre de véhicules :</label>
-        <input type="number" id="vehicule" name="vehicule" min="0" onchange="calculerTotal()"><br><br>
+        <input type="number" id="vehicule" name="vehicule" min="0" value="0"><br><br>
 
         <!-- Affichage du total estimé -->
         <div id="total-estime">Total estimé : 0,00 €</div><br><br>
 
-        <input type="button" value="Afficher le total estimé" onclick="calculerTotal()" class="button">
-        <input type="submit" value="Envoyer la demande de devis" onclick="envoyerDemande()" class="button">
+        <input type="submit" value="Envoyer la demande de devis" class="button">
     </form>
 </div>
 

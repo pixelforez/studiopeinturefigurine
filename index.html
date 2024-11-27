@@ -21,7 +21,85 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
+     
+</head>
+<body>
+<header>
+    <h1><img src="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png" alt="Studio Peinture Figurine " width="40" height="40">
+<a href="index.html" style="color: white; text-decoration: none;">Studio Peinture Figurine</a></h1>
+     </header>
+<script>
+         // Obtenir le bouton
+let mybutton = document.getElementById("scrollToTopBtn");
+
+// Afficher le bouton quand l'utilisateur a défilé de 20px vers le bas
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+};
+
+// Fonction pour faire défiler la page jusqu'en haut
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+    
+        // Fonction AJAX pour charger le contenu des pages
+        function loadPage(page) {
+            // Enlever l'ancien contenu et charger la nouvelle page
+            $("#contenu-principal").fadeOut(200, function() {
+                // Charger la nouvelle page dans le div #contenu-principal
+                $("#contenu-principal").load(page + " #contenu-principal", function() {
+                    // Rendre le contenu visible après qu'il soit chargé
+                    $("#contenu-principal").fadeIn(200);
+                });
+            });
+        }
+
+        $(document).ready(function() {
+            // Charger la page d'accueil par défaut
+            loadPage("index.html");
+        });
+
+    </script>
+<nav>
+    <ul>
+        <li><a href="peinturecommission.html" onclick="loadPage('peinturecommission.html'); return false;">Peinture sur commission</a></li>
+        <li><a href="impression3d.html" onclick="loadPage('impression3d.html'); return false;">Impression 3D à la demande</a></li>
+        <li><a href="formation.html" onclick="loadPage('formation.html'); return false;">Formation</a></li>
+        <li><a href="simulateur_devis.html" onclick="loadPage('simulateur_devis.html'); return false;">Simulateur de devis</a></li>
+        <li><a href="galerie.html" onclick="loadPage('galerie.html'); return false;">Galerie</a></li>
+    </ul>
+</nav>
+
+<!-- Contenu principal qui change dynamiquement -->
+<div id="contenu-principal">
+        <h1>Transformez vos figurines en chefs-d'œuvre</h1>
+        <p>Bienvenue chez <span class="highlight">Studio Peinture Figurine</span>, votre partenaire pour la peinture et la personnalisation de figurines et décors. Nous sublimons vos modèles pour le jeu, l'exposition ou la vitrine grâce à notre expertise et à un souci du détail inégalé.</p>
+        <p>Nous proposons des <span class="highlight">prestations sur mesure</span>, adaptées à tous les niveaux de finition et à votre budget. De la préparation minutieuse à des techniques de peinture avancées, en passant par l'impression 3D de haute précision, notre studio s'engage à dépasser vos attentes.</p>
+        <ul>
+            <li>🎨 <strong>Services personnalisés</strong> : peinture, impression 3D, formations.</li>
+            <li>🛠️ <strong>Outils pratiques</strong> : devis en ligne, accompagnement sur mesure.</li>
+        </ul>
+        <p>Choisissez l'excellence pour vos figurines. Explorez nos offres et découvrez comment nous pouvons donner vie à vos projets.</p>
+  <div class="cta">
+       <a href="simulateur_devis.html" onclick="loadPage('simulateur_devis.html'); return false;" class="button">Demander une simulation</a>
+    </div></div>
+     <footer>
+  
+        <p>Contact : <a href="mailto:studiopeinturefigurine@gmail.com">studiopeinturefigurine@gmail.com</a> - Téléphone : <a href="tel:+33775860837">07 75 86 08 37</a></p>
+        <p>&copy; 2024 Studio Peinture Figurine. Tous droits réservés. SIRET : 832 040 380 00020</p>
+    
+    <p><a href="conditions.html" onclick="loadPage('conditions.html'); return false;">Conditions générales de vente</a></p>
+
+    <!-- Bouton de retour en haut -->
+    <button id="scrollToTopBtn" title="Retour en haut" onclick="scrollToTop()">↑</button>
+          <script>
          // Obtenir le bouton
 let mybutton = document.getElementById("scrollToTopBtn");
 
@@ -61,65 +139,8 @@ function scrollToTop() {
             });
         }
     
-        // Fonction AJAX pour charger le contenu des pages
-        function loadPage(page) {
-            // Enlever l'ancien contenu et charger la nouvelle page
-            $("#contenu-principal").fadeOut(200, function() {
-                // Charger la nouvelle page dans le div #contenu-principal
-                $("#contenu-principal").load(page + " #contenu-principal", function() {
-                    // Rendre le contenu visible après qu'il soit chargé
-                    $("#contenu-principal").fadeIn(200);
-                });
-            });
-        }
-
-        $(document).ready(function() {
-            // Charger la page d'accueil par défaut
-            loadPage("index.html");
-        });
 
     </script>
-     
-</head>
-<body>
-<header>
-    <h1><img src="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png" alt="Studio Peinture Figurine " width="40" height="40">
-<a href="index.html" style="color: white; text-decoration: none;">Studio Peinture Figurine</a></h1>
-     </header>
-
-<nav>
-    <ul>
-        <li><a href="peinturecommission.html" onclick="loadPage('peinturecommission.html'); return false;">Peinture sur commission</a></li>
-        <li><a href="impression3d.html" onclick="loadPage('impression3d.html'); return false;">Impression 3D à la demande</a></li>
-        <li><a href="formation.html" onclick="loadPage('formation.html'); return false;">Formation</a></li>
-        <li><a href="simulateur_devis.html" onclick="loadPage('simulateur_devis.html'); return false;">Simulateur de devis</a></li>
-        <li><a href="galerie.html" onclick="loadPage('galerie.html'); return false;">Galerie</a></li>
-    </ul>
-</nav>
-
-<!-- Contenu principal qui change dynamiquement -->
-<div id="contenu-principal">
-        <h1>Transformez vos figurines en chefs-d'œuvre</h1>
-        <p>Bienvenue chez <span class="highlight">Studio Peinture Figurine</span>, votre partenaire pour la peinture et la personnalisation de figurines et décors. Nous sublimons vos modèles pour le jeu, l'exposition ou la vitrine grâce à notre expertise et à un souci du détail inégalé.</p>
-        <p>Nous proposons des <span class="highlight">prestations sur mesure</span>, adaptées à tous les niveaux de finition et à votre budget. De la préparation minutieuse à des techniques de peinture avancées, en passant par l'impression 3D de haute précision, notre studio s'engage à dépasser vos attentes.</p>
-        <ul>
-            <li>🎨 <strong>Services personnalisés</strong> : peinture, impression 3D, formations.</li>
-            <li>🛠️ <strong>Outils pratiques</strong> : devis en ligne, accompagnement sur mesure.</li>
-        </ul>
-        <p>Choisissez l'excellence pour vos figurines. Explorez nos offres et découvrez comment nous pouvons donner vie à vos projets.</p>
-  <div class="cta">
-       <a href="simulateur_devis.html" onclick="loadPage('simulateur_devis.html'); return false;" class="button">Demander une simulation</a>
-    </div></div>
-     <footer>
-  
-        <p>Contact : <a href="mailto:studiopeinturefigurine@gmail.com">studiopeinturefigurine@gmail.com</a> - Téléphone : <a href="tel:+33775860837">07 75 86 08 37</a></p>
-        <p>&copy; 2024 Studio Peinture Figurine. Tous droits réservés. SIRET : 832 040 380 00020</p>
-    
-    <p><a href="conditions.html" onclick="loadPage('conditions.html'); return false;">Conditions générales de vente</a></p>
-
-    <!-- Bouton de retour en haut -->
-    <button id="scrollToTopBtn" title="Retour en haut" onclick="scrollToTop()">↑</button>
-          
 </footer>
      </body>
 </html>

@@ -1,12 +1,11 @@
 /* Style général du corps de la page */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #2f8b4f;
-            color: #333;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
         .container {
             width: 90%;
             max-width: 1200px;

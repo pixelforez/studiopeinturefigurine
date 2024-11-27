@@ -67,7 +67,31 @@
         
         <!-- Affichage du total estimé -->
         <div id="total-estime">Total estimé : <?= number_format($total, 2, ',', ' ') ?> €</div>
-        <button type="submit" class="button">Demander un devis</button>
+
+         <button onclick="$('#formSection').toggle();" class="button">Demander un devis personnalisé</button>
+
+<section id="formSection" style="display:none;">
+    <h3>Formulaire de Contact</h3>
+    <form id="contactForm">
+        <label for="name">Nom :</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="prenom">Prénom :</label><br>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+        
+        <label for="email">Email :</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telephone">Téléphone :</label><br>
+        <input type="telephone" id="telephone" name="telephone" required><br><br>
+
+        <label for="message">Message :</label><br>
+        <textarea id="message" name="message" rows="6" required></textarea><br><br>
+
+        <input type="submit" value="Envoyer"  class="button">
+    </form>
+</section>
+        
     </form>
 </div>
 

@@ -120,6 +120,7 @@ footer a:hover {
     /* Ajustement du conteneur principal */
     #contenu-principal {
         width: 90%;
+        padding: 15px;
     }
 
     /* Réorganisation des éléments de navigation */

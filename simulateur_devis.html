@@ -11,30 +11,6 @@
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
 
- 
-     <script src="script.js"></script>
-    <form id="devisForm" method="post" action="envoyer_devis.php">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required onclick="updateTotal()"><br><br>
-
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" name="prenom" required onclick="updateTotal()"><br><br>
-
-        <label for="adresse">Adresse Postale :</label>
-        <input type="text" id="adresse" name="adresse" required onclick="updateTotal()"><br><br>
-
-        <label for="codePostal">Code Postal :</label>
-        <input type="text" id="codePostal" name="codePostal" required onclick="updateTotal()"><br><br>
-
-        <label for="ville">Ville :</label>
-        <input type="text" id="ville" name="ville" required onclick="updateTotal()"><br><br>
-
-        <label for="telephone">Téléphone :</label>
-        <input type="text" id="telephone" name="telephone" required onclick="updateTotal()"><br><br>
-
-        <label for="email">E-mail :</label>
-        <input type="email" id="email" name="email" required onclick="updateTotal()"><br><br>
-
         <label for="niveau">Niveau de Peinture :</label>
         <select id="niveau" name="niveau">
             <option value="niveau_1">Niveau 1 - Prêt pour le Tournoi</option>
@@ -60,7 +36,7 @@
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
         <button type="submit" onclick="updateTotal()">Voir Total</button>
-    </form>
+
         <script>
         // Tarifs en JavaScript
 const tarifs = {

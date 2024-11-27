@@ -20,6 +20,12 @@ header h1 a {
     text-decoration: none;
     font-weight: bold;
 }
+/* Style des titres */
+h1, h2, h3, h4, h5 {
+  color: var(--dark-green); /* Titres en vert foncé */
+  text-align: center; /* Titres centrés */
+    font-size: 16px;
+}
 
 header h1 a:hover {
     text-decoration: underline;
@@ -83,7 +89,7 @@ nav ul li a:hover {
     display: inline-block;
     background-color: #2f8b4f;
     color: white;
-    font-size: 8px;
+    font-size: 18px;
     padding: 0;
     text-align: center;
     text-decoration: none;

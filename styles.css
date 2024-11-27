@@ -7,7 +7,27 @@
         display: block;
         margin-bottom: 15px;
     }
-    
+    /* Tableau */
+  th, td {
+            padding: 0px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .check {
+            color: green;
+            font-weight: bold;
+        }
+        .cross {
+            color: red;
+            font-weight: bold;
+        }
 /* Style général du corps de la page */
 body {
     font-family: Arial, sans-serif;
@@ -199,6 +219,27 @@ li {
         display: block;
         margin-bottom: 15px;
     }
+    /* Tableau */
+  th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .check {
+            color: green;
+            font-weight: bold;
+        }
+        .cross {
+            color: red;
+            font-weight: bold;
+        }
     
 /* Style général du corps de la page */
 body {

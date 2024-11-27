@@ -22,6 +22,11 @@
         $(document).ready(function() {
             // Charger le contenu initial de la page peinture sur commission
             loadPage("peinturecommission.html");
+
+            // Charger un contenu spécifique lors du clic sur le bouton
+            $("#changer-contenu").click(function() {
+                loadPage("nouveau_contenu.html"); // Remplacez par le fichier ou page que vous souhaitez charger
+            });
         });
     </script>
 </head>
@@ -77,9 +82,11 @@
         Vous souhaitez connaître le coût exact de votre projet ? Utilisez notre <a href="simulateur_devis.html" class="button">Simulateur de devis</a> pour obtenir une estimation rapide et détaillée.
     </p>
 
-    <p>
-        Vous pouvez également <a href="contact.html">nous contacter</a> directement pour discuter de vos besoins et de votre projet. Nous serons ravis de vous aider à réaliser vos idées.
-    </p>
+    <!-- Bouton pour charger un autre contenu avec AJAX -->
+    <div style="text-align: center; margin-top: 20px;">
+        <button id="changer-contenu" style="padding: 10px 20px; font-size: 16px;">Voir un exemple de projet</button>
+    </div>
+
 </div>
 
 <footer>

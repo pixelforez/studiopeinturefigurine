@@ -64,6 +64,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             calculerTotal();
         };
     </script>
+        <script>
+        // Fonction pour faire disparaître et réapparaître le texte
+        function toggleTexte() {
+            var texte = document.getElementById("texte");
+            if (texte.style.display === "none") {
+                texte.style.display = "block"; // Réapparaître le texte
+            } else {
+                texte.style.display = "none"; // Disparaître le texte
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -91,12 +102,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label for="vehicule">Nombre de véhicules :</label>
         <input type="number" id="vehicule" name="vehicule" min="0" value="<?= isset($_POST['vehicule']) ? $_POST['vehicule'] : 0 ?>" onchange="calculerTotal()" onclick="calculerTotal()"><br>
         
-        <!-- Soumettre le formulaire -->
-        <input type="submit" value="Envoyer la demande de devis" class="button">
+                 <!-- Affichage du total estimé -->
+    <div id="total-estime">Total estimé : <?= number_format($total, 2, ',', ' ') ?> €</div>
+        <button onclick="toggleTexte()">Demander un devis</button>
+
+    <!-- Texte à afficher/masquer -->
+    <div id="texte">test</div>
+
+        
     </form>
 
-    <!-- Affichage du total estimé -->
-    <div id="total-estime">Total estimé : <?= number_format($total, 2, ',', ' ') ?> €</div>
 </div>
 
 </body>

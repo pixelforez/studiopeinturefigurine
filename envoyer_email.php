@@ -4,32 +4,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $adresse = $_POST['adresse'];
-    $email = $_POST['email'];
+    $codePostal = $_POST['codePostal'];
+    $ville = $_POST['ville'];
     $telephone = $_POST['telephone'];
-    $message = $_POST['message'];
+    $email = $_POST['email'];
+    $niveau = $_POST['niveau'];
+    $infanterie = $_POST['infanterie'];
+    $cavalerie = $_POST['cavalerie'];
+    $heros = $_POST['heros'];
+    $petitMonstre = $_POST['petitMonstre'];
+    $grosMonstre = $_POST['grosMonstre'];
+    $total = $_POST['total'];
 
-    // Destinataire de l'email
+    // Destinataire et sujet
     $to = "studiopeinturefigurine@gmail.com";
+    $subject = "Devis de Peinture - Formulaire";
 
-    // Sujet de l'email
-    $subject = "Message de $prenom $nom";
+    // Contenu du message
+    $message = "
+        <h3>Devis de Peinture</h3>
+        <p><strong>Nom :</strong> $nom</p>
+        <p><strong>Prénom :</strong> $prenom</p>
+        <p><strong>Adresse :</strong> $adresse, $codePostal $ville</p>
+        <p><strong>Téléphone :</strong> $telephone</p>
+        <p><strong>E-mail :</strong> $email</p>
+        <p><strong>Niveau de Peinture :</strong> $niveau</p>
+        <p><strong>Infanteries :</strong> $infanterie</p>
+        <p><strong>Cavaleries :</strong> $cavalerie</p>
+        <p><strong>Héros à Pied :</strong> $heros</p>
+        <p><strong>Petits Véhicules/Monstres :</strong> $petitMonstre</p>
+        <p><strong>Gros Véhicules/Monstres :</strong> $grosMonstre</p>
+        <p><strong>Total Estimé :</strong> $total €</p>
+    ";
 
-    // Contenu de l'email
-    $messageContent = "Nom: $nom\n";
-    $messageContent .= "Prénom: $prenom\n";
-    $messageContent .= "Adresse: $adresse\n";
-    $messageContent .= "Email: $email\n";
-    $messageContent .= "Téléphone: $telephone\n\n";
-    $messageContent .= "Message:\n$message";
-
-    // En-têtes de l'email
-    $headers = "From: $email";
-
-    // Envoi de l'email
-    if (mail($to, $subject, $messageContent, $headers)) {
-        echo "Votre message a été envoyé avec succès.";
-    } else {
-        echo "Erreur lors de l'envoi du message.";
-    }
-}
-?>
+    // En

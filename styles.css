@@ -232,3 +232,10 @@ tr:nth-child(even) {
 #scrollToTopBtn:hover {
     background-color: #267a38;
 }
+table {
+    width: auto;
+    border-collapse: collapse; /* Évite les espaces entre les bordures */
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+

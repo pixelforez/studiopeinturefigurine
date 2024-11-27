@@ -10,7 +10,7 @@
 <body>
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
-
+<form id="devisForm" method="POST">
         <label for="niveau">Niveau de Peinture :</label>
         <select id="niveau" name="niveau">
             <option value="niveau_1">Niveau 1 - Prêt pour le Tournoi</option>
@@ -36,7 +36,7 @@
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
         <button type="submit" onclick="updateTotal()">Voir Total</button>
-
+</form>
         <script>
         // Tarifs en JavaScript
 const tarifs = {

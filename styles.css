@@ -19,6 +19,7 @@ header h1 a {
     font-size: 36px;
     text-decoration: none;
     font-weight: bold;
+    text-align: center;
 }
 
 header h1 a:hover {

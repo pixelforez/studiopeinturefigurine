@@ -21,44 +21,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <script>
-        let mybutton = document.getElementById("scrollToTopBtn");
-
-        // Afficher le bouton quand l'utilisateur a défilé de 20px vers le bas
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        };
-
-        // Fonction pour faire défiler la page jusqu'en haut
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-    </script>
-    <script>
-        // Fonction AJAX pour charger le contenu des pages
-        function loadPage(page) {
-            // Enlever l'ancien contenu et charger la nouvelle page
-            $("#contenu-principal").fadeOut(200, function() {
-                // Charger la nouvelle page dans le div #contenu-principal
-                $("#contenu-principal").load(page + " #contenu-principal", function() {
-                    // Rendre le contenu visible après qu'il soit chargé
-                    $("#contenu-principal").fadeIn(200);
-                });
-            });
-        }
-
-        $(document).ready(function() {
-            // Charger la page d'accueil par défaut
-            loadPage("index.html");
-        });
-    </script>
+     <script src="https://pf-peinturefigurine.github.io/studiopeinturefigurine/script.js"></script>
+     
 </head>
 <body>
 <header>

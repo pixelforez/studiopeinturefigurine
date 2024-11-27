@@ -1,0 +1,7 @@
+{
+    "name": "vendor/package",
+    "description": "Description de votre projet",
+    "require": {
+        "php": ">=7.4"
+    }
+}

@@ -3,55 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulateur de Devis</title>
+    <title>Calcul du Nombre de Figurines</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Prix par niveau pour chaque type
+        const prixInfanterie = [8, 13, 25];  // niv1, niv2, niv3
+        const prixPersonnage = [12, 20, 40];
+        const prixMonstre = [30, 50, 100];
+        const prixVehicule = [60, 80, 150];
+
+        // Fonction de calcul dynamique
+        function calculerTotal() {
+            // Récupérer les valeurs du formulaire
+            const niveau = document.getElementById("niveau").value - 1; // Niveau 1 -> index 0, Niveau 2 -> index 1, Niveau 3 -> index 2
+            const infanterie = parseInt(document.getElementById("infanterie").value) || 0;
+            const personnage = parseInt(document.getElementById("personnage").value) || 0;
+            const monstre = parseInt(document.getElementById("monstre").value) || 0;
+            const vehicule = parseInt(document.getElementById("vehicule").value) || 0;
+
+            // Calcul du total estimé
+            const total = (
+                infanterie * prixInfanterie[niveau] + 
+                personnage * prixPersonnage[niveau] + 
+                monstre * prixMonstre[niveau] + 
+                vehicule * prixVehicule[niveau]
+            );
+
+            // Affichage du total estimé
+            document.getElementById("total-estime").innerText = "Total estimé : " + total.toFixed(2) + " €";
+        }
+        
+        // Calcul au chargement de la page
+        window.onload = function() {
+            calculerTotal();
+        };
+    </script>
 </head>
 <body>
 
 <div id="contenu-principal">
-    <h2>Simulateur de Devis</h2>
-    <form method="POST" action="traitement_devis.php">
-        <!-- Informations personnelles -->
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" value="" required><br><br>
-
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" name="prenom" value="" required><br><br>
-
-        <label for="adresse">Adresse :</label>
-        <input type="text" id="adresse" name="adresse" value="" required><br><br>
-
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" value="" required><br><br>
-
-        <label for="telephone">Téléphone :</label>
-        <input type="tel" id="telephone" name="telephone" value="" required><br><br>
-
-        <!-- Choix du niveau et quantités -->
+    <h2>Calcul du Nombre de Figurines</h2>
+    <form id="devis-form">
+        <!-- Choix du niveau de peinture -->
         <label for="niveau">Niveau de Peinture :</label>
-        <select name="niveau" id="niveau" onchange="this.form.submit()">
+        <select name="niveau" id="niveau" onchange="calculerTotal()">
             <option value="1">Niveau 1 - Prêt pour le Tournoi</option>
             <option value="2">Niveau 2 - TableTop simple et efficace</option>
             <option value="3">Niveau 3 - TableTop de Qualité supérieur</option>
-        </select><br><br>
+        </select><br>
 
+        <!-- Quantités de figurines -->
         <label for="infanterie">Nombre d'infanterie :</label>
-        <input type="number" id="infanterie" name="infanterie" min="0" value="0" onchange="this.form.submit()"><br><br>
+        <input type="number" id="infanterie" name="infanterie" min="0" value="0" onchange="calculerTotal()"><br>
 
         <label for="personnage">Nombre de personnages :</label>
-        <input type="number" id="personnage" name="personnage" min="0" value="0" onchange="this.form.submit()"><br><br>
+        <input type="number" id="personnage" name="personnage" min="0" value="0" onchange="calculerTotal()"><br>
 
         <label for="monstre">Nombre de monstres :</label>
-        <input type="number" id="monstre" name="monstre" min="0" value="0" onchange="this.form.submit()"><br><br>
+        <input type="number" id="monstre" name="monstre" min="0" value="0" onchange="calculerTotal()"><br>
 
         <label for="vehicule">Nombre de véhicules :</label>
-        <input type="number" id="vehicule" name="vehicule" min="0" value="0" onchange="this.form.submit()"><br><br>
-
-        <!-- Affichage du total estimé -->
-        <div id="total-estime">Total estimé : 0.00 €</div><br><br>
-
-        <input type="submit" value="Envoyer la demande de devis" class="button">
+        <input type="number" id="vehicule" name="vehicule" min="0" value="0" onchange="calculerTotal()"><br>
     </form>
+
+    <!-- Affichage du total estimé -->
+    <div id="total-estime">Total estimé : 0.00 €</div>
 </div>
 
 </body>

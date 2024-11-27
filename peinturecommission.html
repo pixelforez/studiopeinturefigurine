@@ -3,87 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Peinture Figurine - Studio de Peinture pour Wargames et Modélisme">
-    <meta property="og:description" content="Transformez vos figurines en œuvres d'art avec notre service de peinture sur figurines. Services personnalisés pour Warhammer, Age of Sigmar, et plus.">
-    <meta property="og:image" content="https://peinturefigurine.fr/favicon.png">
-    <meta property="og:url" content="https://peinturefigurine.fr/peinturecommission.html">
-    <meta property="og:type" content="website">
-
-    <!-- Meta description for SEO -->
-    <meta name="description" content="Peinture sur figurines et décors de haute qualité pour jeux de figurines, wargames et modélisme. Services de peinture sur mesure et impression 3D à la demande.">
-
-    <!-- Page Title -->
-    <title>Peinture sur Commission - Studio Peinture Figurine</title>
-
-    <!-- JSON-LD structured data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Entreprise",
-      "name": "Studio Peinture Figurine",
-      "url": "https://peinturefigurine.fr",
-      "logo": "https://peinturefigurine.fr/favicon.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "07 75 86 08 37",
-        "contactType": "Service de Peinture et Impression",
-        "areaServed": "FR",
-        "availableLanguage": "fr"
-      },
-      "sameAs": [
-        "https://www.facebook.com/peinturefigurine.fr",
-        "https://www.instagram.com/peinturefigurine.fr"
-      ]
-    }
-    </script>
-
-    <!-- Including jQuery for AJAX -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-        // AJAX Request to load dynamic content
-        function loadContent(section) {
-            $.ajax({
-                url: section + ".html", // Assume the sections are in separate HTML files
-                type: "GET",
-                success: function(response) {
-                    $("#" + section).html(response);
-                },
-                error: function() {
-                    $("#" + section).html("<p>Une erreur est survenue lors du chargement du contenu.</p>");
-                }
-            });
-        }
-
-        // Initialize the first section on page load
-        $(document).ready(function() {
-            loadContent("service"); // Load 'service' section by default
-        });
-    </script>
+    <title>Demande de Peinture sur Figurines</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+
 <header>
-    <h1>Transformez vos Figurines en Œuvres d'Art</h1>
-    <p>Confiez-nous la peinture de vos figurines et décors pour un résultat digne de votre passion !</p>
+    <h2>Demande de Peinture sur Figurines</h2>
+    <p>Transformez vos figurines en véritables œuvres d'art grâce à notre service de peinture sur mesure.</p>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="javascript:void(0);" onclick="loadContent('service')">Nos Services</a></li>
-        <li><a href="javascript:void(0);" onclick="loadContent('processus')">Notre Processus</a></li>
-        <li><a href="javascript:void(0);" onclick="loadContent('contact')">Contact</a></li>
-    </ul>
-</nav>
+<div id="contenu-principal">
+    <h2>Nos Niveaux de Peinture</h2>
+    <p>Nous proposons trois niveaux de peinture adaptés à vos besoins :</p>
 
-<section id="service">
-    <!-- Dynamic content will be loaded here -->
-    <h2>Nos Services de Peinture</h2>
-    <p>Nous proposons des services de peinture sur figurines pour les wargames, du tabletop au niveau vitrine, adaptés à vos besoins et à votre budget.</p>
-
-    <h3>Niveaux de Peinture</h3>
+    <h3>Niveau de Préparation</h3>
     <table>
         <tr>
             <th>Préparation de la Pièce</th>
@@ -111,36 +46,30 @@
             <td><strong>Niv. 3</strong> : Freehand + battle damage + weathering</td>
         </tr>
     </table>
-    
-    <button onclick="loadContent('contact')">Contactez-nous pour un devis</button>
+
+    <h3>Contactez-nous pour un Devis</h3>
+    <button onclick="$('#formSection').toggle();">Demander un devis personnalisé</button>
 </section>
 
-<section id="processus">
-    <!-- Dynamic content will be loaded here -->
-    <p>Chargement du processus...</p>
-</section>
-
-<section id="contact">
-    <!-- Dynamic content will be loaded here -->
-    <h2>Contactez-nous</h2>
-    <form action="mailto:studiopeinturefigurine@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Nom:</label><br>
+<section id="formSection" style="display:none;">
+    <h3>Formulaire de Contact</h3>
+    <form id="contactForm">
+        <label for="name">Nom et Prénom :</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email">Email:</label><br>
+        <label for="email">Email :</label><br>
         <input type="email" id="email" name="email" required><br><br>
 
-        <label for="message">Message:</label><br>
+        <label for="message">Message :</label><br>
         <textarea id="message" name="message" rows="4" required></textarea><br><br>
 
         <input type="submit" value="Envoyer">
     </form>
-</section>
 
-<footer>
-    <p>&copy; 2024 Studio Peinture Figurine - Tous droits réservés</p>
-    <p>Contactez-nous : <a href="mailto:studiopeinturefigurine@gmail.com">studiopeinturefigurine@gmail.com</a> | Tél: <a href="tel:+33658708056">06 58 70 80 56</a> | SIRET: 123 456 789 00012</p>
-</footer>
+    <div id="formFeedback"></div>
+</div>
 
 </body>
 </html>
+
+

@@ -204,6 +204,27 @@ footer a:hover {
 .scroll-to-top:hover {
   transform: scale(1.1);
 }
+/* Style du bouton */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2f8b4f;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Masqué au départ */
+    z-index: 200;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Apparence du bouton au survol */
+#scrollToTopBtn:hover {
+    background-color: #267a38;
+}
 ul {
   list-style-type: none; /* Supprime les puces */
   padding: 0; /* Enlève l'espace intérieur */
@@ -413,7 +434,7 @@ footer a:hover {
     border-radius: 50%;
     cursor: pointer;
     display: none; /* Masqué au départ */
-    z-index: 500;
+    z-index: 200;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 

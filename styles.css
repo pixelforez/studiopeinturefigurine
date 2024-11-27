@@ -5,6 +5,7 @@
   --black: #000000; /* Couleur noire */
 }
 
+
 /* Global styles */
 body {
   background-color: var(--white); /* Fond blanc */
@@ -19,6 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+   text-align: center; 
 }
 
 /* Menu, head et footer */

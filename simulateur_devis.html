@@ -80,19 +80,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <!-- Quantités de figurines -->
         <label for="infanterie">Nombre d'infanterie :</label>
-        <input type="number" id="infanterie" name="infanterie" min="0" value="<?= isset($_POST['infanterie']) ? $_POST['infanterie'] : 0 ?>" onchange="calculerTotal()"><br>
+        <input type="number" id="infanterie" name="infanterie" min="0" value="<?= isset($_POST['infanterie']) ? $_POST['infanterie'] : 0 ?>" onchange="calculerTotal()" nclick="calculerTotal()"><br>
 
         <label for="personnage">Nombre de personnages :</label>
-        <input type="number" id="personnage" name="personnage" min="0" value="<?= isset($_POST['personnage']) ? $_POST['personnage'] : 0 ?>" onchange="calculerTotal()"><br>
+        <input type="number" id="personnage" name="personnage" min="0" value="<?= isset($_POST['personnage']) ? $_POST['personnage'] : 0 ?>" onchange="calculerTotal()" nclick="calculerTotal()"><br>
 
         <label for="monstre">Nombre de monstres :</label>
-        <input type="number" id="monstre" name="monstre" min="0" value="<?= isset($_POST['monstre']) ? $_POST['monstre'] : 0 ?>" onchange="calculerTotal()"><br>
+        <input type="number" id="monstre" name="monstre" min="0" value="<?= isset($_POST['monstre']) ? $_POST['monstre'] : 0 ?>" onchange="calculerTotal()" nclick="calculerTotal()"><br>
 
         <label for="vehicule">Nombre de véhicules :</label>
-        <input type="number" id="vehicule" name="vehicule" min="0" value="<?= isset($_POST['vehicule']) ? $_POST['vehicule'] : 0 ?>" onchange="calculerTotal()"><br>
+        <input type="number" id="vehicule" name="vehicule" min="0" value="<?= isset($_POST['vehicule']) ? $_POST['vehicule'] : 0 ?>" onchange="calculerTotal()" onclick="calculerTotal()"><br>
         
         <!-- Soumettre le formulaire -->
-        <input type="submit" value="Envoyer la demande de devis">
+        <input type="submit" value="Envoyer la demande de devis" class="button">
     </form>
 
     <!-- Affichage du total estimé -->

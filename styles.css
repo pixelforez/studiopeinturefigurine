@@ -1,7 +1,7 @@
 /* Responsive: Formulaire sur mobile */
 @media screen and (max-width: 768px) {
     #contenu-principal {
-        width: 100%;
+        width: 80%;
     }
     nav ul li {
         display: block;
@@ -70,7 +70,7 @@ nav {
 
 nav ul {
     list-style: none;
-   padding: 30px;
+   padding: 0px;
     margin: 0;
 }
 
@@ -151,7 +151,7 @@ footer a:hover {
 
     nav ul li {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
          flex-direction: row; /* Les éléments du menu restent sur une ligne */
     flex-wrap: nowrap; /* Eviter le retour à la ligne sur petits écrans */
     justify-content: space-between; /* Répartir l'espace entre les éléments */
@@ -216,7 +216,7 @@ li {
     }
     nav ul li {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
     /* Tableau */
   th, td {
@@ -282,7 +282,7 @@ nav {
 
 nav ul {
     list-style: none;
-    padding: 30px;
+    padding: 0px;
     margin: 0;
 }
 
@@ -363,7 +363,7 @@ footer a:hover {
 
     nav ul li {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
          flex-direction: row; /* Les éléments du menu restent sur une ligne */
     flex-wrap: nowrap; /* Eviter le retour à la ligne sur petits écrans */
     justify-content: space-between; /* Répartir l'espace entre les éléments */

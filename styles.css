@@ -10,7 +10,7 @@ body {
 /* Styles du header */
 header {
     background-color: #2f8b4f; /* Vert foncé */
-    padding: 20px;
+    padding: 15px; /* Moins de padding sur petits écrans */
     text-align: center;
 }
 
@@ -19,6 +19,7 @@ header h1 a {
     text-decoration: none;
     font-weight: bold;
     text-align: center;
+    font-size: 20px; /* Taille de police plus petite */
 }
 
 header h1 a:hover {
@@ -45,6 +46,8 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
+    display: inline-block;
 }
 
 nav ul li a:hover {
@@ -53,11 +56,11 @@ nav ul li a:hover {
 
 /* Conteneur principal */
 #contenu-principal {
-    width: 60%;
+    width: 80%; /* Augmenter la largeur pour les petits écrans */
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 15px; /* Moins de padding sur petits écrans */
     text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 
@@ -76,11 +79,13 @@ nav ul li a:hover {
     display: inline-block;
     background-color: #2f8b4f;
     color: white;
-    font-size: 18px;
+    font-size: 16px; /* Réduire la taille des boutons */
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
+    padding: 10px 15px;
     transition: background-color 0.3s ease;
+    width: 100%; /* S'étend sur toute la largeur des petits écrans */
 }
 
 .button:hover {
@@ -92,6 +97,7 @@ footer {
     background-color: #2f8b4f;
     color: white;
     text-align: center;
+    padding: 10px; /* Moins de padding */
 }
 
 footer a {
@@ -105,30 +111,25 @@ footer a:hover {
 }
 
 /* Responsive: Formulaire et autres éléments sur mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     /* Ajustement du conteneur principal */
     #contenu-principal {
-        width: 60%;
+        width: 90%; /* Largeur adaptée pour les petits écrans */
+        padding: 10px; /* Moins de padding */
     }
 
     /* Réorganisation des éléments de navigation */
-    nav ul {
-        padding: 0;
-    }
-
     nav ul li {
         display: block;
-        text-align: center;
-    }
-
-    /* Ajustement des titres */
-    #contenu-principal h2 {
-    }
-
-    /* Boutons plus adaptés aux petits écrans */
-    .button {
         width: 100%;
-        font-size: 20px;
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    /* Ajustement des boutons */
+    .button {
+        font-size: 18px;
+        padding: 12px 15px;
     }
 
     /* Formulaire de contact : ajuster la largeur et espacement des champs */
@@ -137,6 +138,7 @@ footer a:hover {
         padding: 12px;
         border: 1px solid #ddd;
         border-radius: 5px;
+        font-size: 14px; /* Réduire la taille des champs sur petits écrans */
     }
 
     form input[type="submit"] {
@@ -193,7 +195,7 @@ tr:nth-child(even) {
     display: none;
 }
 
-/* Style du bouton */
+/* Style du bouton de retour en haut */
 #scrollToTopBtn {
     position: fixed;
     bottom: 20px;
@@ -214,9 +216,10 @@ tr:nth-child(even) {
 #scrollToTopBtn:hover {
     background-color: #267a38;
 }
+
 table {
     border-collapse: collapse; /* Évite les espaces entre les bordures */
     margin: 20px 0;
     font-family: Arial, sans-serif;
+    width: 100%; /* Ajuste la table à 100% de la largeur disponible */
 }
-

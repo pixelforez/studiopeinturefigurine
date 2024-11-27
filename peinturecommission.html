@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Peinture Figurine - Studio de Peinture pour Wargames et Modélisme">
     <meta property="og:description" content="Transformez vos figurines en œuvres d'art avec notre service de peinture sur figurines. Services personnalisés pour Warhammer, Age of Sigmar, et plus.">
@@ -39,6 +39,29 @@
     }
     </script>
 
+    <!-- Including jQuery for AJAX -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // AJAX Request to load dynamic content
+        function loadContent(section) {
+            $.ajax({
+                url: section + ".html", // Assume the sections are in separate HTML files
+                type: "GET",
+                success: function(response) {
+                    $("#" + section).html(response);
+                },
+                error: function() {
+                    $("#" + section).html("<p>Une erreur est survenue lors du chargement du contenu.</p>");
+                }
+            });
+        }
+
+        // Initialize the first section on page load
+        $(document).ready(function() {
+            loadContent("service"); // Load 'service' section by default
+        });
+    </script>
 </head>
 <body>
 
@@ -47,39 +70,76 @@
     <p>Confiez-nous la peinture de vos figurines et décors pour un résultat digne de votre passion !</p>
 </header>
 
-<section id="service">
-    <h2>Notre Expertise à Votre Service</h2>
-    <p>Que vous soyez un joueur de **Warhammer 40K**, un collectionneur ou un passionné de **modélisme**, notre studio de peinture sur figurines est spécialisé dans la transformation de vos pièces en œuvres d'art. De la peinture tabletop à la qualité vitrine, chaque figurine est minutieusement préparée et peinte selon vos préférences.</p>
-    <p>Notre objectif : vous offrir des créations exceptionnelles, prêtes à briller sur vos tables de jeu ou dans vos vitrines. Nous prenons soin de chaque détail, de la **préparation à la finition**, pour un rendu à la hauteur de vos attentes.</p>
-</section>
-
-<section id="services">
-    <h2>Nos Services</h2>
+<nav>
     <ul>
-        <li><strong>Peinture Tabletop</strong> : Idéal pour les parties avec des figurines prêtes à l'emploi.</li>
-        <li><strong>Peinture Vitrine</strong> : Pour une finition impeccable, digne des plus grandes collections.</li>
-        <li><strong>Peinture Personnalisée</strong> : Vous choisissez les couleurs et le style, nous les réalisons pour vous.</li>
-        <li><strong>Impression 3D sur Mesure</strong> : Obtenez des figurines et décors uniques à partir de vos fichiers STL, avec une qualité de détail exceptionnelle.</li>
+        <li><a href="javascript:void(0);" onclick="loadContent('service')">Nos Services</a></li>
+        <li><a href="javascript:void(0);" onclick="loadContent('processus')">Notre Processus</a></li>
+        <li><a href="javascript:void(0);" onclick="loadContent('contact')">Contact</a></li>
     </ul>
+</nav>
+
+<section id="service">
+    <!-- Dynamic content will be loaded here -->
+    <h2>Nos Services de Peinture</h2>
+    <p>Nous proposons des services de peinture sur figurines pour les wargames, du tabletop au niveau vitrine, adaptés à vos besoins et à votre budget.</p>
+
+    <h3>Niveaux de Peinture</h3>
+    <table>
+        <tr>
+            <th>Préparation de la Pièce</th>
+            <th>Soclage</th>
+            <th>Peinture</th>
+        </tr>
+        <tr>
+            <td><strong>Niv. 0</strong> : Retrait des carottes d'injection plastique</td>
+            <td><strong>Niv. 0</strong> : Texture</td>
+            <td><strong>Niv. 0</strong> : Préparation + couleurs de base</td>
+        </tr>
+        <tr>
+            <td><strong>Niv. 1</strong> : Suppression des lignes de moule</td>
+            <td><strong>Niv. 1</strong> : Ombrage + éclairci</td>
+            <td><strong>Niv. 1</strong> : Préparation + éclaircis + ombrage</td>
+        </tr>
+        <tr>
+            <td><strong>Niv. 2</strong> : Jointures et trous bouchés</td>
+            <td><strong>Niv. 2</strong> : Herbes synthétiques + impression pour socle</td>
+            <td><strong>Niv. 2</strong> : Préparation + éclaircis multiples + ombrages multiples + détails + lining + glacis</td>
+        </tr>
+        <tr>
+            <td><strong>Niv. 3</strong> : -</td>
+            <td><strong>Niv. 3</strong> : -</td>
+            <td><strong>Niv. 3</strong> : Freehand + battle damage + weathering</td>
+        </tr>
+    </table>
+    
+    <button onclick="loadContent('contact')">Contactez-nous pour un devis</button>
 </section>
 
 <section id="processus">
-    <h2>Comment Ça Marche ?</h2>
-    <ol>
-        <li><strong>Devis Personnalisé</strong> : Décrivez vos besoins, et nous vous fournissons un devis précis en fonction de la taille et du type de figurine.</li>
-        <li><strong>Réservation et Démarrage</strong> : Un acompte de 20% vous permet de réserver un créneau pour votre projet.</li>
-        <li><strong>Suivi et Livraison</strong> : Vous recevez des photos régulières de l'avancement, et une fois terminé, nous vous envoyons vos figurines par Colissimo ou Mondial Relay.</li>
-    </ol>
+    <!-- Dynamic content will be loaded here -->
+    <p>Chargement du processus...</p>
 </section>
 
 <section id="contact">
-    <h2>Prêt à Donner Vie à Vos Projets ?</h2>
-    <p>Contactez-nous dès aujourd'hui pour obtenir un devis personnalisé et discuter de vos besoins. Nous sommes là pour rendre vos figurines exceptionnelles !</p>
-    <p><strong>Contact : </strong><a href="mailto:studiopeinturefigurine@gmail.com">studiopeinturefigurine@gmail.com</a> | Téléphone : 07 75 86 08 37</p>
+    <!-- Dynamic content will be loaded here -->
+    <h2>Contactez-nous</h2>
+    <form action="mailto:studiopeinturefigurine@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Nom:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Envoyer">
+    </form>
 </section>
 
 <footer>
     <p>&copy; 2024 Studio Peinture Figurine - Tous droits réservés</p>
+    <p>Contactez-nous : <a href="mailto:studiopeinturefigurine@gmail.com">studiopeinturefigurine@gmail.com</a> | Tél: <a href="tel:+33658708056">06 58 70 80 56</a> | SIRET: 123 456 789 00012</p>
 </footer>
 
 </body>

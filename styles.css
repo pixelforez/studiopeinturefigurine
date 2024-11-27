@@ -211,7 +211,6 @@ li {
 }
 }
 
-@media screen  {
     #contenu-principal {
         width: 100%;
     }
@@ -421,5 +420,4 @@ l {
 
 li {
   margin-bottom: 0px; /* Optionnel : espace entre les éléments de la liste */
-}
 }

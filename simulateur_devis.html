@@ -32,6 +32,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Calcul du Nombre de Figurines</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Fonction AJAX pour charger le contenu des pages
+        function loadPage(page) {
+            // Enlever l'ancien contenu et charger la nouvelle page
+            $("#contenu-principal").fadeOut(200, function() {
+                // Charger la nouvelle page dans le div #contenu-principal
+                $("#contenu-principal").load(page + " #contenu-principal", function() {
+                    // Rendre le contenu visible après qu'il soit chargé
+                    $("#contenu-principal").fadeIn(200);
+                });
+            });
+        }
+
+        $(document).ready(function() {
+            // Charger la page d'accueil par défaut
+            loadPage("index.html");
+        });
+    </script>
     <script>
         // Prix par niveau pour chaque type
         const prixInfanterie = [8, 13, 25];  // niv1, niv2, niv3
@@ -110,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Texte à afficher/masquer -->
     <div id="texte">
 
-        <p></p>FORMULAIRE</p>
+<div id="contenu-principal"><p>FORMULAIRE</p></div>
     </div>
 
         

@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Fonction AJAX pour charger le contenu des pages
+        function loadPage(page) {
+            // Enlever l'ancien contenu et charger la nouvelle page
+            $("#contenu-principal").fadeOut(200, function() {
+                $("#contenu-principal").load(page + " #contenu-principal", function() {
+                    // Rendre le contenu visible après qu'il soit chargé
+                    $("#contenu-principal").fadeIn(200);
+                });
+            });
+        }
+
+        $(document).ready(function() {
+            // Charger le contenu initial de la page peinture sur commission
+            loadPage("peinturecommission.html");
+        });
+    </script>
 </head>
 <body>
 
@@ -24,7 +41,7 @@
     </ul>
 </nav>
 
-<!-- Contenu principal -->
+<!-- Contenu principal qui changera dynamiquement -->
 <div id="contenu-principal">
     <h2>Peinture sur Commission</h2>
     

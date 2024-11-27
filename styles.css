@@ -1,7 +1,7 @@
 /* Responsive: Formulaire sur mobile */
 @media screen and (max-width: 768px) {
     #contenu-principal {
-        width: 90%;
+        width: 100%;
     }
     nav ul li {
         display: block;
@@ -213,7 +213,7 @@ li {
 
 @media screen  {
     #contenu-principal {
-        width: 90%;
+        width: 100%;
     }
     nav ul li {
         display: block;

@@ -5,94 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulateur de devis</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        // Prix par niveau pour chaque type
-        const prixInfanterie = [8, 13, 25];  // niv1, niv2, niv3
-        const prixPersonnage = [12, 20, 40];
-        const prixMonstre = [30, 50, 100];
-        const prixVehicule = [60, 80, 150];
-
-        // Fonction de calcul dynamique
-        function calculerTotal() {
-            // Récupérer les valeurs du formulaire
-            const niveau = document.getElementById("niveau").value - 1; // Niveau 1 -> index 0, Niveau 2 -> index 1, Niveau 3 -> index 2
-            const infanterie = parseInt(document.getElementById("infanterie").value) || 0;
-            const personnage = parseInt(document.getElementById("personnage").value) || 0;
-            const monstre = parseInt(document.getElementById("monstre").value) || 0;
-            const vehicule = parseInt(document.getElementById("vehicule").value) || 0;
-
-            // Calcul du total estimé
-            const total = (
-                infanterie * prixInfanterie[niveau] + 
-                personnage * prixPersonnage[niveau] + 
-                monstre * prixMonstre[niveau] + 
-                vehicule * prixVehicule[niveau]
-            );
-
-            // Affichage du total estimé
-            document.getElementById("total-estime").innerText = "Total estimé : " + total.toFixed(2) + " €";
-        }
-        
-        // Calcul au chargement de la page
-        window.onload = function() {
-            calculerTotal();
-        };
-    </script>
 </head>
 <body>
 
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
-      <form id="email-form" method="POST" action="envoyer_email.php">
-    <form id="devis-form" method="POST" action="calcul.php">
-        <!-- Choix du niveau de peinture -->
-        <label for="niveau">Niveau de Peinture :</label>
-        <select name="niveau" id="niveau" onchange="calculerTotal()">
-            <option value="1" <?= isset($niveau) && $niveau == 1 ? 'selected' : '' ?>>Niveau 1 - Prêt pour le Tournoi</option>
-            <option value="2" <?= isset($niveau) && $niveau == 2 ? 'selected' : '' ?>>Niveau 2 - TableTop simple et efficace</option>
-            <option value="3" <?= isset($niveau) && $niveau == 3 ? 'selected' : '' ?>>Niveau 3 - TableTop de Qualité supérieur</option>
-        </select><br>
 
-        <!-- Quantités de figurines -->
-        <label for="infanterie">Nombre d'infanterie :</label>
-        <input type="number" id="infanterie" name="infanterie" min="0" value="<?= isset($_POST['infanterie']) ? $_POST['infanterie'] : 0 ?>" onchange="calculerTotal()"><br>
+    <form id="devisForm">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br><br>
 
-        <label for="personnage">Nombre de personnages :</label>
-        <input type="number" id="personnage" name="personnage" min="0" value="<?= isset($_POST['personnage']) ? $_POST['personnage'] : 0 ?>" onchange="calculerTotal()"><br>
-
-        <label for="monstre">Nombre de monstres :</label>
-        <input type="number" id="monstre" name="monstre" min="0" value="<?= isset($_POST['monstre']) ? $_POST['monstre'] : 0 ?>" onchange="calculerTotal()"><br>
-
-        <label for="vehicule">Nombre de véhicules :</label>
-        <input type="number" id="vehicule" name="vehicule" min="0" value="<?= isset($_POST['vehicule']) ? $_POST['vehicule'] : 0 ?>" onchange="calculerTotal()"><br>
-        
-        <!-- Affichage du total estimé -->
-        <div id="total-estime">Total estimé : <?= number_format($total, 2, ',', ' ') ?> €</div>
-
-         <button onclick="$('#formSection').toggle();" class="button">Demander un devis personnalisé</button>
-
-<section id="formSection" style="display:none;">
-    <h3>Formulaire de Contact</h3>
-        <label for="name">Nom :</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="prenom">Prénom :</label><br>
+        <label for="prenom">Prénom :</label>
         <input type="text" id="prenom" name="prenom" required><br><br>
-        
-        <label for="email">Email :</label><br>
+
+        <label for="adresse">Adresse Postale :</label>
+        <input type="text" id="adresse" name="adresse" required><br><br>
+
+        <label for="codePostal">Code Postal :</label>
+        <input type="text" id="codePostal" name="codePostal" required><br><br>
+
+        <label for="ville">Ville :</label>
+        <input type="text" id="ville" name="ville" required><br><br>
+
+        <label for="telephone">Téléphone :</label>
+        <input type="text" id="telephone" name="telephone" required><br><br>
+
+        <label for="email">E-mail :</label>
         <input type="email" id="email" name="email" required><br><br>
 
-        <label for="telephone">Téléphone :</label><br>
-        <input type="telephone" id="telephone" name="telephone" required><br><br>
+        <label for="niveau">Niveau de Peinture :</label>
+        <select id="niveau" name="niveau">
+            <option value="niveau_1">Niveau 1</option>
+            <option value="niveau_2">Niveau 2</option>
+            <option value="niveau_3">Niveau 3</option>
+        </select><br><br>
 
-        <label for="message">Message :</label><br>
-        <textarea id="message" name="message" rows="6" required></textarea><br><br>
+        <label for="infanterie">Nombre d'Infanteries :</label>
+        <input type="number" id="infanterie" name="infanterie" min="0" value="0"><br><br>
 
-        <input type="submit" value="Envoyer"  class="button">
+        <label for="cavalerie">Nombre de Cavaleries :</label>
+        <input type="number" id="cavalerie" name="cavalerie" min="0" value="0"><br><br>
+
+        <label for="heros">Nombre de Héros à Pied :</label>
+        <input type="number" id="heros" name="heros" min="0" value="0"><br><br>
+
+        <label for="petitMonstre">Nombre de Petits Véhicules/Monstres :</label>
+        <input type="number" id="petitMonstre" name="petitMonstre" min="0" value="0"><br><br>
+
+        <label for="grosMonstre">Nombre de Gros Véhicules/Monstres :</label>
+        <input type="number" id="grosMonstre" name="grosMonstre" min="0" value="0"><br><br>
+
+        <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
     </form>
-</section>
-        
-    </form>
+
+    <script>
+        // Tarifs en JavaScript
+        const tarifs = {
+            "infanterie": { "niveau_1": 8.00, "niveau_2": 13.00, "niveau_3": 25.00 },
+            "cavalerie_lourde": { "niveau_1": 11.00, "niveau_2": 18.00, "niveau_3": 35.00 },
+            "heros_a_pied": { "niveau_1": 12.00, "niveau_2": 20.00, "niveau_3": 40.00 },
+            "petit_vehicule_monstre": { "niveau_1": 15.00, "niveau_2": 25.00, "niveau_3": 50.00 },
+            "gros_vehicule_monstre": { "niveau_1": 50.00, "niveau_2": 75.00, "niveau_3": 150.00 }
+        };
+
+        // Fonction de mise à jour du total
+        function updateTotal() {
+            const niveau = document.getElementById("niveau").value;
+            const infanterie = parseInt(document.getElementById("infanterie").value) || 0;
+            const cavalerie = parseInt(document.getElementById("cavalerie").value) || 0;
+            const heros = parseInt(document.getElementById("heros").value) || 0;
+            const petitMonstre = parseInt(document.getElementById("petitMonstre").value) || 0;
+            const grosMonstre = parseInt(document.getElementById("grosMonstre").value) || 0;
+
+            const total = 
+                (tarifs.infanterie[niveau] * infanterie) +
+                (tarifs.cavalerie_lourde[niveau] * cavalerie) +
+                (tarifs.heros_a_pied[niveau] * heros) +
+                (tarifs.petit_vehicule_monstre[niveau] * petitMonstre) +
+                (tarifs.gros_vehicule_monstre[niveau] * grosMonstre);
+
+            document.getElementById("total").textContent = total.toFixed(2);
+        }
+
+        // Écoute des événements pour mettre à jour dynamiquement
+        document.getElementById("devisForm").addEventListener("input", updateTotal);
+    </script>
+
 </div>
 
 </body>

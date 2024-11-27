@@ -1,35 +1,9 @@
-<?php
-// Prix par niveau pour chaque type
-$prixInfanterie = [8, 13, 25];  // niv1, niv2, niv3
-$prixPersonnage = [12, 20, 40];
-$prixMonstre = [30, 50, 100];
-$prixVehicule = [60, 80, 150];
-
-// Calcul PHP (au cas où on veut valider côté serveur ou lors de l'envoi du formulaire)
-$total = 0;
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $niveau = isset($_POST['niveau']) ? $_POST['niveau'] : 1;
-    $infanterie = isset($_POST['infanterie']) ? (int)$_POST['infanterie'] : 0;
-    $personnage = isset($_POST['personnage']) ? (int)$_POST['personnage'] : 0;
-    $monstre = isset($_POST['monstre']) ? (int)$_POST['monstre'] : 0;
-    $vehicule = isset($_POST['vehicule']) ? (int)$_POST['vehicule'] : 0;
-
-    // Calcul du total estimé
-    $total = (
-        $infanterie * $prixInfanterie[$niveau - 1] + 
-        $personnage * $prixPersonnage[$niveau - 1] + 
-        $monstre * $prixMonstre[$niveau - 1] + 
-        $vehicule * $prixVehicule[$niveau - 1]
-    );
-}
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcul du Nombre de Figurines</title>
+    <title>Simulateur de devis</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -69,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 
 <div id="contenu-principal">
-    <h2>Calcul du Nombre de Figurines</h2>
-    <form id="devis-form" method="POST">
+    <h2>Simulateur de devis</h2>
+    <form id="devis-form" method="POST" action="calcul.php">
         <!-- Choix du niveau de peinture -->
         <label for="niveau">Niveau de Peinture :</label>
         <select name="niveau" id="niveau" onchange="calculerTotal()">
@@ -81,21 +55,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <!-- Quantités de figurines -->
         <label for="infanterie">Nombre d'infanterie :</label>
-        <input type="number" id="infanterie" name="infanterie" min="0" value="<?= isset($_POST['infanterie']) ? $_POST['infanterie'] : 0 ?>" onchange="calculerTotal()" nclick="calculerTotal()"><br>
+        <input type="number" id="infanterie" name="infanterie" min="0" value="<?= isset($_POST['infanterie']) ? $_POST['infanterie'] : 0 ?>" onchange="calculerTotal()"><br>
 
         <label for="personnage">Nombre de personnages :</label>
-        <input type="number" id="personnage" name="personnage" min="0" value="<?= isset($_POST['personnage']) ? $_POST['personnage'] : 0 ?>" onchange="calculerTotal()" nclick="calculerTotal()"><br>
+        <input type="number" id="personnage" name="personnage" min="0" value="<?= isset($_POST['personnage']) ? $_POST['personnage'] : 0 ?>" onchange="calculerTotal()"><br>
 
         <label for="monstre">Nombre de monstres :</label>
-        <input type="number" id="monstre" name="monstre" min="0" value="<?= isset($_POST['monstre']) ? $_POST['monstre'] : 0 ?>" onchange="calculerTotal()" nclick="calculerTotal()"><br>
+        <input type="number" id="monstre" name="monstre" min="0" value="<?= isset($_POST['monstre']) ? $_POST['monstre'] : 0 ?>" onchange="calculerTotal()"><br>
 
         <label for="vehicule">Nombre de véhicules :</label>
-        <input type="number" id="vehicule" name="vehicule" min="0" value="<?= isset($_POST['vehicule']) ? $_POST['vehicule'] : 0 ?>" onchange="calculerTotal()" onclick="calculerTotal()"><br>
+        <input type="number" id="vehicule" name="vehicule" min="0" value="<?= isset($_POST['vehicule']) ? $_POST['vehicule'] : 0 ?>" onchange="calculerTotal()"><br>
         
-                 <!-- Affichage du total estimé -->
-    <div id="total-estime">Total estimé : <?= number_format($total, 2, ',', ' ') ?> €</div>
-        <button onclick="toggleTexte()" class="button">Demander un devis</button>
-
+        <!-- Affichage du total estimé -->
+        <div id="total-estime">Total estimé : <?= number_format($total, 2, ',', ' ') ?> €</div>
+        <button type="submit" class="button">Demander un devis</button>
     </form>
+</div>
+
 </body>
 </html>

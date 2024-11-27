@@ -11,7 +11,8 @@
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
 
-    <form id="devisForm">
+ 
+    <form id="devisForm" method="post" action="send_email.php">
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" required><br><br>
 
@@ -57,7 +58,7 @@
 
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
-        <button type="button" id="envoyerBtn">Envoyer par e-mail</button>
+        <button type="submit">Envoyer le devis par email</button>
     </form>
 
     <script>
@@ -91,26 +92,6 @@
 
         // Écoute des événements pour mettre à jour dynamiquement
         document.getElementById("devisForm").addEventListener("input", updateTotal);
-
-        // Fonction d'envoi par e-mail
-        document.getElementById("envoyerBtn").addEventListener("click", function() {
-            const formData = new FormData(document.getElementById("devisForm"));
-            formData.append('total', document.getElementById("total").textContent);
-
-            fetch('envoyer_devis.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert(data); // Affiche la réponse du serveur
-            })
-            .catch(error => {
-                console.error('Erreur:', error);
-                alert('Une erreur est survenue.');
-            });
-        });
     </script>
 </body>
 </html>
-

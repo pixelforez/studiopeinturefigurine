@@ -6,18 +6,6 @@
     <title>Peinture sur Commission</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // Fonction pour faire disparaître et réapparaître le texte
-        function toggleTexte() {
-            var texte = document.getElementById("texte");
-            if (texte.style.display === "none") {
-                texte.style.display = "block"; // Réapparaître le texte
-            } else {
-                texte.style.display = "none"; // Disparaître le texte
-            }
-        }
-    </script>
 
 <body>
 
@@ -69,10 +57,10 @@
         </div>
     </div>
 
-    <button onclick="toggleTexte()" class="button">Détails des niveaux</button>
+    <button onclick="$('#formSection').toggle();" class="button">Détails des niveaux</button>
 
-    <!-- Texte à afficher/masquer -->
-    <div id="texte">
+<section id="formSection" style="display:none;">
+
 
       <table>
         <thead>
@@ -252,29 +240,6 @@
             </tr>
         </tbody>
     </table>
-        </div>
-
-
-    <h3>Contactez-nous pour un Devis</h3>
-    <button onclick="$('#formSection').toggle();" class="button">Demander un devis personnalisé</button>
-
-<section id="formSection" style="display:none;">
-    <h3>Formulaire de Contact</h3>
-    <form id="contactForm">
-        <label for="name">Nom :</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="prenom">Prénom :</label><br>
-        <input type="text" id="prenom" name="prenom" required><br><br>
-        
-        <label for="email">Email :</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="message">Message :</label><br>
-        <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
-        <input type="submit" value="Envoyer"  class="button">
-    </form>
 </section>
 
 </body>

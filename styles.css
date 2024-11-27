@@ -166,9 +166,9 @@ footer a:hover {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 20px;
+  gap: 200px;
   justify-items: center;
-  margin-top: 20px;
+  margin-top: 200px;
   width: 80%;
   max-width: 200px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
@@ -188,8 +188,8 @@ footer a:hover {
 /* Flèche pour remonter */
 .scroll-to-top {
   position: fixed;
-  left: 20px;
-  bottom: 20px;
+  left: 40px;
+  bottom: 40px;
   background-color: var(--dark-green);
   color: var(--white);
   font-size: 24px;
@@ -381,9 +381,9 @@ footer a:hover {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 20px;
+  gap: 40px;
   justify-items: center;
-  margin-top: 20px;
+  margin-top: 40px;
   width: 80%;
   max-width: 200px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
@@ -403,8 +403,8 @@ footer a:hover {
 /* Flèche pour remonter */
 .scroll-to-top {
   position: fixed;
-  left: 20px;
-  bottom: 20px;
+  left: 40px;
+  bottom: 40px;
   background-color: var(--dark-green);
   color: var(--white);
   font-size: 24px;

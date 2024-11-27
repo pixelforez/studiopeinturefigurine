@@ -39,15 +39,17 @@ header h1 {
 
 /* Style du menu */
 nav ul {
-  list-style-type: none;
+  list-style-type: none; /* Suppression des puces */
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: nowrap; /* Assure que les éléments restent sur une seule ligne */
+  gap: 20px; /* Espace entre les éléments */
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0;
 }
 
 nav ul li a {
@@ -129,14 +131,12 @@ h1, h2, h3, h4, h5 {
   background-color: var(--button-hover); /* Effet au survol */
 }
 
-/* Réactivité */
+/* Réactivité : assure que le menu tient sur une ligne même sur mobile */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
-  }
-  
-  nav ul li {
-    margin: 10px 0;
+    flex-direction: row; /* Les éléments du menu restent sur une ligne */
+    flex-wrap: nowrap; /* Eviter le retour à la ligne sur petits écrans */
+    justify-content: space-between; /* Répartir l'espace entre les éléments */
   }
   
   .gallery {

@@ -14,47 +14,47 @@
  
     <form id="devisForm" method="post" action="envoyer_devis.php">
         <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required><br><br>
+        <input type="text" id="nom" name="nom" required onclick="updateTotal()"><br><br>
 
         <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" name="prenom" required><br><br>
+        <input type="text" id="prenom" name="prenom" required onclick="updateTotal()"><br><br>
 
         <label for="adresse">Adresse Postale :</label>
-        <input type="text" id="adresse" name="adresse" required><br><br>
+        <input type="text" id="adresse" name="adresse" required onclick="updateTotal()"><br><br>
 
         <label for="codePostal">Code Postal :</label>
-        <input type="text" id="codePostal" name="codePostal" required><br><br>
+        <input type="text" id="codePostal" name="codePostal" required> onclick="updateTotal()"<br><br>
 
         <label for="ville">Ville :</label>
-        <input type="text" id="ville" name="ville" required><br><br>
+        <input type="text" id="ville" name="ville" required onclick="updateTotal()"><br><br>
 
         <label for="telephone">Téléphone :</label>
-        <input type="text" id="telephone" name="telephone" required><br><br>
+        <input type="text" id="telephone" name="telephone" required onclick="updateTotal()"><br><br>
 
         <label for="email">E-mail :</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required onclick="updateTotal()"><br><br>
 
         <label for="niveau">Niveau de Peinture :</label>
         <select id="niveau" name="niveau">
-            <option value="niveau_1">Niveau 1</option>
-            <option value="niveau_2">Niveau 2</option>
-            <option value="niveau_3">Niveau 3</option>
+            <option value="niveau_1">Niveau 1 - Prêt pour le Tournoi</option>
+            <option value="niveau_2">Niveau 2 - TableTop Simple et efficace</option>
+            <option value="niveau_3">Niveau 3- TableTop de Qualité supérieur</option>
         </select><br><br>
 
         <label for="infanterie">Nombre d'Infanteries :</label>
-        <input type="number" id="infanterie" name="infanterie" min="0" value="0"><br><br>
+        <input type="number" id="infanterie" name="infanterie" min="0" value="0" onclick="updateTotal()"><br><br>
 
         <label for="cavalerie">Nombre de Cavaleries :</label>
-        <input type="number" id="cavalerie" name="cavalerie" min="0" value="0"><br><br>
+        <input type="number" id="cavalerie" name="cavalerie" min="0" value="0" onclick="updateTotal()"><br><br>
 
         <label for="heros">Nombre de Héros à Pied :</label>
-        <input type="number" id="heros" name="heros" min="0" value="0"><br><br>
+        <input type="number" id="heros" name="heros" min="0" value="0" onclick="updateTotal()"><br><br>
 
         <label for="petitMonstre">Nombre de Petits Véhicules/Monstres :</label>
-        <input type="number" id="petitMonstre" name="petitMonstre" min="0" value="0"><br><br>
+        <input type="number" id="petitMonstre" name="petitMonstre" min="0" value="0" onclick="updateTotal()"><br><br>
 
         <label for="grosMonstre">Nombre de Gros Véhicules/Monstres :</label>
-        <input type="number" id="grosMonstre" name="grosMonstre" min="0" value="0"><br><br>
+        <input type="number" id="grosMonstre" name="grosMonstre" min="0" value="0" onclick="updateTotal()"><br><br>
 
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 

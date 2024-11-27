@@ -10,7 +10,28 @@
 <body>
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
-<form id="devisForm" method="POST">
+<form id="contactForm" method="POST">
+     <label for="nom">Nom :</label><br>
+            <input type="text" id="nom" name="nom" required><br><br>
+
+            <label for="prenom">Prénom :</label><br>
+            <input type="text" id="prenom" name="prenom" required><br><br>
+
+            <label for="adresse">Adresse :</label><br>
+            <input type="text" id="adresse" name="adresse" required><br><br>
+
+            <label for="codePostal">Code Postal :</label><br>
+            <input type="text" id="codePostal" name="codePostal" required><br><br>
+
+            <label for="ville">Ville :</label><br>
+            <input type="text" id="ville" name="ville" required><br><br>
+
+            <label for="telephone">Téléphone :</label><br>
+            <input type="text" id="telephone" name="telephone" required><br><br>
+
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+    
         <label for="niveau">Niveau de Peinture :</label>
         <select id="niveau" name="niveau">
             <option value="niveau_1">Niveau 1 - Prêt pour le Tournoi</option>
@@ -67,8 +88,27 @@ function updateTotal() {
 }
 
 // Écoute des événements pour mettre à jour dynamiquement
-document.getElementById("devisForm").addEventListener("input", updateTotal);
-        
-    </script>
+document.getElementById("contactForm").addEventListener("input", updateTotal);
+
+            
+$(document).ready(function() {
+    // Fonction de soumission du formulaire avec AJAX
+    $('#contactForm').on('submit', function(event) {
+        event.preventDefault();  // Empêcher la soumission normale du formulaire
+
+        var formData = $(this).serialize();  // Sérialiser les données du formulaire
+
+        $.ajax({
+            url: 'traitement_formulaire.php',  // Le fichier PHP qui va traiter les données
+            method: 'POST',
+            data: formData,
+            success: function(response) {
+                // Afficher les informations retournées par PHP
+                $('#resultat').html(response);
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>

@@ -43,6 +43,7 @@
 
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
+      <form id="email-form" method="POST" action="envoyer_email.php">
     <form id="devis-form" method="POST" action="calcul.php">
         <!-- Choix du niveau de peinture -->
         <label for="niveau">Niveau de Peinture :</label>
@@ -72,7 +73,6 @@
 
 <section id="formSection" style="display:none;">
     <h3>Formulaire de Contact</h3>
-  <form id="email-form" method="POST" action="envoyer_email.php">
         <label for="name">Nom :</label><br>
         <input type="text" id="name" name="name" required><br><br>
 

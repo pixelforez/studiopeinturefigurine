@@ -122,4 +122,34 @@ table {
 .button:hover {
     background-color: #267a38; /* Vert plus foncé */
 }
+/* Responsive: Formulaire et autres éléments sur mobile */
+@media screen and (max-width: 480px) {
+    /* Ajustement du conteneur principal */
+    #contenu-principal {
+        width: 90%; /* Largeur adaptée pour les petits écrans */
+        padding: 10px; /* Moins de padding */
+    }
+
+    /* Réorganisation des éléments de navigation */
+    nav ul li {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    /* Ajustement des boutons */
+    .button {
+        font-size: 18px;
+        padding: 12px 15px;
+    }
+
+    /* Formulaire de contact : ajuster la largeur et espacement des champs */
+    form input, form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px; /* Réduire la taille des champs sur petits écrans */
+    }
 

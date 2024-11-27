@@ -8,11 +8,11 @@
     <link rel="icon" href="favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-
         // Fonction AJAX pour charger le contenu des pages
         function loadPage(page) {
             // Enlever l'ancien contenu et charger la nouvelle page
             $("#contenu-principal").fadeOut(200, function() {
+                // Charger la nouvelle page dans le div #contenu-principal
                 $("#contenu-principal").load(page + " #contenu-principal", function() {
                     // Rendre le contenu visible après qu'il soit chargé
                     $("#contenu-principal").fadeIn(200);
@@ -21,7 +21,7 @@
         }
 
         $(document).ready(function() {
-            // Lorsque la page est chargée, on charge le contenu de base
+            // Charger la page d'accueil par défaut
             loadPage("index.html");
         });
     </script>
@@ -62,7 +62,7 @@
 
 <footer>
     <p>&copy; 2024 Studio Peinture Figurine. Tous droits réservés.</p>
- <p><a href="conditions.html" onclick="loadPage('peinturecommission.html'); return false;">Conditions générales de vente</a></p>
+    <p><a href="conditions.html" onclick="loadPage('conditions.html'); return false;">Conditions générales de vente</a></p>
 </footer>
 
 </body>

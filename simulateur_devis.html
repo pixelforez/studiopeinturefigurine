@@ -57,7 +57,6 @@
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
         <button type="submit" onclick="updateTotal()" class="button">Voir Total</button>
-     <input type="submit" value="Envoyer" class="button>
 </form>
         <script>
         // Tarifs en JavaScript
@@ -89,7 +88,7 @@ function updateTotal() {
 }
 
 // Écoute des événements pour mettre à jour dynamiquement
-document.getElementById("contactForm").addEventListener("input", updateTotal);
+document.getElementById("contactForm").addEventListener("input", updateTotal());
 
             
 $(document).ready(function() {

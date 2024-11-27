@@ -176,3 +176,12 @@ footer a:hover {
 .scroll-to-top:hover {
   transform: scale(1.1);
 }
+l {
+  list-style-type: none; /* Supprime les puces */
+  padding: 0; /* Enlève l'espace intérieur */
+  margin: 0; /* Enlève les marges par défaut */
+}
+
+li {
+  margin-bottom: 0px; /* Optionnel : espace entre les éléments de la liste */
+}

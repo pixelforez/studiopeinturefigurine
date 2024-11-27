@@ -22,10 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $vehicule = isset($_POST['vehicule']) ? (int)$_POST['vehicule'] : 0;
 
     // Prix par niveau pour chaque type
-    $prixInfanterie = [5, 8, 15]; // Tabletop, Tabletop, Vitrine
+    $prixInfanterie = [8, 13, 25]; // niv1, niv2, niv3
     $prixPersonnage = [12, 20, 40];
-    $prixMonstre = [11, 18, 35];
-    $prixVehicule = [15, 25, 50];
+    $prixMonstre = [30, 50, 100];
+    $prixVehicule = [60, 80, 150];
 
     // Calcul du total
     $total = ($infanterie * $prixInfanterie[$niveau - 1]) +

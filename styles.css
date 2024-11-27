@@ -6,6 +6,31 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Tableau */
+  th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .check {
+            color: green;
+            font-weight: bold;
+        }
+
+        .cross {
+            color: red;
+            font-weight: bold;
+        }
 
 /* Styles du header */
 header {

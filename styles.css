@@ -154,3 +154,6 @@ footer a:hover {
             font-weight: bold;
         }
 
+.hidden {
+    display: none;
+}

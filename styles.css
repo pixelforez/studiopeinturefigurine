@@ -223,3 +223,25 @@ table {
     font-family: Arial, sans-serif;
     width: 100%; /* Ajuste la table à 100% de la largeur disponible */
 }
+/* Style du bouton */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2f8b4f;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Masqué au départ */
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Apparence du bouton au survol */
+#scrollToTopBtn:hover {
+    background-color: #267a38;
+}
+

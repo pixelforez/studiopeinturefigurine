@@ -41,9 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <form method="POST">
         <label for="niveau">Niveau de Peinture :</label>
         <select name="niveau" id="niveau" onchange="this.form.submit()">
-            <option value="1" <?php if ($niveau == 1) echo 'selected'; ?>>Niveau 1 - Tabletop</option>
-            <option value="2" <?php if ($niveau == 2) echo 'selected'; ?>>Niveau 2 - Peinture détaillée</option>
-            <option value="3" <?php if ($niveau == 3) echo 'selected'; ?>>Niveau 3 - Vitrine</option>
+            <option value="1" <?php if ($niveau == 1) echo 'selected'; ?>>Niveau 1 - Prêt pour le Tournoi</option>
+            <option value="2" <?php if ($niveau == 2) echo 'selected'; ?>>Niveau 2 - TableTop simple et efficace</option>
+            <option value="3" <?php if ($niveau == 3) echo 'selected'; ?>>Niveau 3 - TableTop de qualité Supérieur</option>
         </select><br><br>
 
         <label for="infanterie">Nombre d'infanterie :</label>

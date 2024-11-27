@@ -56,6 +56,8 @@
         <input type="number" id="grosMonstre" name="grosMonstre" min="0" value="0"><br><br>
 
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
+
+        <button type="button" id="envoyerBtn">Envoyer par e-mail</button>
     </form>
 
     <script>
@@ -89,9 +91,26 @@
 
         // Écoute des événements pour mettre à jour dynamiquement
         document.getElementById("devisForm").addEventListener("input", updateTotal);
+
+        // Fonction d'envoi par e-mail
+        document.getElementById("envoyerBtn").addEventListener("click", function() {
+            const formData = new FormData(document.getElementById("devisForm"));
+            formData.append('total', document.getElementById("total").textContent);
+
+            fetch('envoyer_devis.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data); // Affiche la réponse du serveur
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                alert('Une erreur est survenue.');
+            });
+        });
     </script>
-
-</div>
-
 </body>
 </html>
+

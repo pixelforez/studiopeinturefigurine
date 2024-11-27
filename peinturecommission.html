@@ -6,6 +6,18 @@
     <title>Peinture sur Commission</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+    <script>
+        // Fonction pour faire disparaître et réapparaître le texte
+        function toggleTexte() {
+            var texte = document.getElementById("texte");
+            if (texte.style.display === "none") {
+                texte.style.display = "block"; // Réapparaître le texte
+            } else {
+                texte.style.display = "none"; // Disparaître le texte
+            }
+        }
+    </script>
+
 <body>
 
 <div id="contenu-principal">
@@ -56,16 +68,11 @@
         </div>
     </div>
 
-    <div id="myElement">Détails des Niveaux</div>
-    <p>test</p>
-<button onclick="hideElement()" class="button">Afficher Tableau</button>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-    function hideElement() {
-        document.getElementById('myElement').style.display = 'none';
-    }
-</script>
-    
+    <button onclick="toggleTexte()">Détails des niveaux</button>
+
+    <!-- Texte à afficher/masquer -->
+    <div id="texte">
+
       <table>
         <thead>
             <tr>
@@ -244,6 +251,8 @@
             </tr>
         </tbody>
     </table>
+        </div>
+
 
     <h3>Contactez-nous pour un Devis</h3>
     <button onclick="$('#formSection').toggle();" class="button">Demander un devis personnalisé</button>

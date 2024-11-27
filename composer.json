@@ -1,7 +1,15 @@
 {
     "name": "vendor/package",
-    "description": "Description de votre projet",
+    "description": "Description of the project",
+    "type": "library",
     "require": {
-        "php": ">=7.4"
-    }
+        "php": "^7.4 || ^8.0"
+    },
+    "license": "proprietary", // Ajoutez cette ligne
+    "authors": [
+        {
+            "name": "Studio Peinture Figurine",
+            "email": "studiopeinturefigurine@gmail.com"
+        }
+    ]
 }

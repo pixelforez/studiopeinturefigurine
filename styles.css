@@ -1,6 +1,6 @@
  #contenu-principal {
         width: 80%;
-      padding: 0px;
+      padding: 20px;
      border: 0px;
     }
     nav ul li {
@@ -35,7 +35,7 @@ body {
     background-color: #f4f7f6;
     color: #333;
     margin: 0;
-         padding: 0px;
+         padding: 20px;
      border: 0px;
 }
 
@@ -74,7 +74,7 @@ flex-direction: row; /* Les éléments du menu restent sur une ligne */
 
 nav ul {
     list-style: none;
-    padding: 00px;
+    padding: 20px;
     margin: 0;
 }
 
@@ -102,7 +102,7 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0px;
+    padding: 20px;
     text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 

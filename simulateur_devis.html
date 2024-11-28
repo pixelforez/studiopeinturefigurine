@@ -93,7 +93,7 @@
 
         // Construire l'URL mailto
         const subject = `Demande de devis de ${prenom} ${nom}`;
-        const body = `Bonjour,%0A%0AVoici ma demande de devis :%0A- Nom : ${nom}%0A- Prénom : ${prenom}%0A- Email : ${email}%0A- Téléphone : ${telephone}%0A%0ATotal estimé : ${total.toFixed(2)} €.%0A%0AJe reste à votre disposition.%0A%0ACordialement.`;
+        const body = `Bonjour, Voici ma demande de devis : - Nom : ${nom} - Prénom : ${prenom} - Email : ${email} - Téléphone : ${telephone} Total estimé : ${total.toFixed(2)} €. Je reste à votre disposition. Cordialement.`;
         const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
         window.location.href = mailtoURL; // Redirection

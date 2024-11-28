@@ -401,16 +401,16 @@ footer a:hover {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
   gap: 80px;
   justify-items: center;
   margin-top: 20px;
-  width: 100%;
+  width: 60%;
   max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
-  width: 80%;
+  width: 60%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;

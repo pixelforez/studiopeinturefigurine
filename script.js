@@ -28,3 +28,23 @@ function updateTotal() {
 
 // Écoute des événements pour mettre à jour dynamiquement
 document.getElementById("contactForm").addEventListener("input", updateTotal());
+
+
+$(document).ready(function() {
+    // Fonction de soumission du formulaire avec AJAX
+    $('#contactForm').on('submit', function(event) {
+        event.preventDefault();  // Empêcher la soumission normale du formulaire
+
+        var formData = $(this).serialize();  // Sérialiser les données du formulaire
+
+        $.ajax({
+            url: 'traitement_formulaire.php',  // Le fichier PHP qui va traiter les données
+            method: 'POST',
+            data: formData,
+            success: function(response) {
+                // Afficher les informations retournées par PHP
+                $('#resultat').html(response);
+            }
+        });
+    });
+});

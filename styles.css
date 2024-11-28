@@ -185,9 +185,28 @@ footer a:hover {
 .gallery img:hover {
   transform: scale(1.05);
 }
+/* Flèche pour remonter */
+#scrollToTopBtn {
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
+  background-color: var(--dark-green);
+  color: var(--white);
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  padding: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  transform: scale(1.1);
+}
 
 /* Style du bouton */
-#scrollToTopBtn {
+.button {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -202,7 +221,7 @@ footer a:hover {
 }
 
 /* Apparence du bouton au survol */
-#scrollToTopBtn:hover {
+.button:hover {
     background-color: #267a38;
 }
 ul {
@@ -402,7 +421,7 @@ footer a:hover {
 }
 
 /* Flèche pour remonter */
-.scroll-to-top {
+#scrollToTopBtn {
   position: fixed;
   left: 40px;
   bottom: 40px;
@@ -417,11 +436,11 @@ footer a:hover {
   transition: transform 0.3s ease;
 }
 
-.scroll-to-top:hover {
+#scrollToTopBtn:hover {
   transform: scale(1.1);
 }
 /* Style du bouton */
-#scrollToTopBtn {
+.button {
     position: fixed;
     bottom: 20px;
     right: 20px;

@@ -1,19 +1,13 @@
  #contenu-principal {
         width: 80%;
-      padding: 40px;
-     border: 20px;
+      padding: 30px;
+     border: 00px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
     nav ul li {
         display: block;
         margin-bottom: 5px;
     }
-table{
-            display: flex;
-            justify-content: center; /* Centre horizontalement */
-            align-items: center; /* Centre verticalement */
-            margin: 0; /* Supprime les marges par défaut */
-}
     /* Tableau */
   th, td {
             padding: 0px;
@@ -107,11 +101,11 @@ nav ul li a:hover {
 /* Conteneur principal */
 #contenu-principal {
     width: 80%;
-    margin: 20px;
+    margin: 00px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
+    padding: 30px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 
@@ -177,16 +171,16 @@ footer a:hover {
 /* Style de la galerie */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
   gap: 0px;
   justify-items: center;
   margin-top: 20px;
-  width: 80%;
+  width: 100%;
   max-width: 600px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
-  width: 80%;
+  width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
@@ -223,12 +217,6 @@ ul {
   list-style-type: none; /* Supprime les puces */
   padding: 0; /* Enlève l'espace intérieur */
   margin: 0; /* Enlève les marges par défaut */
-}
-table{
-            display: flex;
-            justify-content: center; /* Centre horizontalement */
-            align-items: center; /* Centre verticalement */
-            margin: 0; /* Supprime les marges par défaut */
 }
 li {
   margin-bottom: 0px; /* Optionnel : espace entre les éléments de la liste */
@@ -400,16 +388,16 @@ footer a:hover {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
   gap: 80px;
   justify-items: center;
   margin-top: 20px;
-  width: 40%;
+  width: 70%;
   max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
-  width: 40%;
+  width: 70%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;

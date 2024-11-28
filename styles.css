@@ -1,6 +1,6 @@
  #contenu-principal {
         width: 80%;
-      padding: 40px;
+      padding: 30px;
      border: 20px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
@@ -112,7 +112,7 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
+    padding: 30px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 
@@ -182,8 +182,8 @@ footer a:hover {
   gap: 0px;
   justify-items: center;
   margin-top: 20px;
-  width: 80%;
-  max-width: 600px; /* Limite de largeur pour éviter trop de photos par ligne */
+  width: 100%;
+  max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
@@ -301,7 +301,7 @@ header h1 a:hover {
 /* Styles du menu de navigation */
 nav {
     background-color: #3c9b67; /* Vert clair */
-    padding: 20px;
+    padding: 0px;
     text-align: center;
 flex-direction: row; /* Les éléments du menu restent sur une ligne */
     flex-wrap: nowrap; /* Eviter le retour à la ligne sur petits écrans */
@@ -402,15 +402,15 @@ footer a:hover {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 80px;
+  gap: 40px;
   justify-items: center;
   margin-top: 20px;
-  width: 60%;
-  max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
+  width: 40%;
+  max-width: 400px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
-  width: 60%;
+  width: 40%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;

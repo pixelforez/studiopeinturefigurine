@@ -103,7 +103,7 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
+  
 }
 
 /* Titre principal de la page */
@@ -221,7 +221,7 @@ li {
 /* Responsive: Formulaire sur mobile */
 @media screen and (max-width: 768px) {
     #contenu-principal {
-        width: 70%;
+        width: 80%;
     }
     nav ul li {
         display: block;
@@ -322,7 +322,7 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
+   
 }
 
 /* Titre principal de la page */

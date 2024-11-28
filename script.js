@@ -26,9 +26,6 @@ function updateTotal() {
     document.getElementById("total").textContent = total.toFixed(2);
 }
 
-// Écoute des événements pour mettre à jour dynamiquement
-document.getElementById("contactForm").addEventListener("input", updateTotal());
-
 
 $(document).ready(function() {
     // Fonction de soumission du formulaire avec AJAX

@@ -34,13 +34,26 @@ function updateTotal() {
         (tarifs.petit_vehicule_monstre[niveau] * petitMonstre) +
         (tarifs.gros_vehicule_monstre[niveau] * grosMonstre);
 
-    document.getElementById("total").textContent = total.toFixed(2);
-}
+
                
- document.getElementById("form").addEventListener("submit", (e) => {
-            e.preventDefault();
-            console.log(<span id="total">0.00</span> €</p>);
+ document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche le comportement par défaut du formulaire
+
+            // Récupérer les valeurs des champs
+            const nom = document.getElementById("nom").value;
+            const prenom = document.getElementById("prenom").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Construire l'URL mailto
+            const subject = `Demande de devis de ${prenom} ${nom}`;
+            const body = `Bonjour,%0A%0A${message}%0A%0AContact : ${email} - ${total}`;
+            const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Rediriger vers l'URL mailto
+            window.location.href = mailtoURL;
         });
+
                
 // Écoute des événements pour mettre à jour dynamiquement
 document.getElementById("contactForm").addEventListener("input", updateTotal());
@@ -48,7 +61,18 @@ document.getElementById("contactForm").addEventListener("input", updateTotal());
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
 <form id="contactForm">
-     <label for="nom">Nom :</label><br>
+      <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+     <label for="telephone">Téléphone :</label>
+        <input type="telephone" id="telephone" name="telephone" required><br><br>
+
     
         <label for="niveau">Niveau de Peinture :</label>
         <select id="niveau" name="niveau">

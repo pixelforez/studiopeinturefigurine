@@ -1,5 +1,5 @@
  #contenu-principal {
-        width: 90%;
+        width: 100%;
       padding: 20px;
      border: 0px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
@@ -100,7 +100,7 @@ nav ul li a:hover {
 
 /* Conteneur principal */
 #contenu-principal {
-    width: 90%;
+    width: 100%;
     margin: 0px;
     background-color: white;
     border-radius: 5px;
@@ -171,8 +171,8 @@ footer a:hover {
 /* Style de la galerie */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 0px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  gap: 140px;
   justify-items: center;
   margin-top: 0px;
   width: 200%;
@@ -180,7 +180,7 @@ footer a:hover {
 }
 
 .gallery img {
-  width: 140%;
+  width: 200%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
@@ -188,7 +188,7 @@ footer a:hover {
 }
 
 .gallery img:hover {
-  transform: scale(2.05);
+  transform: scale(5.05);
 }
 /* Style du bouton fleche */
 #scrollToTopBtn {
@@ -388,7 +388,7 @@ footer a:hover {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
   gap: 0px;
   justify-items: center;
   margin-top: 0px;
@@ -405,7 +405,7 @@ footer a:hover {
 }
 
 .gallery img:hover {
-  transform: scale(2.05);
+  transform: scale(3.05);
 }
 
 /* Style du bouton fleche */

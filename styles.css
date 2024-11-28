@@ -162,16 +162,16 @@ footer a:hover {
 /* Style de la galerie */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(1200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
   gap: 0px;
   justify-items: center;
   margin-top: 0px;
-  width: 400%;
-  max-width: 1400px; /* Limite de largeur pour éviter trop de photos par ligne */
+  width: 100%;
+  max-width: 400px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
-  width: 400%;
+  width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
@@ -179,7 +179,7 @@ footer a:hover {
 }
 
 .gallery img:hover {
-  transform: scale(8.05);
+  transform: scale(4.05);
 }
 /* Style du bouton fleche */
 #scrollToTopBtn {
@@ -296,7 +296,7 @@ nav ul {
      list-style: none; /* Supprime les puces */
             padding: 0;
             margin: 0;
-            display: flex; /* Met les éléments sur une seule ligne */
+              flex-direction: column; /* Retourne à un affichage vertical sur petits écrans */
             justify-content: space-around; /* Espace égal entre les liens */
 }
 

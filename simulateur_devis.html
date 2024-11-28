@@ -36,7 +36,12 @@ function updateTotal() {
 
     document.getElementById("total").textContent = total.toFixed(2);
 }
-
+               
+ document.getElementById("form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            console.log(<span id="total">0.00</span> €</p>);
+        });
+               
 // Écoute des événements pour mettre à jour dynamiquement
 document.getElementById("contactForm").addEventListener("input", updateTotal());
            </script>
@@ -53,23 +58,23 @@ document.getElementById("contactForm").addEventListener("input", updateTotal());
         </select><br><br>
 
         <label for="infanterie">Nombre d'Infanteries :</label>
-        <input type="number" id="infanterie" name="infanterie" min="0" value="0" onclick="updateTotal()" onclick="updateTotal()"><br><br>
+        <input type="number" id="infanterie" name="infanterie" min="0" value="0" onclick="updateTotal()" ontouch="updateTotal()"><br><br>
 
         <label for="cavalerie">Nombre de Cavaleries :</label>
-        <input type="number" id="cavalerie" name="cavalerie" min="0" value="0" onclick="updateTotal()"><br><br>
+        <input type="number" id="cavalerie" name="cavalerie" min="0" value="0" onclick="updateTotal()" ontouch="updateTotal()"><br><br>
 
         <label for="heros">Nombre de Héros à Pied :</label>
-        <input type="number" id="heros" name="heros" min="0" value="0" onclick="updateTotal()"><br><br>
+        <input type="number" id="heros" name="heros" min="0" value="0" onclick="updateTotal()" ontouch="updateTotal()"><br><br>
 
         <label for="petitMonstre">Nombre de Petits Véhicules/Monstres :</label>
-        <input type="number" id="petitMonstre" name="petitMonstre" min="0" value="0" onclick="updateTotal()"><br><br>
+        <input type="number" id="petitMonstre" name="petitMonstre" min="0" value="0" onclick="updateTotal()" ontouch="updateTotal()"><br><br>
 
         <label for="grosMonstre">Nombre de Gros Véhicules/Monstres :</label>
-        <input type="number" id="grosMonstre" name="grosMonstre" min="0" value="0" onclick="updateTotal()"><br><br>
+        <input type="number" id="grosMonstre" name="grosMonstre" min="0" value="0" onclick="updateTotal()" ontouch="updateTotal()"><br><br>
 
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
-        <button type="submit" onclick="updateTotal()" class="button">Voir Total</button>
+        <button type="submit" class="button">Voir Total</button>
 </form>
 </body>
 </html>

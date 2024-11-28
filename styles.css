@@ -4,10 +4,7 @@
      border: 0px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
-    nav ul li {
-        display: block;
-        margin-bottom: 5px;
-    }
+
     /* Tableau */
   th, td {
             padding: 0px;
@@ -76,21 +73,23 @@ flex-direction: row; /* Les éléments du menu restent sur une ligne */
 }
 
 nav ul {
-    list-style: none;
-    padding: 20px;
-    margin: 0;
+     list-style: none; /* Supprime les puces */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Met les éléments sur une seule ligne */
+            justify-content: space-around; /* Espace égal entre les liens */
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 0px;
+        margin: 0;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
+    c display: block; /* Pour que les liens remplissent les éléments */
+            padding: 10px 20px;
+            text-decoration: none; /* Supprime le soulignement */
+            color: white; /* Couleur du texte */
+            font-family: Arial, sans-serif;
 
 }
 
@@ -158,14 +157,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 15px;
-         flex-direction: row; /* Les éléments du menu restent sur une ligne */
-    flex-wrap: nowrap; /* Eviter le retour à la ligne sur petits écrans */
-    justify-content: space-between; /* Répartir l'espace entre les éléments */
-    }
 }
 
 /* Style de la galerie */
@@ -227,10 +218,7 @@ li {
         width: 80%;
       text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
-    nav ul li {
-        display: block;
-        margin-bottom: 0px;
-    }
+   
     /* Tableau */
   th, td {
             padding: 0px;
@@ -296,22 +284,33 @@ flex-direction: row; /* Les éléments du menu restent sur une ligne */
 
 }
 
+nav {
+    background-color: #3c9b67; /* Vert clair */
+    padding: 0px;
+    text-align: center;
+flex-direction: row; /* Les éléments du menu restent sur une ligne */
+  
+}
+
 nav ul {
-    list-style: none;
-   padding: 0px;
-    margin: 0;
+     list-style: none; /* Supprime les puces */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Met les éléments sur une seule ligne */
+            justify-content: space-around; /* Espace égal entre les liens */
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 0px;
+        margin: 0;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
+    c display: block; /* Pour que les liens remplissent les éléments */
+            padding: 10px 20px;
+            text-decoration: none; /* Supprime le soulignement */
+            color: white; /* Couleur du texte */
+            font-family: Arial, sans-serif;
+
 }
 
 nav ul li a:hover {
@@ -375,15 +374,6 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-    nav ul li {
-        display: block;
-        margin-bottom: 15px;
-         flex-direction: row; /* Les éléments du menu restent sur une ligne */
-    flex-wrap: nowrap; /* Eviter le retour à la ligne sur petits écrans */
-    justify-content: space-between; /* Répartir l'espace entre les éléments */
-    }
 }
 
 .gallery {

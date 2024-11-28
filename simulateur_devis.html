@@ -8,60 +8,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-           <script>
-        // Tarifs en JavaScript
-const tarifs = {
-    "infanterie": { "niveau_1": 8.00, "niveau_2": 13.00, "niveau_3": 25.00 },
-    "cavalerie_lourde": { "niveau_1": 11.00, "niveau_2": 18.00, "niveau_3": 35.00 },
-    "heros_a_pied": { "niveau_1": 12.00, "niveau_2": 20.00, "niveau_3": 40.00 },
-    "petit_vehicule_monstre": { "niveau_1": 15.00, "niveau_2": 25.00, "niveau_3": 50.00 },
-    "gros_vehicule_monstre": { "niveau_1": 50.00, "niveau_2": 75.00, "niveau_3": 150.00 }
-};
-
-// Fonction de mise à jour du total
-function updateTotal() {
-    const niveau = document.getElementById("niveau").value;
-    const infanterie = parseInt(document.getElementById("infanterie").value) || 0;
-    const cavalerie = parseInt(document.getElementById("cavalerie").value) || 0;
-    const heros = parseInt(document.getElementById("heros").value) || 0;
-    const petitMonstre = parseInt(document.getElementById("petitMonstre").value) || 0;
-    const grosMonstre = parseInt(document.getElementById("grosMonstre").value) || 0;
-
-    const total = 
-        (tarifs.infanterie[niveau] * infanterie) +
-        (tarifs.cavalerie_lourde[niveau] * cavalerie) +
-        (tarifs.heros_a_pied[niveau] * heros) +
-        (tarifs.petit_vehicule_monstre[niveau] * petitMonstre) +
-        (tarifs.gros_vehicule_monstre[niveau] * grosMonstre);
-
-
-               
- document.getElementById("form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Empêche le comportement par défaut du formulaire
-
-            // Récupérer les valeurs des champs
-            const nom = document.getElementById("nom").value;
-            const prenom = document.getElementById("prenom").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-
-            // Construire l'URL mailto
-            const subject = `Demande de devis de ${prenom} ${nom}`;
-            const body = `Bonjour,%0A%0A${message}%0A%0AContact : ${email} - ${total}`;
-            const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            // Rediriger vers l'URL mailto
-            window.location.href = mailtoURL;
-        });
-
-               
-// Écoute des événements pour mettre à jour dynamiquement
-document.getElementById("contactForm").addEventListener("input", updateTotal());
-           </script>
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
-<form id="contactForm">
-      <label for="nom">Nom :</label>
+    <form id="contactForm">
+        <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" required><br><br>
 
         <label for="prenom">Prénom :</label>
@@ -70,35 +20,89 @@ document.getElementById("contactForm").addEventListener("input", updateTotal());
         <label for="email">Email :</label>
         <input type="email" id="email" name="email" required><br><br>
 
-     <label for="telephone">Téléphone :</label>
-        <input type="telephone" id="telephone" name="telephone" required><br><br>
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" required><br><br>
 
-    
         <label for="niveau">Niveau de Peinture :</label>
         <select id="niveau" name="niveau">
             <option value="niveau_1">Niveau 1 - Prêt pour le Tournoi</option>
             <option value="niveau_2">Niveau 2 - TableTop Simple et efficace</option>
-            <option value="niveau_3">Niveau 3- TableTop de Qualité supérieur</option>
+            <option value="niveau_3">Niveau 3 - TableTop de Qualité supérieur</option>
         </select><br><br>
 
         <label for="infanterie">Nombre d'Infanteries :</label>
-        <input type="number" id="infanterie" name="infanterie" min="0" value="0" onclick="updateTotal()" ontouch="updateTotal()"><br><br>
+        <input type="number" id="infanterie" name="infanterie" min="0" value="0"><br><br>
 
         <label for="cavalerie">Nombre de Cavaleries :</label>
-        <input type="number" id="cavalerie" name="cavalerie" min="0" value="0" onclick="updateTotal()" ontouch="updateTotal()"><br><br>
+        <input type="number" id="cavalerie" name="cavalerie" min="0" value="0"><br><br>
 
         <label for="heros">Nombre de Héros à Pied :</label>
-        <input type="number" id="heros" name="heros" min="0" value="0" onclick="updateTotal()" ontouch="updateTotal()"><br><br>
+        <input type="number" id="heros" name="heros" min="0" value="0"><br><br>
 
         <label for="petitMonstre">Nombre de Petits Véhicules/Monstres :</label>
-        <input type="number" id="petitMonstre" name="petitMonstre" min="0" value="0" onclick="updateTotal()" ontouch="updateTotal()"><br><br>
+        <input type="number" id="petitMonstre" name="petitMonstre" min="0" value="0"><br><br>
 
         <label for="grosMonstre">Nombre de Gros Véhicules/Monstres :</label>
-        <input type="number" id="grosMonstre" name="grosMonstre" min="0" value="0" onclick="updateTotal()" ontouch="updateTotal()"><br><br>
+        <input type="number" id="grosMonstre" name="grosMonstre" min="0" value="0"><br><br>
 
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
-        <button type="submit" class="button">Voir Total</button>
-</form>
+        <button type="submit" class="button">Envoyer</button>
+    </form>
+</div>
+
+<script>
+    // Tarifs en JavaScript
+    const tarifs = {
+        "infanterie": { "niveau_1": 8.00, "niveau_2": 13.00, "niveau_3": 25.00 },
+        "cavalerie_lourde": { "niveau_1": 11.00, "niveau_2": 18.00, "niveau_3": 35.00 },
+        "heros_a_pied": { "niveau_1": 12.00, "niveau_2": 20.00, "niveau_3": 40.00 },
+        "petit_vehicule_monstre": { "niveau_1": 15.00, "niveau_2": 25.00, "niveau_3": 50.00 },
+        "gros_vehicule_monstre": { "niveau_1": 50.00, "niveau_2": 75.00, "niveau_3": 150.00 }
+    };
+
+    // Fonction de mise à jour du total
+    function updateTotal() {
+        const niveau = document.getElementById("niveau").value;
+        const infanterie = parseInt(document.getElementById("infanterie").value) || 0;
+        const cavalerie = parseInt(document.getElementById("cavalerie").value) || 0;
+        const heros = parseInt(document.getElementById("heros").value) || 0;
+        const petitMonstre = parseInt(document.getElementById("petitMonstre").value) || 0;
+        const grosMonstre = parseInt(document.getElementById("grosMonstre").value) || 0;
+
+        const total =
+            (tarifs.infanterie[niveau] * infanterie) +
+            (tarifs.cavalerie_lourde[niveau] * cavalerie) +
+            (tarifs.heros_a_pied[niveau] * heros) +
+            (tarifs.petit_vehicule_monstre[niveau] * petitMonstre) +
+            (tarifs.gros_vehicule_monstre[niveau] * grosMonstre);
+
+        document.getElementById("total").textContent = total.toFixed(2);
+        return total;
+    }
+
+    // Gestion de l'envoi du formulaire
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Empêche le comportement par défaut
+
+        const nom = document.getElementById("nom").value;
+        const prenom = document.getElementById("prenom").value;
+        const email = document.getElementById("email").value;
+        const telephone = document.getElementById("telephone").value;
+        const total = updateTotal(); // Récupère le total calculé
+
+        // Construire l'URL mailto
+        const subject = `Demande de devis de ${prenom} ${nom}`;
+        const body = `Bonjour,%0A%0AVoici ma demande de devis :%0A- Nom : ${nom}%0A- Prénom : ${prenom}%0A- Email : ${email}%0A- Téléphone : ${telephone}%0A%0ATotal estimé : ${total.toFixed(2)} €.%0A%0AJe reste à votre disposition.%0A%0ACordialement.`;
+        const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoURL; // Redirection
+    });
+
+    // Événements d'entrée pour la mise à jour du total
+    document.querySelectorAll("#contactForm input, #contactForm select").forEach(element => {
+        element.addEventListener("input", updateTotal);
+    });
+</script>
 </body>
 </html>

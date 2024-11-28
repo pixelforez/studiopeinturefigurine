@@ -1,7 +1,7 @@
  #contenu-principal {
         width: 80%;
-      padding: 30px;
-     border: 0px;
+      padding: 40px;
+     border: 20px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
     nav ul li {
@@ -42,9 +42,8 @@ body {
     background-color: #f4f7f6;
     color: #333;
     margin: 0;
-         padding: 0px;
+    padding: 40px;
      border: 0px;
- display: flex;
             justify-content: center; /* Centre horizontalement */
             align-items: center; /* Centre verticalement */
 }
@@ -73,31 +72,33 @@ header h1 a:hover {
     text-decoration: underline;
 }
 
-* Styles du menu de navigation */
+/* Styles du menu de navigation */
 nav {
     background-color: #3c9b67; /* Vert clair */
-    padding: 15px;
+    padding: 0px;
     text-align: center;
+flex-direction: row; /* Les éléments du menu restent sur une ligne */
+  
 }
+
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 20px;
     margin: 0;
 }
+
 nav ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 0px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-}
-nav ul li a:hover {
-    text-decoration: underline;
-}
 
+}
 
 nav ul li a:hover {
     text-decoration: underline;
@@ -106,11 +107,11 @@ nav ul li a:hover {
 /* Conteneur principal */
 #contenu-principal {
     width: 80%;
-    margin: 0px;
+    margin: 20px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 40px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 
@@ -180,12 +181,12 @@ footer a:hover {
   gap: 0px;
   justify-items: center;
   margin-top: 20px;
-  width: 100%;
-  max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
+  width: 80%;
+  max-width: 600px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
-  width: 100%;
+  width: 80%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
@@ -296,31 +297,34 @@ header h1 a:hover {
     text-decoration: underline;
 }
 
-* Styles du menu de navigation */
+/* Styles du menu de navigation */
 nav {
     background-color: #3c9b67; /* Vert clair */
-    padding: 15px;
+    padding: 20px;
     text-align: center;
+flex-direction: row; /* Les éléments du menu restent sur une ligne */
+    flex-wrap: nowrap; /* Eviter le retour à la ligne sur petits écrans */
+    justify-content: space-between; /* Répartir l'espace entre les éléments */
+
 }
+
 nav ul {
     list-style: none;
-    padding: 0;
+   padding: 0px;
     margin: 0;
 }
+
 nav ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 0px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
 }
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
 
 nav ul li a:hover {
     text-decoration: underline;
@@ -329,7 +333,7 @@ nav ul li a:hover {
 /* Conteneur principal */
 #contenu-principal {
     width: 80%;
-    margin: 00px auto;
+    margin: 20px auto;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -397,11 +401,11 @@ footer a:hover {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 40px;
+  gap: 80px;
   justify-items: center;
   margin-top: 20px;
   width: 40%;
-  max-width: 400px; /* Limite de largeur pour éviter trop de photos par ligne */
+  max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {

@@ -90,7 +90,7 @@ nav ul li a {
             text-decoration: none; /* Supprime le soulignement */
             color: white; /* Couleur du texte */
             font-family: Arial, sans-serif;
-
+font-weight: bold;
 }
 
 nav ul li a:hover {

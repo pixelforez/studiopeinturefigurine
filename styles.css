@@ -136,6 +136,7 @@ nav ul li a:hover {
     background-color: #267a38; /* Vert plus foncé */
 }
 
+
 /* Footer */
 footer {
     background-color: #2f8b4f;
@@ -207,25 +208,23 @@ footer a:hover {
     background-color: #267a38;
 }
 
-/* Style du bouton */
+/* Bouton pour la simulation */
 .button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    display: inline-block;
     background-color: #2f8b4f;
     color: white;
-    border: none;
-    padding: 15px;
-    font-size: 24px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Apparence du bouton au survol */
 .button:hover {
-    background-color: #267a38;
+    background-color: #267a38; /* Vert plus foncé */
 }
+
 ul {
   list-style-type: none; /* Supprime les puces */
   padding: 0; /* Enlève l'espace intérieur */

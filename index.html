@@ -29,25 +29,6 @@
 <a href="index.html" style="color: white; text-decoration: none;">Studio Peinture Figurine</a></h1>
      </header>
 <script>
-         // Obtenir le bouton
-let mybutton = document.getElementById("scrollToTopBtn");
-
-// Afficher le bouton quand l'utilisateur a défilé de 20px vers le bas
-window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-};
-
-// Fonction pour faire défiler la page jusqu'en haut
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
     
         // Fonction AJAX pour charger le contenu des pages
         function loadPage(page) {
@@ -103,9 +84,9 @@ function scrollToTop() {
          // Obtenir le bouton
 let mybutton = document.getElementById("scrollToTopBtn");
 
-// Afficher le bouton quand l'utilisateur a défilé de 50px vers le bas
+// Afficher le bouton quand l'utilisateur a défilé de 20px vers le bas
 window.onscroll = function() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";

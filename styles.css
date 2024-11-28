@@ -1,6 +1,6 @@
  #contenu-principal {
         width: 80%;
-      padding: 40px;
+      padding: 20px;
      border: 0px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
@@ -107,7 +107,7 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
+    padding: 20px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 

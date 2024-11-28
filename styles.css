@@ -121,7 +121,7 @@ nav ul li a:hover {
 
 /* Bouton pour la simulation */
 .button {
-  position: fixed;
+    display: inline-block;
     background-color: #2f8b4f;
     color: white;
     font-size: 18px;

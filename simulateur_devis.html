@@ -43,27 +43,8 @@ document.getElementById("contactForm").addEventListener("input", updateTotal());
            </script>
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
-<form id="contactForm" method="POST">
+<form id="contactForm">
      <label for="nom">Nom :</label><br>
-            <input type="text" id="nom" name="nom" required><br><br>
-
-            <label for="prenom">Prénom :</label><br>
-            <input type="text" id="prenom" name="prenom" required><br><br>
-
-            <label for="adresse">Adresse :</label><br>
-            <input type="text" id="adresse" name="adresse" required><br><br>
-
-            <label for="codePostal">Code Postal :</label><br>
-            <input type="text" id="codePostal" name="codePostal" required><br><br>
-
-            <label for="ville">Ville :</label><br>
-            <input type="text" id="ville" name="ville" required><br><br>
-
-            <label for="telephone">Téléphone :</label><br>
-            <input type="text" id="telephone" name="telephone" required><br><br>
-
-            <label for="email">Email :</label><br>
-            <input type="email" id="email" name="email" required><br><br>
     
         <label for="niveau">Niveau de Peinture :</label>
         <select id="niveau" name="niveau">
@@ -73,7 +54,7 @@ document.getElementById("contactForm").addEventListener("input", updateTotal());
         </select><br><br>
 
         <label for="infanterie">Nombre d'Infanteries :</label>
-        <input type="number" id="infanterie" name="infanterie" min="0" value="0" onclick="updateTotal()"><br><br>
+        <input type="number" id="infanterie" name="infanterie" min="0" value="0" onclick="updateTotal()" onclick="updateTotal()"><br><br>
 
         <label for="cavalerie">Nombre de Cavaleries :</label>
         <input type="number" id="cavalerie" name="cavalerie" min="0" value="0" onclick="updateTotal()"><br><br>

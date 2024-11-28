@@ -1,6 +1,6 @@
  #contenu-principal {
         width: 100%;
-      padding: 10px;
+      padding: 0px;
      border: 0px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
@@ -105,7 +105,7 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 0px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 
@@ -175,12 +175,12 @@ footer a:hover {
   gap: 0px;
   justify-items: center;
   margin-top: 0px;
-  width: 200%;
-  max-width: 600px; /* Limite de largeur pour éviter trop de photos par ligne */
+  width: 400%;
+  max-width: 1400px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
-  width: 200%;
+  width: 400%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
@@ -188,7 +188,7 @@ footer a:hover {
 }
 
 .gallery img:hover {
-  transform: scale(5.05);
+  transform: scale(8.05);
 }
 /* Style du bouton fleche */
 #scrollToTopBtn {

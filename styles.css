@@ -167,11 +167,11 @@ footer a:hover {
 /* Style de la galerie */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
   gap: 80px;
   justify-items: center;
   margin-top: 20px;
-  width: 80%;
+  width: 100%;
   max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
@@ -184,9 +184,9 @@ footer a:hover {
 }
 
 .gallery img:hover {
-  transform: scale(4.05);
+  transform: scale(8.05);
 }
-/* Style du bouton */
+/* Style du bouton fleche */
 #scrollToTopBtn {
     position: fixed;
     bottom: 20px;
@@ -208,22 +208,6 @@ footer a:hover {
     background-color: #267a38;
 }
 
-/* Bouton pour la simulation */
-.button {
-  position: fixed;
-    background-color: #2f8b4f;
-    color: white;
-    font-size: 18px;
-    padding: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #267a38; /* Vert plus foncé */
-}
 
 ul {
   list-style-type: none; /* Supprime les puces */
@@ -354,13 +338,12 @@ nav ul li a:hover {
     margin-bottom: 0px;
 }
 
-/* Bouton pour la simulation */
+/* Bouton */
 .button {
-   position: fixed;
     background-color: #2f8b4f;
     color: white;
     font-size: 18px;
-    padding: 30px;
+    padding: 0x;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
@@ -401,11 +384,11 @@ footer a:hover {
 /* Style de la galerie */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  grid-template-columns: repeat(auto-fill, minmax(800px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
   gap: 80px;
   justify-items: center;
   margin-top: 20px;
-  width: 80%;
+  width: 100%;
   max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
@@ -418,10 +401,10 @@ footer a:hover {
 }
 
 .gallery img:hover {
-  transform: scale(4.05);
+  transform: scale(8.05);
 }
 
-/* Style du bouton */
+/* Style du bouton fleche */
 #scrollToTopBtn {
     position: fixed;
     bottom: 20px;
@@ -435,26 +418,6 @@ footer a:hover {
     cursor: pointer;
     display: none; /* Masqué au départ */
     z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Apparence du bouton au survol */
-#scrollToTopBtn:hover {
-    background-color: #267a38;
-}
-/* Style du bouton */
-.button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #2f8b4f;
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 24px;
-    border-radius: 5%;
-    cursor: pointer;
-
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 

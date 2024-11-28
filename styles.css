@@ -1,6 +1,6 @@
  #contenu-principal {
         width: 80%;
-      padding: 20px;
+      padding: 40px;
      border: 0px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
@@ -9,8 +9,10 @@
         margin-bottom: 5px;
     }
 table{
- justify-items: center;
-  text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
+            display: flex;
+            justify-content: center; /* Centre horizontalement */
+            align-items: center; /* Centre verticalement */
+            margin: 0; /* Supprime les marges par défaut */
 }
     /* Tableau */
   th, td {
@@ -103,11 +105,11 @@ nav ul li a:hover {
 /* Conteneur principal */
 #contenu-principal {
     width: 80%;
-    margin: 0px;
+    margin: 00px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 40px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 
@@ -173,12 +175,12 @@ footer a:hover {
 /* Style de la galerie */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 80px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  gap: 0px;
   justify-items: center;
   margin-top: 20px;
-  width: 100%;
-  max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
+  width: 80%;
+  max-width: 600px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
@@ -221,8 +223,10 @@ ul {
   margin: 0; /* Enlève les marges par défaut */
 }
 table{
- justify-items: center;
-  text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
+            display: flex;
+            justify-content: center; /* Centre horizontalement */
+            align-items: center; /* Centre verticalement */
+            margin: 0; /* Supprime les marges par défaut */
 }
 li {
   margin-bottom: 0px; /* Optionnel : espace entre les éléments de la liste */

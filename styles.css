@@ -1,6 +1,6 @@
  #contenu-principal {
         width: 100%;
-      padding: 20px;
+      padding: 10px;
      border: 0px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
@@ -36,7 +36,7 @@ body {
     background-color: #f4f7f6;
     color: #333;
     margin: 0;
-    padding: 40px;
+    padding: 30px;
      border: 0px;
             justify-content: center; /* Centre horizontalement */
             align-items: center; /* Centre verticalement */
@@ -105,7 +105,7 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 10px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 
@@ -171,8 +171,8 @@ footer a:hover {
 /* Style de la galerie */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 140px;
+  grid-template-columns: repeat(auto-fill, minmax(1200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  gap: 0px;
   justify-items: center;
   margin-top: 0px;
   width: 200%;
@@ -388,7 +388,7 @@ footer a:hover {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
   gap: 0px;
   justify-items: center;
   margin-top: 0px;

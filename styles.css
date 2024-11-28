@@ -168,9 +168,9 @@ footer a:hover {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 800px;
+  gap: 80px;
   justify-items: center;
-  margin-top: 800px;
+  margin-top: 20px;
   width: 80%;
   max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
@@ -184,7 +184,7 @@ footer a:hover {
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(4.05);
 }
 /* Style du bouton */
 #scrollToTopBtn {
@@ -402,9 +402,9 @@ footer a:hover {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 800px;
+  gap: 80px;
   justify-items: center;
-  margin-top: 800px;
+  margin-top: 20px;
   width: 80%;
   max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
@@ -418,7 +418,7 @@ footer a:hover {
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(4.05);
 }
 
 /* Style du bouton */

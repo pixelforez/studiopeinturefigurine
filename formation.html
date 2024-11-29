@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formation</title>
     <link rel="stylesheet" href="styles.css">
+     <script>
+        function envoyerMail(form) {
+            const nom = encodeURIComponent(form.nom.value);
+            const prenom = encodeURIComponent(form.prenom.value);
+            const email = encodeURIComponent(form.email.value);
+            const telephone = encodeURIComponent(form.telephone.value);
+            const cours = encodeURIComponent(form.cours.value);
+            const message = encodeURIComponent(form.message.value);
+
+            const subject = `Demande de cours de peinture - ${nom} ${prenom}`;
+            const body = `Bonjour,\n\nVoici une nouvelle demande de cours :\n\nNom : ${nom}\nPrénom : ${prenom}\nEmail : ${email}\nTéléphone : ${telephone}\nCours choisi : ${cours}\n\nMessage du client :\n${message}\n\nCordialement,\n${prenom} ${nom}`;
+            
+            const mailtoLink = `mailto:studiopeinturefigurine@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
 </head>
 <body>
 
@@ -68,8 +84,41 @@
 
 </div>
     
- <form>
-     
- </form>
+ <form onsubmit="event.preventDefault(); envoyerMail(this);">
+        <!-- Champ pour le nom -->
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <!-- Champ pour le prénom -->
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+
+        <!-- Champ pour l'email -->
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Champ pour le téléphone -->
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" required><br><br>
+
+        <!-- Choix des cours -->
+        <label for="cours">Choisissez votre cours :</label>
+        <select id="cours" name="cours" required>
+            <option value="COURS PEINTURE 1h - 35€/h - 35,00€">COURS PEINTURE 1h - 35€/h - 35,00 €</option>
+            <option value="COURS PEINTURE 3h - 35€/h - 105,00€">COURS PEINTURE 3h - 35€/h - 105,00 €</option>
+            <option value="COURS PEINTURE 5h - 30€/h - 150,00€">COURS PEINTURE 5h - 30€/h - 150,00 €</option>
+            <option value="COURS PEINTURE 10h - 30€/h - 300,00€">COURS PEINTURE 10h - 30€/h - 300,00 €</option>
+            <option value="Forfait 4h - 1h par semaine/mois (35€/h) - 140,00€">Forfait 4h - 1h par semaine/mois (35€/h) - 140,00 €</option>
+            <option value="Forfait 12h - 3h par semaine/mois (30€/h) - 360,00€">Forfait 12h - 3h par semaine/mois (30€/h) - 360,00 €</option>
+            <option value="Forfait 20h - 5h par semaine/mois (25€/h) - 500,00€">Forfait 20h - 5h par semaine/mois (25€/h) - 500,00 €</option>
+        </select><br><br>
+
+        <!-- Champ de texte pour un message -->
+        <label for="message">Message ou présentation :</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Votre message ici..." required></textarea><br><br>
+
+        <!-- Bouton pour soumettre le formulaire -->
+        <button type="submit">Envoyer ma demande</button>
+    </form>
 </body>
 </html>

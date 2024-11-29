@@ -5,7 +5,6 @@
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
 .center{
-display: flex;
   justify-content: center; /* Centrage horizontal */
   align-items: center; /* Centrage vertical */
  margin-left: auto;

@@ -8,7 +8,9 @@
 display: flex;
   justify-content: center; /* Centrage horizontal */
   align-items: center; /* Centrage vertical */
-  height: 100vh; /* La hauteur du conteneur parent, nécessaire pour le centrage vertical */
+ margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* Ou toute autre valeur selon la taille désirée */
 }
     /* Tableau */
   th, td {

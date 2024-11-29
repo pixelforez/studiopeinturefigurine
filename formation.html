@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Peinture Figurine - Studio de Peinture pour Wargames et Modélisme">
+    <meta property="og:description" content="Transformez vos figurines en œuvres d'art avec notre service de peinture sur figurines. Services personnalisés pour Warhammer, Age of Sigmar, et plus.">
+    <meta property="og:image" content="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png">
+    <meta property="og:url" content="https://peinturefigurine.fr/peinturecommission.html">
+    <meta property="og:type" content="website">
+
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Peinture sur figurines et décors de haute qualité pour jeux de figurines, wargames et modélisme. Services de peinture sur mesure et impression 3D à la demande.">
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formation</title>
+    <title>Studio Peinture Figurine</title>
     <link rel="stylesheet" href="styles.css">
-     <script>
-        function envoyerMail(form) {
-            const nom = encodeURIComponent(form.nom.value);
-            const prenom = encodeURIComponent(form.prenom.value);
-            const email = encodeURIComponent(form.email.value);
-            const telephone = encodeURIComponent(form.telephone.value);
-            const cours = encodeURIComponent(form.cours.value);
-            const message = encodeURIComponent(form.message.value);
+    <link rel="icon" href="favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-            const subject = `Demande de cours de peinture - ${nom} ${prenom}`;
-            const body = `Bonjour,\n\nVoici une nouvelle demande de cours :\n\nNom : ${nom}\nPrénom : ${prenom}\nEmail : ${email}\nTéléphone : ${telephone}\nCours choisi : ${cours}\n\nMessage du client :\n${message}\n\nCordialement,\n${prenom} ${nom}`;
-            
-            const mailtoLink = `mailto:studiopeinturefigurine@gmail.com?subject=${subject}&body=${body}`;
-            window.location.href = mailtoLink;
-        }
-    </script>
 </head>
 <body>
+<header>
+    <h1><img src="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png" alt="Studio Peinture Figurine " width="40" height="40">
+<a href="index.html" style="color: white; text-decoration: none;">Studio Peinture Figurine</a></h1>
+     </header>
+<script>
+    
+        // Fonction AJAX pour charger le contenu des pages
+        function loadPage(page) {
+            // Enlever l'ancien contenu et charger la nouvelle page
+            $("#contenu-principal").fadeOut(20, function() {
+                // Charger la nouvelle page dans le div #contenu-principal
+                $("#contenu-principal").load(page + " #contenu-principal", function() {
+                    // Rendre le contenu visible après qu'il soit chargé
+                    $("#contenu-principal").fadeIn(20);
+                });
+            });
+        }
+    </script>
+<nav>
+    <ul>
+        <li><a href="peinturecommission.html" onclick="loadPage('peinturecommission.html'); return false;">Peinture sur commission</a></li>
+        <li><a href="impression3d.html" onclick="loadPage('impression3d.html'); return false;">Impression 3D à la demande</a></li>
+        <li><a href="formation.html">Formation</a></li>
+        <li><a href="simulateur_devis.html">Simulateur de devis</a></li>
+        <li><a href="galerie.html" onclick="loadPage('galerie.html'); return false;">Galerie</a></li>
+    </ul>
+</nav>
 
+<!-- Contenu principal qui change dynamiquement -->
 <div id="contenu-principal">
   <section class="formation">
   <h2>🎨 Formation en Peinture sur Figurines - Maîtrisez l'Art de la Peinture</h2>

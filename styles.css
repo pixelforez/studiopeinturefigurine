@@ -5,10 +5,10 @@
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
 .center{
- justify-content: center; /* Centre horizontalement */
-            align-items: center; /* Centre verticalement */
-  text-align: center;
- width: 60%;
+display: flex;
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+  height: 100vh; /* La hauteur du conteneur parent, nécessaire pour le centrage vertical */
 }
     /* Tableau */
   th, td {

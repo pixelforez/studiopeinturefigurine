@@ -62,17 +62,17 @@
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
     <form id="contactForm">
-         <p>Nom et Coordonnées :</p>
-        <label for="nom">Nom :</label>
+         <p>Nom et Coordonnées :*</p>
+        <label for="nom">Nom :*</label>
         <input type="text" id="nom" name="nom" required><br><br>
 
-        <label for="prenom">Prénom :</label>
+        <label for="prenom">Prénom :*</label>
         <input type="text" id="prenom" name="prenom" required><br><br>
 
-        <label for="email">Email :</label>
+        <label for="email">Email :*</label>
         <input type="email" id="email" name="email" required><br><br>
 
-        <label for="telephone">Téléphone :</label>
+        <label for="telephone">Téléphone :*</label>
         <input type="tel" id="telephone" name="telephone" required><br><br>
  <p>Ma demande :</p>
         <label for="niveau">Niveau de Peinture :</label>
@@ -99,9 +99,9 @@
 
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
-           <label for="message">Pour un devis plus précisi, merci de me définir la liste de figurines à peindre et si le montage est nécessaire :</label>
-        <input type="text" id="message" name="message" rows="4" min="20" value="Votre message"><br><br>
-         
+           <label for="message">Pour un devis plus précisi, merci de me définir la liste de figurines à peindre et si le montage est nécessaire :*</label>
+        <textarea type="text" id="message" name="message" rows="5" cols="30" required min="20" value="Votre message " required><br><br>
+         <p>* champs obligatoire.</p>
         <button type="submit" class="button">Envoyer</button>
     </form>
 </div>

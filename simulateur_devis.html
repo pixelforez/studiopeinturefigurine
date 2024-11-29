@@ -99,7 +99,7 @@
 
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
-           <label for="message">Pour un devis plus précis, merci de me définir la liste de figurines à peindre et si le montage est nécessaire :*</label>
+           <label for="message">Pour un devis plus précis, merci de me définir la liste de figurines à peindre et si le montage est nécessaire :*</label><br><br>
         <textarea type="text" id="message" name="message" rows="5" cols="30" required min="20" value="Votre message " required></textarea><br><br>
          <p>* champs obligatoire.</p>
         <button type="submit" class="button">Envoyer</button>
@@ -124,7 +124,7 @@
         const heros = parseInt(document.getElementById("heros").value) || 0;
         const petitMonstre = parseInt(document.getElementById("petitMonstre").value) || 0;
         const grosMonstre = parseInt(document.getElementById("grosMonstre").value) || 0;
-         const message = parseInt(document.getElementById("message").value) || 0;
+         const message = document.getElementById("message").value;
 
         const total =
             (tarifs.infanterie[niveau] * infanterie) +

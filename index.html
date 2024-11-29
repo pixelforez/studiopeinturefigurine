@@ -33,11 +33,11 @@
         // Fonction AJAX pour charger le contenu des pages
         function loadPage(page) {
             // Enlever l'ancien contenu et charger la nouvelle page
-            $("#contenu-principal").fadeOut(20000, function() {
+            $("#contenu-principal").fadeOut(2000, function() {
                 // Charger la nouvelle page dans le div #contenu-principal
                 $("#contenu-principal").load(page + " #contenu-principal", function() {
                     // Rendre le contenu visible après qu'il soit chargé
-                    $("#contenu-principal").fadeIn(200000);
+                    $("#contenu-principal").fadeIn(2000);
                 });
             });
         }

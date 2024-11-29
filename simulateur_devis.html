@@ -6,7 +6,49 @@
     <title>Simulateur de devis</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
+</head>
+<body>
+<div id="contenu-principal">
+    <h2>Simulateur de devis</h2>
+    <form id="contactForm">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" required><br><br>
+
+        <label for="niveau">Niveau de Peinture :</label>
+        <select id="niveau" name="niveau">
+            <option value="niveau_1">Niveau 1 - Prêt pour le Tournoi</option>
+            <option value="niveau_2">Niveau 2 - TableTop Simple et efficace</option>
+            <option value="niveau_3">Niveau 3 - TableTop de Qualité supérieur</option>
+        </select><br><br>
+
+        <label for="infanterie">Nombre d'Infanteries :</label>
+        <input type="number" id="infanterie" name="infanterie" min="0" value="0"><br><br>
+
+        <label for="cavalerie">Nombre de Cavaleries :</label>
+        <input type="number" id="cavalerie" name="cavalerie" min="0" value="0"><br><br>
+
+        <label for="heros">Nombre de Héros à Pied :</label>
+        <input type="number" id="heros" name="heros" min="0" value="0"><br><br>
+
+        <label for="petitMonstre">Nombre de Petits Véhicules/Monstres :</label>
+        <input type="number" id="petitMonstre" name="petitMonstre" min="0" value="0"><br><br>
+
+        <label for="grosMonstre">Nombre de Gros Véhicules/Monstres :</label>
+        <input type="number" id="grosMonstre" name="grosMonstre" min="0" value="0"><br><br>
+
+        <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
+
+        <button type="submit" class="button">Envoyer</button>
+<script>
     // Tarifs en JavaScript
     const tarifs = {
         "infanterie": { "niveau_1": 8.00, "niveau_2": 13.00, "niveau_3": 25.00 },
@@ -59,48 +101,6 @@
         element.addEventListener("input", updateTotal);
     });
 </script>
-</head>
-<body>
-<div id="contenu-principal">
-    <h2>Simulateur de devis</h2>
-    <form id="contactForm">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required><br><br>
-
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" name="prenom" required><br><br>
-
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="telephone">Téléphone :</label>
-        <input type="tel" id="telephone" name="telephone" required><br><br>
-
-        <label for="niveau">Niveau de Peinture :</label>
-        <select id="niveau" name="niveau">
-            <option value="niveau_1">Niveau 1 - Prêt pour le Tournoi</option>
-            <option value="niveau_2">Niveau 2 - TableTop Simple et efficace</option>
-            <option value="niveau_3">Niveau 3 - TableTop de Qualité supérieur</option>
-        </select><br><br>
-
-        <label for="infanterie">Nombre d'Infanteries :</label>
-        <input type="number" id="infanterie" name="infanterie" min="0" value="0"><br><br>
-
-        <label for="cavalerie">Nombre de Cavaleries :</label>
-        <input type="number" id="cavalerie" name="cavalerie" min="0" value="0"><br><br>
-
-        <label for="heros">Nombre de Héros à Pied :</label>
-        <input type="number" id="heros" name="heros" min="0" value="0"><br><br>
-
-        <label for="petitMonstre">Nombre de Petits Véhicules/Monstres :</label>
-        <input type="number" id="petitMonstre" name="petitMonstre" min="0" value="0"><br><br>
-
-        <label for="grosMonstre">Nombre de Gros Véhicules/Monstres :</label>
-        <input type="number" id="grosMonstre" name="grosMonstre" min="0" value="0"><br><br>
-
-        <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
-
-        <button type="submit" class="button">Envoyer</button>
     </form>
 </div>
 </body>

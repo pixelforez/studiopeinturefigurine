@@ -1,55 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Peinture Figurine - Studio de Peinture pour Wargames et Modélisme">
+    <meta property="og:description" content="Transformez vos figurines en œuvres d'art avec notre service de peinture sur figurines. Services personnalisés pour Warhammer, Age of Sigmar, et plus.">
+    <meta property="og:image" content="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png">
+    <meta property="og:url" content="https://peinturefigurine.fr/peinturecommission.html">
+    <meta property="og:type" content="website">
+
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Peinture sur figurines et décors de haute qualité pour jeux de figurines, wargames et modélisme. Services de peinture sur mesure et impression 3D à la demande.">
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulateur de devis</title>
+    <title>Studio Peinture Figurine</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
+       
 </head>
 <body>
+<header>
+    <h1><img src="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png" alt="Studio Peinture Figurine " width="40" height="40">
+<a href="index.html" style="color: white; text-decoration: none;">Studio Peinture Figurine</a></h1>
+     </header>
+
+<nav>
+    <ul>
+        <li><a href="peinturecommission.html" onclick="loadPage('peinturecommission.html'); return false;">Peinture sur commission</a></li>
+        <li><a href="impression3d.html" onclick="loadPage('impression3d.html'); return false;">Impression 3D à la demande</a></li>
+        <li><a href="formation.html" onclick="loadPage('formation.html'); return false;">Formation</a></li>
+        <li><a href="simulateur_devis.html" onclick="loadPage('simulateur_devis.html'); return false;">Simulateur de devis</a></li>
+        <li><a href="galerie.html" onclick="loadPage('galerie.html'); return false;">Galerie</a></li>
+    </ul>
+</nav>
+
+<!-- Contenu principal qui change dynamiquement -->
 <div id="contenu-principal">
-    <h2>Simulateur de devis</h2>
-    <form id="contactForm">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required><br><br>
+        <h1>Transformez vos figurines en chefs-d'œuvre</h1>
+        <p>Bienvenue chez <span class="highlight">Studio Peinture Figurine</span>, votre partenaire pour la peinture et la personnalisation de figurines et décors. Nous sublimons vos modèles pour le jeu, l'exposition ou la vitrine grâce à notre expertise et à un souci du détail inégalé.</p>
+        <p>Nous proposons des <span class="highlight">prestations sur mesure</span>, adaptées à tous les niveaux de finition et à votre budget. De la préparation minutieuse à des techniques de peinture avancées, en passant par l'impression 3D de haute précision, notre studio s'engage à dépasser vos attentes.</p>
+        <ul>
+            <li>🎨 <strong>Services personnalisés</strong> : peinture, impression 3D, formations.</li>
+            <li>🛠️ <strong>Outils pratiques</strong> : devis en ligne, accompagnement sur mesure.</li>
+        </ul>
+        <p>Choisissez l'excellence pour vos figurines. Explorez nos offres et découvrez comment nous pouvons donner vie à vos projets.</p>
+  <div class="cta">
+       <a href="simulateur_devis.html" onclick="loadPage('simulateur_devis.html'); return false;" class="button">Demander une simulation</a>
+    </div></div>
+     <footer>
 
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" name="prenom" required><br><br>
+        <p>Contact : <a href="mailto:studiopeinturefigurine@gmail.com">studiopeinturefigurine@gmail.com</a> - Téléphone : <a href="tel:+33775860837">07 75 86 08 37</a></p>
+        <p>&copy; 2024 Studio Peinture Figurine. Tous droits réservés. SIRET : 832 040 380 00020</p>
+    
+    <p><a href="conditions.html" onclick="loadPage('conditions.html'); return false;">Conditions générales de vente</a></p>
+   
+  
+    <button id="scrollToTopBtn" title="Retour en haut" onclick="scrollToTop()">↑</button>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="telephone">Téléphone :</label>
-        <input type="tel" id="telephone" name="telephone" required><br><br>
-
-        <label for="niveau">Niveau de Peinture :</label>
-        <select id="niveau" name="niveau">
-            <option value="niveau_1">Niveau 1 - Prêt pour le Tournoi</option>
-            <option value="niveau_2">Niveau 2 - TableTop Simple et efficace</option>
-            <option value="niveau_3">Niveau 3 - TableTop de Qualité supérieur</option>
-        </select><br><br>
-
-        <label for="infanterie">Nombre d'Infanteries :</label>
-        <input type="number" id="infanterie" name="infanterie" min="0" value="0"><br><br>
-
-        <label for="cavalerie">Nombre de Cavaleries :</label>
-        <input type="number" id="cavalerie" name="cavalerie" min="0" value="0"><br><br>
-
-        <label for="heros">Nombre de Héros à Pied :</label>
-        <input type="number" id="heros" name="heros" min="0" value="0"><br><br>
-
-        <label for="petitMonstre">Nombre de Petits Véhicules/Monstres :</label>
-        <input type="number" id="petitMonstre" name="petitMonstre" min="0" value="0"><br><br>
-
-        <label for="grosMonstre">Nombre de Gros Véhicules/Monstres :</label>
-        <input type="number" id="grosMonstre" name="grosMonstre" min="0" value="0"><br><br>
-
-        <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
-
-        <button type="submit" class="button">Envoyer</button>
-    </form>
-</div>
-</body>
+</footer>
+     </body>
 </html>

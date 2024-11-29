@@ -97,7 +97,7 @@
            <label for="message">Pour un devis plus précis, merci de me définir la liste de figurines à peindre et si le montage est nécessaire :*</label><br><br>
         <textarea type="text" id="message" name="message" rows="5" cols="30" min="20" value="Votre message" required></textarea><br><br>
          <p>* champs obligatoire.</p>
-        <button type="submit" class="button">Envoyer</button>
+        <button type="submit" class="button">Envoyer la demande par mail</button>
     </form>
 </div>
 
@@ -172,7 +172,15 @@ Cordialement.`;
  
         window.location.href = mailtoURL; // Redirection
          window.location.href = 'index.html';  // Redirige vers index.html
-         alert("C'est un message d'alerte !");
+         function showAlert() {
+            var alertBox = document.getElementById("alertMessage");
+            alertBox.style.display = "block"; // Affiche l'alerte
+
+            // Masque l'alerte après 3 secondes
+            setTimeout(function() {
+                alertBox.style.display = "none";
+            }, 3000);
+        }
     });
 
     // Événements d'entrée pour la mise à jour du total

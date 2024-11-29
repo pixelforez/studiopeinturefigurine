@@ -173,7 +173,18 @@ Voici ma demande de devis de peinture  ${niveau} :
  Mon message :
  ${message}
 Cordialement.`;
-        const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+       emailjs.send("service_6v3lj6i", "template_qfvf6rj", {
+                subject: subject,
+                message: body,
+                to_email: "studiopeinturefigurine@gmail.com",
+            })
+                .then(function () {
+                    alert("Email envoyé avec succès !");
+                }, function (error) {
+                    alert("Erreur lors de l'envoi : " + JSON.stringify(error));
+                });
+  
+const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
         window.location.href = mailtoURL; // Redirection
     });

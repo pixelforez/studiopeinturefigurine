@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Peinture Figurine - Studio de Peinture pour Wargames et Modélisme">
+    <meta property="og:description" content="Transformez vos figurines en œuvres d'art avec notre service de peinture sur figurines. Services personnalisés pour Warhammer, Age of Sigmar, et plus.">
+    <meta property="og:image" content="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png">
+    <meta property="og:url" content="https://peinturefigurine.fr/peinturecommission.html">
+    <meta property="og:type" content="website">
+
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Peinture sur figurines et décors de haute qualité pour jeux de figurines, wargames et modélisme. Services de peinture sur mesure et impression 3D à la demande.">
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulateur de devis</title>
+    <title>Studio Peinture Figurine</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
+       
 </head>
 <body>
+<header>
+    <h1><img src="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png" alt="Studio Peinture Figurine " width="40" height="40">
+<a href="index.html" style="color: white; text-decoration: none;">Studio Peinture Figurine</a></h1>
+     </header>
+
+<nav>
+    <ul>
+        <li><a href="peinturecommission.html" onclick="loadPage('peinturecommission.html'); return false;">Peinture sur commission</a></li>
+        <li><a href="impression3d.html" onclick="loadPage('impression3d.html'); return false;">Impression 3D à la demande</a></li>
+        <li><a href="formation.html" onclick="loadPage('formation.html'); return false;">Formation</a></li>
+        <li><a href="simulateur_devis.html">Simulateur de devis</a></li>
+        <li><a href="galerie.html" onclick="loadPage('galerie.html'); return false;">Galerie</a></li>
+    </ul>
+</nav>
+
+<!-- Contenu principal qui change dynamiquement -->
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
     <form id="contactForm">
@@ -51,5 +83,16 @@
         <button type="submit" class="button">Envoyer</button>
     </form>
 </div>
-</body>
+     <footer>
+
+        <p>Contact : <a href="mailto:studiopeinturefigurine@gmail.com">studiopeinturefigurine@gmail.com</a> - Téléphone : <a href="tel:+33775860837">07 75 86 08 37</a></p>
+        <p>&copy; 2024 Studio Peinture Figurine. Tous droits réservés. SIRET : 832 040 380 00020</p>
+    
+    <p><a href="conditions.html" onclick="loadPage('conditions.html'); return false;">Conditions générales de vente</a></p>
+   
+  
+    <button id="scrollToTopBtn" title="Retour en haut" onclick="scrollToTop()">↑</button>
+
+</footer>
+     </body>
 </html>

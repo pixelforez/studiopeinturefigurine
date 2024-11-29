@@ -139,7 +139,18 @@
 
         // Construire l'URL mailto
         const subject = `Demande de devis de ${prenom} ${nom}`;
-        const body = `Bonjour, Voici ma demande de devis : - Nom : ${nom} - Prénom : ${prenom} - Email : ${email} - Téléphone : ${telephone} Total estimé : ${total.toFixed(2)} €. Je reste à votre disposition. Cordialement.`;
+        const body = `Bonjour,/n
+Voici ma demande de devis :/n
+ - Nom : ${nom} - Prénom : ${prenom}/n
+ - Email : ${email} /n
+- Téléphone : ${telephone} /n
+- Infanterie : ${infanterie}/n
+- Cavalerie : ${cavalerie}/n
+- Personnage : ${heros}/n
+- Monstre : ${petitMonstre}/n
+- Vehicule : ${grosMonstre}/n
+ Total estimé : ${total.toFixed(2)} €./n
+Cordialement.`;
         const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
         window.location.href = mailtoURL; // Redirection
@@ -184,3 +195,4 @@ function scrollToTop() {
 </footer>
      </body>
 </html>
+

@@ -57,6 +57,7 @@
 <div id="contenu-principal">
     <h2>Simulateur de devis</h2>
     <form id="contactForm">
+         <p>Nom et Coordonnées :</p>
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" required><br><br>
 
@@ -68,7 +69,7 @@
 
         <label for="telephone">Téléphone :</label>
         <input type="tel" id="telephone" name="telephone" required><br><br>
-
+ <p>Ma demande :</p>
         <label for="niveau">Niveau de Peinture :</label>
         <select id="niveau" name="niveau">
             <option value="niveau_1">Niveau 1 - Prêt pour le Tournoi</option>
@@ -93,6 +94,9 @@
 
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
+           <label for="message">Pour un devis plus précisi, merci de me définir la liste de figurines à peindre et si le montage est nécessaire :</label>
+        <input type="text" id="message" name="message" rows="4" min="0" value="0"><br><br>
+         
         <button type="submit" class="button">Envoyer</button>
     </form>
 </div>
@@ -115,6 +119,7 @@
         const heros = parseInt(document.getElementById("heros").value) || 0;
         const petitMonstre = parseInt(document.getElementById("petitMonstre").value) || 0;
         const grosMonstre = parseInt(document.getElementById("grosMonstre").value) || 0;
+         const message = parseInt(document.getElementById("message").value) || 0;
 
         const total =
             (tarifs.infanterie[niveau] * infanterie) +
@@ -141,11 +146,11 @@
 const heros = document.getElementById("heros").value;
          const petitMonstre = document.getElementById("petitMonstre").value;
          const grosMonstre = document.getElementById("grosMonstre").value;
-         
+         const niveau = document.getElementById("niveau").value;
         // Construire l'URL mailto
         const subject = `Demande de devis de ${prenom} ${nom}`;
         const body = `Bonjour,
-Voici ma demande de devis :
+Voici ma demande de devis de peinture  ${niveau} :
  - Nom : ${nom} - Prénom : ${prenom}
  - Email : ${email}
 - Téléphone : ${telephone} 
@@ -155,6 +160,8 @@ Voici ma demande de devis :
 - Monstre : ${petitMonstre}
 - Vehicule : ${grosMonstre}
  Total estimé : ${total.toFixed(2)} €.
+ Mon message :
+ ${message}
 Cordialement.`;
         const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 

@@ -21,12 +21,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init("kpDRhA6CZL0MQQby0"); // Remplacez par votre clé publique
-        })();
-    </script>
+
 </head>
 <body>
 <header>
@@ -174,16 +169,7 @@ Voici ma demande de devis de peinture  ${niveau} :
  ${message}
 Cordialement.`;
         const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
- emailjs.send("service_6v3lj6i", "template_qfvf6rj", {
-                subject: subject,
-                message: body,
-                to_email: "studiopeinturefigurine@gmail.com",
-            })
-                .then(function () {
-                    alert("Email envoyé avec succès !");
-                }, function (error) {
-                    alert("Erreur lors de l'envoi : " + JSON.stringify(error));
-                });
+ 
         window.location.href = mailtoURL; // Redirection
     });
 
@@ -192,22 +178,6 @@ Cordialement.`;
         element.addEventListener("input", updateTotal);
     });
 </script>
-  <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            emailjs.send("service_6v3lj6i", "template_qfvf6rj", {
-                subject: subject,
-                message: body,
-                to_email: "studiopeinturefigurine@gmail.com",
-            })
-                .then(function () {
-                    alert("Email envoyé avec succès !");
-                }, function (error) {
-                    alert("Erreur lors de l'envoi : " + JSON.stringify(error));
-                });
-        });
-    </script>
      <footer>
 
         <p>Contact : <a href="mailto:studiopeinturefigurine@gmail.com">studiopeinturefigurine@gmail.com</a> - Téléphone : <a href="tel:+33775860837">07 75 86 08 37</a></p>

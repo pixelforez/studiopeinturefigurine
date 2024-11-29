@@ -21,14 +21,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-<header>
-    <h1><img src="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png" alt="Studio Peinture Figurine " width="40" height="40">
-<a href="index.html" style="color: white; text-decoration: none;">Studio Peinture Figurine</a></h1>
-     </header>
-<script>
-    
+<script>  
         // Fonction AJAX pour charger le contenu des pages
         function loadPage(page) {
             // Enlever l'ancien contenu et charger la nouvelle page
@@ -41,8 +34,19 @@
             });
         }
 
+        $(document).ready(function() {
+            // Charger la page d'accueil par défaut
+            loadPage("index.html");
+        });
 
     </script>
+</head>
+<body>
+<header>
+    <h1><img src="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png" alt="Studio Peinture Figurine " width="40" height="40">
+<a href="index.html" style="color: white; text-decoration: none;">Studio Peinture Figurine</a></h1>
+     </header>
+
 <nav>
     <ul>
         <li><a href="peinturecommission.html" onclick="loadPage('peinturecommission.html'); return false;">Peinture sur commission</a></li>

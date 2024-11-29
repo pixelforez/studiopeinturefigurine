@@ -100,7 +100,7 @@
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
            <label for="message">Pour un devis plus précis, merci de me définir la liste de figurines à peindre et si le montage est nécessaire :*</label><br><br>
-        <textarea type="text" id="message" name="message" rows="5" cols="30" min="20" value="Votre message " required></textarea><br><br>
+        <textarea type="text" id="message" name="message" rows="5" cols="30" min="20" value="Votre message" required></textarea><br><br>
          <p>* champs obligatoire.</p>
         <button type="submit" class="button">Envoyer</button>
     </form>
@@ -167,7 +167,9 @@ Voici ma demande de devis de peinture  ${niveau} :
 - Personnage : ${heros}
 - Monstre : ${petitMonstre}
 - Vehicule : ${grosMonstre}
- Total estimé : ${total.toFixed(2)} €.
+
+ Total estimé : ${total.toFixed(2)} €
+ 
  Mon message :
  ${message}
 Cordialement.`;

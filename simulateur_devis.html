@@ -136,20 +136,25 @@
         const email = document.getElementById("email").value;
         const telephone = document.getElementById("telephone").value;
         const total = updateTotal(); // Récupère le total calculé
-
+     const infanterie = document.getElementById("infanterie").value;
+         const cavalerie = document.getElementById("cavalerie").value;
+const heros = document.getElementById("heros").value;
+         const petitMonstre = document.getElementById("petitMonstre").value;
+         const grosMonstre = document.getElementById("grosMonstre").value;
+         
         // Construire l'URL mailto
         const subject = `Demande de devis de ${prenom} ${nom}`;
-        const body = `Bonjour,/n
-Voici ma demande de devis :/n
- - Nom : ${nom} - Prénom : ${prenom}/n
- - Email : ${email} /n
-- Téléphone : ${telephone} /n
-- Infanterie : ${infanterie}/n
-- Cavalerie : ${cavalerie}/n
-- Personnage : ${heros}/n
-- Monstre : ${petitMonstre}/n
-- Vehicule : ${grosMonstre}/n
- Total estimé : ${total.toFixed(2)} €./n
+        const body = `Bonjour,
+Voici ma demande de devis :
+ - Nom : ${nom} - Prénom : ${prenom}
+ - Email : ${email}
+- Téléphone : ${telephone} 
+- Infanterie : ${infanterie}
+- Cavalerie : ${cavalerie}
+- Personnage : ${heros}
+- Monstre : ${petitMonstre}
+- Vehicule : ${grosMonstre}
+ Total estimé : ${total.toFixed(2)} €.
 Cordialement.`;
         const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 

@@ -173,18 +173,7 @@ Voici ma demande de devis de peinture  ${niveau} :
  Mon message :
  ${message}
 Cordialement.`;
-        const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        window.location.href = mailtoURL; // Redirection
-    });
-
-    // Événements d'entrée pour la mise à jour du total
-    document.querySelectorAll("#contactForm input, #contactForm select").forEach(element => {
-        element.addEventListener("input", updateTotal);
-    });
-</script>
-  <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
+                document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault();
 
             emailjs.send("service_6v3lj6i", "template_qfvf6rj", {
@@ -198,7 +187,17 @@ Cordialement.`;
                     alert("Erreur lors de l'envoi : " + JSON.stringify(error));
                 });
         });
-    </script>
+         
+         const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoURL; // Redirection
+    });
+
+    // Événements d'entrée pour la mise à jour du total
+    document.querySelectorAll("#contactForm input, #contactForm select").forEach(element => {
+        element.addEventListener("input", updateTotal);
+    });
+</script>
      <footer>
 
         <p>Contact : <a href="mailto:studiopeinturefigurine@gmail.com">studiopeinturefigurine@gmail.com</a> - Téléphone : <a href="tel:+33775860837">07 75 86 08 37</a></p>

@@ -21,9 +21,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function () {
-            emailjs.init("VOTRE_PUBLIC_KEY"); // Remplacez par votre clé publique
+            emailjs.init("xb4-IsmdCzFaNQAzD"); // Remplacez par votre clé publique
         })();
     </script>
 </head>
@@ -99,7 +100,7 @@
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
            <label for="message">Pour un devis plus précisi, merci de me définir la liste de figurines à peindre et si le montage est nécessaire :</label>
-        <input type="text" id="message" name="message" rows="4" min="0" value="0"><br><br>
+        <input type="text" id="message" name="message" rows="4" min="20" value="Votre message"><br><br>
          
         <button type="submit" class="button">Envoyer</button>
     </form>
@@ -152,12 +153,15 @@ const heros = document.getElementById("heros").value;
          const grosMonstre = document.getElementById("grosMonstre").value;
          const niveau = document.getElementById("niveau").value;
         // Construire l'URL mailto
-        const subject = `Demande de devis de ${prenom} ${nom}`;
+        const subject = `Demande de devis de ${prenom} ${nom} - ${niveau} `;
         const body = `Bonjour,
 Voici ma demande de devis de peinture  ${niveau} :
- - Nom : ${nom} - Prénom : ${prenom}
+ - Nom : ${nom} 
+ - Prénom : ${prenom}
  - Email : ${email}
 - Téléphone : ${telephone} 
+
+- Niveau choisi : ${niveau} 
 - Infanterie : ${infanterie}
 - Cavalerie : ${cavalerie}
 - Personnage : ${heros}
@@ -177,26 +181,19 @@ Cordialement.`;
         element.addEventListener("input", updateTotal);
     });
 </script>
- <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
+  <script>
+        document.getElementById('emailForm').addEventListener('submit', function (event) {
             event.preventDefault();
 
-            fetch("http://localhost:3000/send-email", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ subject, body }),
+            emailjs.send("service_6v3lj6i", "template_qfvf6rj", {
+                subject: subject,
+                message: body,
+                to_email: "studiopeinturefigurine@gmail.com",
             })
-                .then((response) => {
-                    if (response.ok) {
-                        alert("Email envoyé avec succès !");
-                    } else {
-                        alert("Erreur lors de l'envoi.");
-                    }
-                })
-                .catch((error) => {
-                    console.error("Erreur :", error);
+                .then(function () {
+                    alert("Email envoyé avec succès !");
+                }, function (error) {
+                    alert("Erreur lors de l'envoi : " + JSON.stringify(error));
                 });
         });
     </script>

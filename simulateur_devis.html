@@ -72,7 +72,12 @@
 
          //voir les différents niveaux
 
-          <table class=".center">
+          <button onclick="$('#formSection').toggle();" class="button">Voir le détails des niveaux</button>
+
+<section id="formSection" style="display:none;">
+
+
+      <table class=".center">
         <thead>
             <tr>
                 <th>Catégorie</th>
@@ -250,6 +255,9 @@
             </tr>
         </tbody>
     </table>
+</section>
+
+
         <label for="niveau">Niveau de Peinture :</label>
         <select id="niveau" name="niveau">
             <option value="niveau_1">Niveau 1 - Prêt pour le Tournoi</option>

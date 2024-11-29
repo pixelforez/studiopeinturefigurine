@@ -4,7 +4,10 @@
      border: 0px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
-
+center{
+ justify-content: center; /* Centre horizontalement */
+            align-items: center; /* Centre verticalement */
+}
     /* Tableau */
   th, td {
             padding: 0px;

@@ -100,7 +100,7 @@
         <p><strong>Total Estimé :</strong> <span id="total">0.00</span> €</p>
 
            <label for="message">Pour un devis plus précis, merci de me définir la liste de figurines à peindre et si le montage est nécessaire :*</label><br><br>
-        <input type="text" id="message" name="message" rows="5" cols="30" required min="20" value="Votre message " required><br><br>
+        <input type="text" id="message" name="message" rows="5" cols="30" min="20" value="Votre message " required><br><br>
          <p>* champs obligatoire.</p>
         <button type="submit" class="button">Envoyer</button>
     </form>
@@ -124,7 +124,6 @@
         const heros = parseInt(document.getElementById("heros").value) || 0;
         const petitMonstre = parseInt(document.getElementById("petitMonstre").value) || 0;
         const grosMonstre = parseInt(document.getElementById("grosMonstre").value) || 0;
-         const message = document.getElementById("message").value;
 
         const total =
             (tarifs.infanterie[niveau] * infanterie) +
@@ -152,6 +151,7 @@ const heros = document.getElementById("heros").value;
          const petitMonstre = document.getElementById("petitMonstre").value;
          const grosMonstre = document.getElementById("grosMonstre").value;
          const niveau = document.getElementById("niveau").value;
+            const message = document.getElementById("message").value;
         // Construire l'URL mailto
         const subject = `Demande de devis de ${prenom} ${nom} - ${niveau} `;
         const body = `Bonjour,

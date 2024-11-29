@@ -21,7 +21,22 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
+        function envoyerMail(form) {
+            const nom = encodeURIComponent(form.nom.value);
+            const prenom = encodeURIComponent(form.prenom.value);
+            const email = encodeURIComponent(form.email.value);
+            const telephone = encodeURIComponent(form.telephone.value);
+            const cours = encodeURIComponent(form.cours.value);
+            const message = encodeURIComponent(form.message.value);
 
+            const subject = `Demande de cours de peinture - ${nom} ${prenom}`;
+            const body = `Bonjour,\n\nVoici une nouvelle demande de cours :\n\nNom : ${nom}\nPrénom : ${prenom}\nEmail : ${email}\nTéléphone : ${telephone}\nCours choisi : ${cours}\n\nMessage du client :\n${message}\n\nCordialement,\n${prenom} ${nom}`;
+            
+            const mailtoLink = `mailto:studiopeinturefigurine@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
 </head>
 <body>
 <header>

@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Peinture Figurine - Studio de Peinture pour Wargames et Modélisme">
+    <meta property="og:description" content="Transformez vos figurines en œuvres d'art avec notre service de peinture sur figurines. Services personnalisés pour Warhammer, Age of Sigmar, et plus.">
+    <meta property="og:image" content="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png">
+    <meta property="og:url" content="https://peinturefigurine.fr/peinturecommission.html">
+    <meta property="og:type" content="website">
+
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Peinture sur figurines et décors de haute qualité pour jeux de figurines, wargames et modélisme. Services de peinture sur mesure et impression 3D à la demande.">
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Forez</title>
-    <link rel="icon" href="favicon.png">
+    <title>Studio Peinture Figurine</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <!-- En-tête avec logo et menu -->
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Pixel Forez Logo" class="logo">
-        </div>
-        <div class="logo-container">
-            <nav>
-                <ul class="menu">
-                    <li><a href="index.html" onclick="loadPage('index.html'); return false;">🏠 Accueil</a></li>
-                    <li><a href="services.html" onclick="loadPage('services.html'); return false;">💼 Services</a></li>
-                    <li><a href="faq.html" onclick="loadPage('faq.html'); return false;">❓ FAQ</a></li>
-                    <li><a href="portfolio.html" onclick="loadPage('portfolio.html'); return false;">📂 Portfolio</a></li>
-                    <li><a href="contact.html" onclick="loadPage('contact.html'); return false;">📞 Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <script>
+<header>
+<script>
+    
         // Fonction AJAX pour charger le contenu des pages
         function loadPage(page) {
             // Enlever l'ancien contenu et charger la nouvelle page
@@ -39,38 +37,76 @@
                 });
             });
         }
-        $(document).ready(function() {
+     $(document).ready(function() {
             // Charger la page d'accueil par défaut
             loadPage("index.html");
         });
     </script>
+<div class="logo-container">
+    <a href="index.html" style="color: white; text-decoration: none;">
+        <img src="https://pf-peinturefigurine.github.io/studiopeinturefigurine/logo.png" alt="Studio Peinture Figurine" class="logo">
+    </a></div>
+     <nav>
+ <ul class="menu">
+        <li><a href="peinturecommission.html" onclick="loadPage('peinturecommission.html'); return false;">Peinture sur commission</a></li>
+        <li><a href="impression3d.html" onclick="loadPage('impression3d.html'); return false;">Impression 3D à la demande</a></li>
+        <li><a href="formation.html">Formation</a></li>
+        <li><a href="simulateur_devis.html">Simulateur de devis</a></li>
+        <li><a href="galerie.html" onclick="loadPage('galerie.html'); return false;">Galerie</a></li>
 
-    <!-- Section principale dynamique -->
-    <div id="contenu-principal">
-        <!-- Contenu par défaut affiché au chargement -->
-        <section style="text-align: center; padding: 40px; font-family: Arial, sans-serif; background-color: #f8f9fa; color: #333;">
-            <h1 style="font-size: 2.5rem; color: #1a6e2f;">👋 Bienvenue chez <span style="color: #4CAF50;">Pixel Forez</span></h1>
-            <p style="font-size: 1.2rem; margin-top: 10px; color: #1a6e2f;">
-                Votre partenaire local pour des <strong>solutions digitales percutantes</strong> 🌐.
-            </p>
-            <div style="margin: 30px auto; max-width: 800px; line-height: 1.6; color: #1a6e2f;">
-                <p>✨ Nous aidons les entreprises locales à se démarquer dans le monde digital grâce à des <strong>solutions personnalisées</strong> 🛠️.</p>
-                <p>🤝 Que vous soyez artisan, commerçant ou entrepreneur, nous sommes là pour <strong>donner vie à vos idées</strong> 💡.</p>
-                <p>🖌️ Du <strong>logo</strong> à la création de <strong>site web</strong>, en passant par la <strong>stratégie numérique</strong>, notre expertise vous accompagne à chaque étape 🔍.</p>
-                <p>🚀 Ensemble, transformons votre <strong>présence locale</strong> en une <strong>force digitale</strong> 💪.</p>
-            </div>
-            <a href="services.html" style="display: inline-block; margin: 20px 10px; padding: 10px 20px; background-color: #1a6e2f; color: white; text-decoration: none; font-size: 1rem; border-radius: 5px;" onclick="loadPage('services.html'); return false;">
-                Découvrez nos services 💼
-            </a>
-            <a href="contact.html" style="display: inline-block; margin: 20px 10px; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; font-size: 1rem; border-radius: 5px;" onclick="loadPage('contact.html'); return false;">
-                Contactez-nous 📩
-            </a>
-        </section>
-    </div>
+     </ul>
+</nav>
 
-    <!-- Pied de page -->
-    <footer style="text-align: center; padding: 20px; background-color: #1a6e2f; color: white;">
-        <p>&copy; 2024 Pixel Forez. Du local au digital, votre image, notre mission. 🌍</p>
-    </footer>
-</body>
+          </header>
+
+<!-- Contenu principal qui change dynamiquement -->
+<main id="contenu-principal">
+        <h1>Transformez vos figurines en chefs-d'œuvre</h1>
+        <p>Bienvenue chez <span class="highlight">Studio Peinture Figurine</span>, votre partenaire pour la peinture et la personnalisation de figurines et décors. Nous sublimons vos modèles pour le jeu, l'exposition ou la vitrine grâce à notre expertise et à un souci du détail inégalé.</p>
+        <p>Nous proposons des <span class="highlight">prestations sur mesure</span>, adaptées à tous les niveaux de finition et à votre budget. De la préparation minutieuse à des techniques de peinture avancées, en passant par l'impression 3D de haute précision, notre studio s'engage à dépasser vos attentes.</p>
+        <ul>
+            <li>🎨 <strong>Services personnalisés</strong> : peinture, impression 3D, formations.</li>
+            <li>🛠️ <strong>Outils pratiques</strong> : devis en ligne, accompagnement sur mesure.</li>
+        </ul>
+        <p>Choisissez l'excellence pour vos figurines. Explorez nos offres et découvrez comment nous pouvons donner vie à vos projets.</p>
+  <div class="cta">
+       <a href="simulateur_devis.html" onclick="loadPage('simulateur_devis.html'); return false;" class="button">Demander une simulation</a></div>
+
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-81547a53-d904-4681-b833-a0c53d059dae" data-elfsight-app-lazy></div>
+       
+    </div></main>
+     <footer>
+<div class=".center"><script src="https://widget.trustmary.com/EUCHp9LXi"></script></div>
+        <p>Contact : <a href="mailto:studiopeinturefigurine@gmail.com">studiopeinturefigurine@gmail.com</a> - Téléphone : <a href="tel:+33775860837">07 75 86 08 37</a></p>
+        <p>&copy; 2024 Studio Peinture Figurine. Tous droits réservés. SIRET : 832 040 380 00020</p>
+    
+    <p><a href="conditions.html" onclick="loadPage('conditions.html'); return false;">Conditions générales de vente</a></p>
+   
+    <!-- Bouton de retour en haut -->
+    <button id="scrollToTopBtn" title="Retour en haut" onclick="scrollToTop()">↑</button>
+          <script>
+         // Obtenir le bouton
+let mybutton = document.getElementById("scrollToTopBtn");
+
+// Afficher le bouton quand l'utilisateur a défilé de 20px vers le bas
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+};
+
+// Fonction pour faire défiler la page jusqu'en haut
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+    </script>
+</footer>
+     </body>
 </html>

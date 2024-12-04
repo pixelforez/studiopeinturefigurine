@@ -288,7 +288,7 @@ nav ul li a:hover {
     /* Galerie */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
     gap: 0px;
     justify-items: center;
     margin-top: 0px;

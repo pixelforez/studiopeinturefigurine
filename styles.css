@@ -21,9 +21,13 @@ div .center{
   width: 50%; /* Ou toute autre valeur selon la taille désirée */
 }
 /* Tableau */
+table{
+    
+}
+
   th, td {
             padding: 0px;
-            text-align: left;
+            text-align: center;
             border: 1px solid #ddd;
         }
         th {

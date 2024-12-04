@@ -8,7 +8,13 @@
   
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
+
+</head>
+<body>
+
+<!-- Contenu principal qui change dynamiquement -->
+<div id="contenu-principal">
+        <script>
         function envoyerMail(form) {
             const nom = encodeURIComponent(form.nom.value);
             const prenom = encodeURIComponent(form.prenom.value);
@@ -33,11 +39,6 @@
             window.location.href = mailtoLink;
         }
     </script>
-</head>
-<body>
-
-<!-- Contenu principal qui change dynamiquement -->
-<div id="contenu-principal">
     <section class="formation">
         <h2>🎨 Formation en Peinture sur Figurines</h2>
         <p>Chez <strong>Studio Peinture Figurine</strong>, nous offrons des formations personnalisées pour tous les niveaux, du débutant au confirmé. Apprenez les techniques professionnelles de peinture avec <strong>pinceau</strong> et <strong>aérographe</strong>, et donnez vie à vos figurines grâce à notre approche unique.</p>

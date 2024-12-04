@@ -7,6 +7,40 @@ body {
     padding: 30px;
     text-align: center;
 }
+#contenu-principal {
+        width: 100%;
+      padding: 0px;
+     border: 0px;
+   text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
+    }
+div .center{
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+ margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* Ou toute autre valeur selon la taille désirée */
+}
+/* Tableau */
+  th, td {
+            padding: 0px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .check {
+            color: green;
+            font-weight: bold;
+        }
+        .cross {
+            color: red;
+            font-weight: bold;
+        }
 
 /* Styles du header */
 header {
@@ -67,6 +101,13 @@ nav ul li a:hover {
     background-color: #FFD700; /* Jaune or au survol */
     color: #333;
 }
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* ou une autre hauteur qui convient */
+}
+
 ul {
   list-style-type: none; /* Supprime les puces */
   padding: 0; /* Enlève l'espace intérieur */

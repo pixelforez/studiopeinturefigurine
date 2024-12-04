@@ -49,11 +49,6 @@
 </head>
 <body>
 <header>
-            <div class="logo-container">
-            <img src="logo.png" alt="Studio Peinture Figurine" class="logo">
-        </div>
-<a href="index.html" style="color: white; text-decoration: none;">Studio Peinture Figurine</a></h1>
-     </header>
 <script>
     
         // Fonction AJAX pour charger le contenu des pages
@@ -69,6 +64,9 @@
         }
     </script>
 <nav>
+        <div class="logo-container">
+           <a href="index.html" style="color: white; text-decoration: none;"> <img src="https://pf-peinturefigurine.github.io/studiopeinturefigurine/logo.png" alt="Studio Peinture Figurine" class="logo"></a>
+        </div>
      <ul class="menu">
         <li><a href="peinturecommission.html" onclick="loadPage('peinturecommission.html'); return false;">Peinture sur commission</a></li>
         <li><a href="impression3d.html" onclick="loadPage('impression3d.html'); return false;">Impression 3D à la demande</a></li>
@@ -77,7 +75,7 @@
         <li><a href="galerie.html" onclick="loadPage('galerie.html'); return false;">Galerie</a></li>
     </ul>
 </nav>
-
+</header>
 <!-- Contenu principal qui change dynamiquement -->
 <div id="contenu-principal">
   <section class="formation">

@@ -1,439 +1,98 @@
- #contenu-principal {
-        width: 100%;
-      padding: 0px;
-     border: 0px;
-   text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
-    }
-.center{
-  justify-content: center; /* Centrage horizontal */
-  align-items: center; /* Centrage vertical */
- margin-left: auto;
-  margin-right: auto;
-  width: 50%; /* Ou toute autre valeur selon la taille désirée */
-}
-    /* Tableau */
-  th, td {
-            padding: 0px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #333;
-            color: #fff;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .check {
-            color: green;
-            font-weight: bold;
-        }
-        .cross {
-            color: red;
-            font-weight: bold;
-        }
-    
-/* Style général du corps de la page */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
-    margin: 0;
-    padding: 30px;
-     border: 0px;
-            justify-content: center; /* Centre horizontalement */
-            align-items: center; /* Centre verticalement */
-}
-
-/* Styles du header */
-header {
-    background-color: #2f8b4f; /* Vert foncé */
-    padding: 30px;
-    text-align: center;
-}
-
-header h1 a {
-    color: white;
-    font-size: 25px;
-    text-decoration: none;
-    font-weight: bold;
-}
-/* Style des titres */
-h1, h2, h3, h4, h5 {
-  color: var(--dark-green); /* Titres en vert foncé */
-    font-size: 16px;
-
-}
-
-header h1 a:hover {
-    text-decoration: underline;
-}
-
-/* Styles du menu de navigation */
-nav {
-    background-color: #3c9b67; /* Vert clair */
-    padding: 0px;
-    text-align: center;
-flex-direction: row; /* Les éléments du menu restent sur une ligne */
-  
-}
-
-nav ul {
-     list-style: none; /* Supprime les puces */
-            padding: 0;
-            margin: 0;
-            display: flex; /* Met les éléments sur une seule ligne */
-            justify-content: space-around; /* Espace égal entre les liens */
-}
-
-nav ul li {
-        margin: 0;
-}
-
-nav ul li a {
-    c display: block; /* Pour que les liens remplissent les éléments */
-            padding: 10px 20px;
-            text-decoration: none; /* Supprime le soulignement */
-            color: white; /* Couleur du texte */
-            font-family: Arial, sans-serif;
-font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Conteneur principal */
-#contenu-principal {
-    width: 100%;
-    margin: 0px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0px;
-   text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
-}
-
-/* Titre principal de la page */
-#contenu-principal h2 {
-    color: #2f8b4f;
-    font-size: 18px;
-  text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
-}
-
-/* Centrage du texte dans les paragraphes */
-.texte-centre {
-    text-align: center;
-    font-size: 10px;
-    margin-bottom: 0px;
-}
-
-/* Bouton pour la simulation */
-.button {
-    display: inline-block;
-    background-color: #2f8b4f;
-    color: white;
-    font-size: 18px;
-    padding: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #267a38; /* Vert plus foncé */
-}
-
-
-/* Footer */
-footer {
-    background-color: #2f8b4f;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-}
-
-/* Style de la galerie */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 0px;
-  justify-items: center;
-  margin-top: 0px;
-  width: 80%;
-  max-width: 400px; /* Limite de largeur pour éviter trop de photos par ligne */
-}
-
-.gallery img {
-  width: 80%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(2.05);
-}
-/* Style du bouton fleche */
-#scrollToTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #2f8b4f;
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 24px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none; /* Masqué au départ */
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Apparence du bouton au survol */
-#scrollToTopBtn:hover {
-    background-color: #267a38;
-}
-
-
-ul {
-  list-style-type: none; /* Supprime les puces */
-  padding: 0; /* Enlève l'espace intérieur */
-  margin: 0; /* Enlève les marges par défaut */
-}
-li {
-  margin-bottom: 0px; /* Optionnel : espace entre les éléments de la liste */
-}
-/* Responsive: Formulaire sur mobile */
-@media screen and (max-width: 768px) {
-    #contenu-principal {
-   width: 100%;
-      padding: 0px;
-     border: 0px;
-   text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
-    }
-   
-    /* Tableau */
-  th, td {
-            padding: 0px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #333;
-            color: #fff;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .check {
-            color: green;
-            font-weight: bold;
-        }
-        .cross {
-            color: red;
-            font-weight: bold;
-        }
-/* Style général du corps de la page */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+/* Configuration globale */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Styles du header */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    padding-top: 80px; /* Compense l'en-tête fixe */
+    line-height: 1.6;
+}
+
+/* En-tête */
 header {
-    background-color: #2f8b4f; /* Vert foncé */
-    padding: 30px;
-    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to right, #4CAF50, #2E8B57);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-header h1 a {
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .menu li a {
     color: white;
-    font-size: 18px;
     text-decoration: none;
     font-weight: bold;
-}
-/* Style des titres */
-h1, h2, h3, h4, h5 {
-  color: var(--dark-green); /* Titres en vert foncé */
-  text-align: center; /* Titres centrés */
-    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
 }
 
-header h1 a:hover {
-    text-decoration: underline;
+nav .menu li a:hover {
+    background-color: white;
+    color: #4CAF50;
 }
 
-/* Styles du menu de navigation */
-nav {
-    background-color: #3c9b67; /* Vert clair */
+/* Section principale */
+main {
     padding: 20px;
     text-align: center;
-flex-direction: row; /* Les éléments du menu restent sur une ligne */
-    flex-wrap: nowrap; /* Eviter le retour à la ligne sur petits écrans */
-    justify-content: space-between; /* Répartir l'espace entre les éléments */
-
 }
 
-nav {
-    background-color: #3c9b67; /* Vert clair */
-    padding: 0px;
-    text-align: center;
-flex-direction: row; /* Les éléments du menu restent sur une ligne */
-  
+main h1 {
+    color: #2E8B57;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-nav ul {
-     list-style: none; /* Supprime les puces */
-            padding: 0;
-            margin: 0;
-              flex-direction: column; /* Retourne à un affichage vertical sur petits écrans */
-            justify-content: space-around; /* Espace égal entre les liens */
+main p {
+    font-size: 1.2rem;
+    color: #555;
 }
 
-nav ul li {
-        margin: 0;
-}
-
-nav ul li a {
-    c display: block; /* Pour que les liens remplissent les éléments */
-            padding: 10px 20px;
-            text-decoration: none; /* Supprime le soulignement */
-            color: white; /* Couleur du texte */
-            font-family: Arial, sans-serif;
-
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Conteneur principal */
-#contenu-principal {
-      width: 100%;
-    margin: 0px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0px;
-   text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
-}
-
-/* Titre principal de la page */
-#contenu-principal h2 {
-    color: #2f8b4f;
-    font-size: 18px;
-  text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
-}
-
-/* Centrage du texte dans les paragraphes */
-.texte-centre {
-    text-align: center;
-    font-size: 10px;
-    margin-bottom: 0px;
-}
-
-/* Bouton */
-.button {
-    background-color: #2f8b4f;
-    color: white;
-    font-size: 18px;
-    padding: 30x;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #267a38; /* Vert plus foncé */
-}
-
-/* Footer */
+/* Pied de page */
 footer {
-    background-color: #2f8b4f;
+    background: #2E8B57;
     color: white;
-    padding: 30px;
     text-align: center;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-  gap: 0px;
-  justify-items: center;
-  margin-top: 0px;
-  width: 60%;
-  max-width: 600px; /* Limite de largeur pour éviter trop de photos par ligne */
-}
-
-.gallery img {
-  width: 60%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(4.05);
-}
-
-/* Style du bouton fleche */
-#scrollToTopBtn {
+    padding: 10px 0;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #2f8b4f;
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 24px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none; /* Masqué au départ */
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    width: 100%;
 }
 
-/* Apparence du bouton au survol */
-#scrollToTopBtn:hover {
-    background-color: #267a38;
-}
-ul {
-  list-style-type: none; /* Supprime les puces */
-  padding: 0; /* Enlève l'espace intérieur */
-  margin: 0; /* Enlève les marges par défaut */
-}
+/* Responsive */
+@media (max-width: 768px) {
+    nav .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-li {
-  margin-bottom: 0px; /* Optionnel : espace entre les éléments de la liste */
-}
+    .logo {
+        height: 40px;
+    }
 }

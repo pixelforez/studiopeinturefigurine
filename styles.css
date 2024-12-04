@@ -26,14 +26,11 @@ table{
   width: auto;              /* Réduit la largeur du tableau à son contenu */
 }
 
+
   th, td {
-            text-align: center;
+            padding: 0px;
+            text-align: left;
             border: 1px solid #ddd;
-       padding: 0;              /* Supprime le padding à l'intérieur des cellules */
-  margin: 0;               /* Supprime le margin (utile dans certains cas) */
-  text-align: center;      /* Alignement du texte, optionnel */
-  font-size: 10px;         /* Réduit la taille du texte (ajustez selon vos besoins) */
-  white-space: nowrap;     /* Empêche le retour à la ligne dans le contenu */
         }
         th {
             background-color: #333;

@@ -154,7 +154,7 @@ li {
 
 /* Bouton */
 .button {
-     border: 2px solid #FFD700
+    border: 2px solid #FFD700;
     background-color: #555; /* Gris foncé */
     color: white;
     font-size: 18px;

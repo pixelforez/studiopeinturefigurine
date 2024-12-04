@@ -11,6 +11,13 @@
   margin-right: auto;
   width: 50%; /* Ou toute autre valeur selon la taille désirée */
 }
+div{
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+ margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* Ou toute autre valeur selon la taille désirée */
+}
     /* Tableau */
   th, td {
             padding: 0px;

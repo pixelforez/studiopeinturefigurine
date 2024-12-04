@@ -153,24 +153,24 @@ const heros = document.getElementById("heros").value;
             const message = document.getElementById("message").value;
         // Construire l'URL mailto
         const subject = `Demande de devis de ${prenom} ${nom} - ${niveau} `;
-        const body = `Bonjour,
-Voici ma demande de devis de peinture  ${niveau} :
- - Nom : ${nom} 
- - Prénom : ${prenom}
- - Email : ${email}
-- Téléphone : ${telephone} 
+        const body = `Bonjour,<br>
+Voici ma demande de devis de peinture  ${niveau} :<br>
+ - Nom : ${nom} <br>
+ - Prénom : ${prenom}<br>
+ - Email : ${email}<br>
+- Téléphone : ${telephone} <br>
 
-- Niveau choisi : ${niveau} 
-- Infanterie : ${infanterie}
-- Cavalerie : ${cavalerie}
-- Personnage : ${heros}
-- Monstre : ${petitMonstre}
-- Vehicule : ${grosMonstre}
+- Niveau choisi : ${niveau} <br>
+- Infanterie : ${infanterie}<br>
+- Cavalerie : ${cavalerie}<br>
+- Personnage : ${heros}<br>
+- Monstre : ${petitMonstre}<br>
+- Vehicule : ${grosMonstre}<br>
 
- Total estimé : ${total.toFixed(2)} €
+ Total estimé : ${total.toFixed(2)} €<br>
  
- Mon message :
- ${message}
+ Mon message :<br>
+ ${message}<br>
 Cordialement.`;
         const mailtoURL = `mailto:studiopeinturefigurine@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
  

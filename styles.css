@@ -411,7 +411,7 @@ li {
 }
 
 .logo {
-    height: 100px;
+    height: 500px;
 }
 
 nav .menu {
@@ -442,6 +442,6 @@ nav .menu li a:hover {
     }
 
     .logo {
-        height: 60px;
+        height: 100px;
     }
 }

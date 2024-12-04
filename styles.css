@@ -69,39 +69,6 @@ header h1 a:hover {
     text-decoration: underline;
 }
 
-/* Styles du menu de navigation */
-nav {
-    background-color: #3c9b67; /* Vert clair */
-    padding: 0px;
-    text-align: center;
-flex-direction: row; /* Les éléments du menu restent sur une ligne */
-  
-}
-
-nav ul {
-     list-style: none; /* Supprime les puces */
-            padding: 0;
-            margin: 0;
-            display: flex; /* Met les éléments sur une seule ligne */
-            justify-content: space-around; /* Espace égal entre les liens */
-}
-
-nav ul li {
-        margin: 0;
-}
-
-nav ul li a {
-    c display: block; /* Pour que les liens remplissent les éléments */
-            padding: 10px 20px;
-            text-decoration: none; /* Supprime le soulignement */
-            color: white; /* Couleur du texte */
-            font-family: Arial, sans-serif;
-font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
 
 /* Conteneur principal */
 #contenu-principal {

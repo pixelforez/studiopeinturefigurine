@@ -408,10 +408,14 @@ li {
 .logo-container {
     display: flex;
     align-items: center;
+         width: 100%;
+      padding: 0px;
+     border: 0px;
+   text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
 }
 
 .logo {
-    height: 150px;
+    height: 100px;
 }
 
 nav .menu {
@@ -442,6 +446,6 @@ nav .menu li a:hover {
     }
 
     .logo {
-        height: 100px;
+        height: auto;
     }
 }

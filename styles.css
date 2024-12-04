@@ -196,7 +196,7 @@ footer a:hover {
   justify-items: center;
   margin-top: 0px;
   width: 100%;
-  max-width: 1000px; /* Limite de largeur pour éviter trop de photos par ligne */
+  max-width: 1200px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
@@ -293,7 +293,7 @@ nav ul li a:hover {
     justify-items: center;
     margin-top: 0px;
     width: 40%;
-    max-width: 400px;
+    max-width: 600px;
 }
 
 .gallery img {

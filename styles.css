@@ -185,12 +185,12 @@ footer a:hover {
 /* Style de la galerie */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
   gap: 0px;
   justify-items: center;
   margin-top: 0px;
   width: 80%;
-  max-width: 400px; /* Limite de largeur pour éviter trop de photos par ligne */
+  max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
@@ -202,7 +202,7 @@ footer a:hover {
 }
 
 .gallery img:hover {
-  transform: scale(2.05);
+  transform: scale(3.05);
 }
 
 

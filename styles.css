@@ -191,13 +191,12 @@ footer a:hover {
 
 /* Style de la galerie */
 .gallery {
-  display: grid;
-  
+  display: fixed;
   gap: 0px;
   justify-items: center;
   margin-top: 0px;
   width: 80%;
-  max-width: 800px; /* Limite de largeur pour éviter trop de photos par ligne */
+  max-width: 600px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {

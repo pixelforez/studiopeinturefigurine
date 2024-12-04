@@ -192,7 +192,7 @@ footer a:hover {
 
 /* Style de la galerie */
 .gallery {
-  display: fixed;
+  display: flex;
   gap: 0px;
   justify-items: center;
   margin-top: 0px;

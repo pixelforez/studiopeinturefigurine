@@ -208,7 +208,7 @@ footer a:hover {
 }
 
 .gallery img:hover {
-  transform: scale(3.05);
+  transform: scale(2.05);
 }
 
 
@@ -288,12 +288,12 @@ nav ul li a:hover {
     /* Galerie */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
     gap: 0px;
     justify-items: center;
     margin-top: 0px;
     width: 40%;
-    max-width: 600px;
+    max-width: 400px;
 }
 
 .gallery img {
@@ -305,7 +305,7 @@ nav ul li a:hover {
 }
 
 .gallery img:hover {
-    transform: scale(2.05); /* Effet de zoom 3D */
+    transform: scale(4.05); /* Effet de zoom 3D */
 }
 /* Bouton */
 .button {

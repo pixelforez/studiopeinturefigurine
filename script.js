@@ -10,11 +10,6 @@
             });
         }
 
-        $(document).ready(function() {
-            // Charger la page d'accueil par défaut
-            loadPage("index.html");
-        });
-
  // Obtenir le bouton
 let mybutton = document.getElementById("scrollToTopBtn");
 

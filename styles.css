@@ -112,6 +112,8 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #FFD700; /* Jaune or au survol */
     color: #333;
+     padding: 0 5px;           /* Espace autour du texte */
+  display: inline-block;    /* Nécessaire pour l'effet arrondi */
 }
 .logo-container {
     display: fixed;
@@ -155,7 +157,7 @@ li {
     background-color: #555; /* Gris foncé */
     color: white;
     font-size: 18px;
-    padding: 30px;
+    padding: 0px;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
@@ -244,7 +246,10 @@ footer a:hover {
         flex-direction: column;
         gap: 10px;
     }
-    
+    table{
+    border-collapse: collapse; /* Supprime les espaces entre les bordures */
+  width: auto;              /* Réduit la largeur du tableau à son contenu */
+}
 nav ul {
     list-style: none;
     padding: 0;
@@ -288,27 +293,27 @@ nav ul li a:hover {
     gap: 0px;
     justify-items: center;
     margin-top: 0px;
-    width: 50%;
+    width: 40%;
     max-width: 600px;
 }
 
 .gallery img {
-    width: 50%;
+    width: 40%;
     height: auto;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 2px;
     transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
-    transform: scale(1.05); /* Effet de zoom 3D */
+    transform: scale(2.05); /* Effet de zoom 3D */
 }
 /* Bouton */
 .button {
     background-color: #555; /* Gris foncé */
     color: white;
     font-size: 18px;
-    padding: 30px;
+    padding: 0px;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;

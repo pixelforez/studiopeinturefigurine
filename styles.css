@@ -272,7 +272,7 @@ nav ul {
      list-style: none; /* Supprime les puces */
             padding: 0;
             margin: 0;
-              flex-direction: column; /* Retourne à un affichage vertical sur petits écrans */
+              flex-direction: row; /* Retourne à un affichage vertical sur petits écrans */
             justify-content: space-around; /* Espace égal entre les liens */
 }
 
@@ -448,5 +448,7 @@ nav .menu li a:hover {
 
     .logo {
         height: 50px;
+      text-align: center;
+     flex-direction: column;
     }
 }

@@ -435,7 +435,7 @@ nav .menu li a:hover {
     align-items: center;
     height: 100px; /* ou une autre hauteur qui convient */
 }
-h1, h2 {
+h1, h3 {
     color: #4CAF50; /* Vert principal */
 }
 
@@ -450,6 +450,20 @@ a:hover {
 h2 {font-size: 1.5rem; color: #1a6e2f;}
 p 
 {font-size: 1rem; margin-top: 10pxl;}
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #0073e6;
+            font-size: 1.6em;
+        }
+        .section p {
+            font-size: 1.1em;
+            color: #555;
+        }
 /* Responsive */
 @media (max-width: 768px) {
     nav .menu {

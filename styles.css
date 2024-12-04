@@ -406,15 +406,6 @@ li {
 }
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-         width: 60%;
-      padding: 0px;
-     border: 0px;
-   text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
-}
-
 .logo {
     height: 100px;
 }
@@ -437,6 +428,12 @@ nav .menu li a {
 nav .menu li a:hover {
     background-color: white;
     color: #4CAF50;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* ou une autre hauteur qui convient */
 }
 
 /* Responsive */

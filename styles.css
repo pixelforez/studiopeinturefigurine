@@ -435,7 +435,21 @@ nav .menu li a:hover {
     align-items: center;
     height: 100px; /* ou une autre hauteur qui convient */
 }
+h1, h2 {
+    color: #4CAF50; /* Vert principal */
+}
 
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+h2 {font-size: 1.5rem; color: #1a6e2f;}
+p 
+{font-size: 1rem; margin-top: 10pxl;}
 /* Responsive */
 @media (max-width: 768px) {
     nav .menu {

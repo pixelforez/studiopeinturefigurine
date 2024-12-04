@@ -127,16 +127,16 @@ footer a:hover {
 /* Galerie */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
     gap: 0px;
     justify-items: center;
     margin-top: 0px;
-    width: 60%;
+    width: 80%;
     max-width: 600px;
 }
 
 .gallery img {
-    width: 60%;
+    width: 80%;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
@@ -144,7 +144,7 @@ footer a:hover {
 }
 
 .gallery img:hover {
-    transform: scale(1.05); /* Effet de zoom 3D */
+    transform: scale(2.05); /* Effet de zoom 3D */
 }
 
 /* Style du bouton de scroll */
@@ -157,7 +157,7 @@ footer a:hover {
     border: none;
     padding: 15px;
     font-size: 24px;
-    border-radius: 50%;
+    border-radius: 60%;
     cursor: pointer;
     display: none;
     z-index: 1000;
@@ -177,11 +177,34 @@ footer a:hover {
 /* Menu responsive */
 @media (max-width: 768px) {
     nav .menu {
-        flex-direction: row;
+        flex-direction: column;
         gap: 10px;
     }
 
     .logo {
         height: 50px;
     }
+    /* Galerie */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+    gap: 0px;
+    justify-items: center;
+    margin-top: 0px;
+    width: 50%;
+    max-width: 600px;
+}
+
+.gallery img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Effet de zoom 3D */
+}
+
 }

@@ -157,7 +157,7 @@ li {
     background-color: #555; /* Gris foncé */
     color: white;
     font-size: 18px;
-    padding: 0px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
@@ -192,7 +192,7 @@ footer a:hover {
 /* Style de la galerie */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  
   gap: 0px;
   justify-items: center;
   margin-top: 0px;
@@ -313,7 +313,7 @@ nav ul li a:hover {
     background-color: #555; /* Gris foncé */
     color: white;
     font-size: 18px;
-    padding: 0px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;

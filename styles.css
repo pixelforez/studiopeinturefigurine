@@ -4,14 +4,7 @@
      border: 0px;
    text-align: center; /* Centre tout le texte à l'intérieur de ce bloc */
     }
-.center{
-  justify-content: center; /* Centrage horizontal */
-  align-items: center; /* Centrage vertical */
- margin-left: auto;
-  margin-right: auto;
-  width: 50%; /* Ou toute autre valeur selon la taille désirée */
-}
-div{
+div .center{
   justify-content: center; /* Centrage horizontal */
   align-items: center; /* Centrage vertical */
  margin-left: auto;

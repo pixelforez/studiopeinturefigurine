@@ -67,6 +67,16 @@ nav ul li a:hover {
     background-color: #FFD700; /* Jaune or au survol */
     color: #333;
 }
+ul {
+  list-style-type: none; /* Supprime les puces */
+  padding: 0; /* Enlève l'espace intérieur */
+  margin: 0; /* Enlève les marges par défaut */
+}
+
+li {
+ list-style-type: none; /* Supprime les puces */
+  margin-bottom: 0px; /* Optionnel : espace entre les éléments de la liste */
+}
 
 /* Conteneur principal */
 #contenu-principal {
@@ -124,28 +134,29 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Galerie */
+/* Style de la galerie */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
-    gap: 0px;
-    justify-items: center;
-    margin-top: 0px;
-    width: 80%;
-    max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Aligner les images par 2 ou 4 maximum */
+  gap: 0px;
+  justify-items: center;
+  margin-top: 0px;
+  width: 80%;
+  max-width: 400px; /* Limite de largeur pour éviter trop de photos par ligne */
 }
 
 .gallery img {
-    width: 80%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
-    transform: scale(2.05); /* Effet de zoom 3D */
+  transform: scale(2.05);
 }
+
 
 /* Style du bouton de scroll */
 #scrollToTopBtn {

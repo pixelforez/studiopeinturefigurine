@@ -28,15 +28,15 @@
             const message = encodeURIComponent(form.message.value);
 
             const subject = `Demande de cours de peinture - ${nom} ${prenom}`;
-            const body = `Bonjour,
-            Voici une nouvelle demande de cours :
-            Nom : ${nom}\n
-            Prénom : ${prenom}
-            Email : ${email}
-            Téléphone : ${telephone}
-            Cours choisi : ${cours}
-            Message :\n${message}\n\n
-            Cordialement,
+            const body = `Bonjour,<br>
+            Voici une nouvelle demande de cours :<br>
+            Nom : ${nom}<br>
+            Prénom : ${prenom}<br>
+            Email : ${email}<br>
+            Téléphone : ${telephone}<br>
+            Cours choisi : ${cours}<br>
+            Message : ${message}<br>
+            Cordialement,<br>
             ${prenom} ${nom}`;
             
             const mailtoLink = `mailto:studiopeinturefigurine@gmail.com?subject=${subject}&body=${body}`;

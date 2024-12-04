@@ -292,12 +292,12 @@ nav ul li a:hover {
     gap: 0px;
     justify-items: center;
     margin-top: 0px;
-    width: 40%;
+    width: 60%;
     max-width: 600px;
 }
 
 .gallery img {
-    width: 40%;
+    width: 60%;
     height: auto;
     object-fit: cover;
     border-radius: 2px;

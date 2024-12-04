@@ -232,9 +232,15 @@ footer a:hover {
         flex-direction: column;
         gap: 10px;
     }
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* ou une autre hauteur qui convient */
+}
 
     .logo {
-        height: 50px;
+        height: auto;
     }
     /* Galerie */
 .gallery {

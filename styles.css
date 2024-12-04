@@ -224,7 +224,7 @@ footer a:hover {
     border-radius: 60%;
     cursor: pointer;
     display: none;
-    z-index: 1500;
+    z-index: 2000;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Ombre douce */
 }
 

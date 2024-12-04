@@ -5,8 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peinture de figurines sur Commission</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #contenu-principal {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #0073e6;
+            font-size: 1.6em;
+        }
+        .section p {
+            font-size: 1.1em;
+            color: #555;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        li strong {
+            color: #333;
+        }
+        .button {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            display: block;
+            margin: 20px auto;
+        }
+        .button:hover {
+            background-color: #005bb5;
+        }
+        .cta {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .cta table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        .cta th, .cta td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .cta th {
+            background-color: #f2f2f2;
+        }
+        .cta .check {
+            color: green;
+        }
+        .cta .cross {
+            color: red;
+        }
+        @media (max-width: 768px) {
+            .container {
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
 <div id="contenu-principal">
@@ -19,7 +113,7 @@
             <p>Chaque figurine passe par une préparation minutieuse pour garantir une base impeccable :</p>
             <ul>
                 <li><strong>Niveau 1 : Prêt pour le Tournoi</strong> <span>🛠️</span>: Retrait des carottes d’injection plastique.</li>
-                <li><strong>Niveau 2: TableTop simple et efficace</strong> <span>⚙️</span>: Suppression des lignes de moulage, jointures et trous bouchés.</li>
+                <li><strong>Niveau 2 : TableTop simple et efficace</strong> <span>⚙️</span>: Suppression des lignes de moulage, jointures et trous bouchés.</li>
                 <li><strong>Niveau 3 : TableTop de qualité supérieur</strong> <span>💎</span>: Ajout de conversions ou kitbash pour personnaliser vos modèles.</li>
             </ul>
         </div>
@@ -57,141 +151,124 @@
         </div>
     </div>
 
-    <button onclick="$('#formSection').toggle();" class="button">Voir le détails des niveaux</button>
+    <button onclick="$('#formSection').toggle();" class="button">Voir les détails des niveaux</button>
 
-<section id="formSection" style="display:none;">
+    <section id="formSection" style="display:none;">
+        <div class="cta">
+            <table class="center">
+                <thead>
+                    <tr>
+                        <th>Catégorie</th>
+                        <th>Prestations</th>
+                        <th>Niveau 1 <span>🛠️</span></th>
+                        <th>Niveau 2 <span>⚙️</span></th>
+                        <th>Niveau 3 <span>💎</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="4">Préparation</td>
+                        <td>Retrait des carottes d'injection plastique</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Suppression lignes de moulage</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Jointures et trous bouchés</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Kitbash / Conversion</td>
+                        <td class="cross">x</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="14">Peinture</td>
+                        <td>Couleurs de base</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Ombrage</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Éclairci</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Éclaircis multiples</td>
+                        <td class="cross">x</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Ombrages multiples</td>
+                        <td class="cross">x</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Lining</td>
+                        <td class="cross">x</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Glacis</td>
+                        <td class="cross">x</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Battle Damage</td>
+                        <td class="cross">x</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Weathering</td>
+                        <td class="cross">x</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Freehand</td>
+                        <td class="cross">x</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Métaux non métalliques (MNM)</td>
+                        <td class="cross">x</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Effets de lumière (OSL)</td>
+                        <td class="cross">x</td>
+                        <td class="cross">x</td>
+                        <td class="check">✓</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
 
-<div class="cta">
-      <table class="center">
-        <thead>
-            <tr>
-                <th>Catégorie</th>
-                <th>Prestations</th>
-                <th>Niveau 1 <span>🛠️</span></th>
-                <th>Niveau 2 <span>⚙️</span></th>
-                <th>Niveau 3 <span>💎</span></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="4">Préparation</td>
-                <td>Retrait des carottes d'injection plastique</td>
-                <td class="check">✓</td>
-                <td class="check">✓</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Suppression lignes de moulage</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Jointures et trous bouchés</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Kitbash / Conversion</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td rowspan="14">Peinture</td>
-                <td>Couleurs de base</td>
-                <td class="check">✓</td>
-                <td class="check">✓</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Ombrage</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Éclairci</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Éclaircis multiples</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Ombrages multiples</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Lining</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Glacis</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Détails (gemmes, yeux, ongles…)</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Texture des matières</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Battle damages</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Weathering</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>OSL</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>MNM</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Free hand simple* (chiffres, tattoos etc)</td>
-                <td class="cross">x</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td rowspan="9">Soclage</td>
-                <td>Texture</td>
-                <td class="check">✓</td>
-                <td class="check">✓</td>
-                <td class="check">✓</td>
-            </tr>
-            <tr>
-                <td>Ombrage texture</td>
-                <td class="cross">x</td>
-                <td class="check">✓</td>
-                <td class="check">✓</
+</body>
+</html>

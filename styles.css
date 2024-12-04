@@ -439,7 +439,7 @@ nav .menu li a:hover {
 /* Responsive */
 @media (max-width: 768px) {
     nav .menu {
-        flex-direction: row;
+        flex-direction: column;
         gap: 10px;
     }
 

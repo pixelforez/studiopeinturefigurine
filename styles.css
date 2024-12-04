@@ -294,12 +294,12 @@ nav ul li a:hover {
     gap: 0px;
     justify-items: center;
     margin-top: 0px;
-    width: 60%;
+    width: 50%;
     max-width: 600px;
 }
 
 .gallery img {
-    width: 60%;
+    width: 50%;
     height: auto;
     object-fit: cover;
     border-radius: 2px;
@@ -307,7 +307,7 @@ nav ul li a:hover {
 }
 
 .gallery img:hover {
-    transform: scale(4.05); /* Effet de zoom 3D */
+    transform: scale(3.05); /* Effet de zoom 3D */
 }
 /* Bouton */
 .button {

@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impression 3D à la Demande</title>
-    <link rel="stylesheet" href="styles.css">  
-  
 
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Peinture Figurine - Studio de Peinture pour Wargames et Modélisme">
+    <meta property="og:description" content="Transformez vos figurines en œuvres d'art avec notre service de peinture sur figurines. Services personnalisés pour Warhammer, Age of Sigmar, et plus.">
+    <meta property="og:image" content="https://pf-peinturefigurine.github.io/studiopeinturefigurine/favicon.png">
+    <meta property="og:url" content="https://peinturefigurine.fr/peinturecommission.html">
+    <meta property="og:type" content="website">
+
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Peinture sur figurines et décors de haute qualité pour jeux de figurines, wargames et modélisme. Services de peinture sur mesure et impression 3D à la demande.">
+
+    <title>Studio Peinture Figurine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-</head>
-<body>
-
-<!-- Contenu principal qui change dynamiquement -->
-<div id="contenu-principal">
-        <script>
+    <script>
         function envoyerMail(form) {
             const nom = encodeURIComponent(form.nom.value);
             const prenom = encodeURIComponent(form.prenom.value);
@@ -39,6 +43,40 @@
             window.location.href = mailtoLink;
         }
     </script>
+</head>
+<body>
+<header>
+    <script>
+        // Fonction AJAX pour charger le contenu des pages
+        function loadPage(page) {
+            // Enlever l'ancien contenu et charger la nouvelle page
+            $("#contenu-principal").fadeOut(20, function() {
+                // Charger la nouvelle page dans le div #contenu-principal
+                $("#contenu-principal").load(page + " #contenu-principal", function() {
+                    // Rendre le contenu visible après qu'il soit chargé
+                    $("#contenu-principal").fadeIn(20);
+                });
+            });
+        }
+    </script>
+    <nav>
+        <div class="logo-container">
+            <a href="index.html" style="color: white; text-decoration: none;">
+                <img src="https://pf-peinturefigurine.github.io/studiopeinturefigurine/logo.png" alt="Studio Peinture Figurine" class="logo">
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="peinturecommission.html" onclick="loadPage('peinturecommission.html'); return false;">Peinture sur commission</a></li>
+            <li><a href="impression3d.html" onclick="loadPage('impression3d.html'); return false;">Impression 3D à la demande</a></li>
+            <li><a href="formation.html">Formation</a></li>
+            <li><a href="simulateur_devis.html">Simulateur de devis</a></li>
+            <li><a href="galerie.html" onclick="loadPage('galerie.html'); return false;">Galerie</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Contenu principal qui change dynamiquement -->
+<div id="contenu-principal">
     <section class="formation">
         <h2>🎨 Formation en Peinture sur Figurines</h2>
         <p>Chez <strong>Studio Peinture Figurine</strong>, nous offrons des formations personnalisées pour tous les niveaux, du débutant au confirmé. Apprenez les techniques professionnelles de peinture avec <strong>pinceau</strong> et <strong>aérographe</strong>, et donnez vie à vos figurines grâce à notre approche unique.</p>

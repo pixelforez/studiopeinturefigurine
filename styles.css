@@ -48,7 +48,8 @@ body {
 
 /* Styles du header */
 header {
-    background-color: #2f8b4f; /* Vert foncé */
+ background: linear-gradient(to right, #2f8b4f, #cccccc);
+
     padding: 30px;
     text-align: center;
 }
@@ -110,8 +111,7 @@ header h1 a:hover {
 }
 
 .button:hover {
-    background-color: #267a38; /* Vert plus foncé */
-}
+    background-color: #267a38; 
 
 
 /* Footer */
@@ -227,7 +227,7 @@ body {
 
 /* Styles du header */
 header {
-    background-color: #2f8b4f; /* Vert foncé */
+    background-color: #2f8b4f; 
     padding: 30px;
     text-align: center;
 }
@@ -240,7 +240,7 @@ header h1 a {
 }
 /* Style des titres */
 h1, h2, h3, h4, h5 {
-  color: var(--dark-green); /* Titres en vert foncé */
+ 
   text-align: center; /* Titres centrés */
     font-size: 16px;
 }
@@ -251,7 +251,7 @@ header h1 a:hover {
 
 /* Styles du menu de navigation */
 nav {
-    background-color: #3c9b67; /* Vert clair */
+    background-color: #3c9b67;
     padding: 20px;
     text-align: center;
 flex-direction: row; /* Les éléments du menu restent sur une ligne */
@@ -261,7 +261,7 @@ flex-direction: row; /* Les éléments du menu restent sur une ligne */
 }
 
 nav {
-    background-color: #3c9b67; /* Vert clair */
+    background-color: #3c9b67; 
     padding: 0px;
     text-align: center;
 flex-direction: row; /* Les éléments du menu restent sur une ligne */
@@ -331,7 +331,7 @@ nav ul li a:hover {
 }
 
 .button:hover {
-    background-color: #267a38; /* Vert plus foncé */
+    background-color: #267a38; 
 }
 
 /* Footer */

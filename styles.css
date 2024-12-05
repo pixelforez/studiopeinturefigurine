@@ -48,7 +48,7 @@ body {
 
 /* Styles du header */
 header {
-    background-color: #2f8b4f; /* Vert foncé */
+   background: linear-gradient(to bottom, #2f8b4f, #cccccc);
     padding: 30px;
     text-align: center;
 }
@@ -60,11 +60,7 @@ header h1 a {
     font-weight: bold;
 }
 /* Style des titres */
-h1, h2, h3, h4, h5 {
-  color: var(--dark-green); /* Titres en vert foncé */
-    font-size: 16px;
 
-}
 
 header h1 a:hover {
     text-decoration: underline;
